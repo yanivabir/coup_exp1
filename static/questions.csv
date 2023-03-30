@@ -1,0 +1,301 @@
+questionId,block,type,question,answer
+AN_01,general,Animal,Which animals are born pregnant and can give birth 10 days after being born themselves?,Aphids
+AN_02,general,Animal,"What are German shepherds called in Great Britain, due to lingering anti-german sentiment following World War II?",Alsatians
+AN_03,general,Animal,What animal can live up to a week without its head?,Cockroach
+AN_04,general,Animal,"Besides the platypus, what's the only egg-laying mammal?",Echidna
+AN_05,general,Animal,Who is the world's oldest (non-human) primate on record?,A chimp born in 1943
+AN_06,general,Animal,A dog mainly sweats through which part of its body?,Paw pads
+AN_07,general,Animal,"Which animals swallow large stones, which remain in their bellies and are thought to be used as ballasts for diving?",Crocodiles
+AN_08,general,Animal,How long are elephants pregant for before they give birth?,22 Months
+AN_09,general,Animal,Which poisonous snake smells like fresh cut cucumbers?,Copperhead snake
+AN_10,general,Animal,What animal is combined with a serpent to make the mythical creature the Cockatrice?,Rooster
+AN_11,general,Animal,What color is the tongue of the giraffe?,Purple
+AN_12,general,Animal,"What invisible ""color"" can bees see on flower petals?",Bee purple
+AN_13,general,Animal,"Which animal's poison could kill up to 2,200 people?",Poison-arrow frog
+AN_14,general,Animal,"What pet bird takes its name from Australian Aborigine words for ""good eating""?",The budgerigar
+AN_15,general,Animal,Which animal can go longer without water than a camel can?,Rat
+AN_16,general,Animal,In which animal species does the father keep the eggs in his mouth until they are ready to hatch?,Catfish
+AN_17,general,Animal,Which breed of dog bites humans more than any other?,German Shepherd
+AN_18,general,Animal,"Which mammal is the world's smallest, weighing less than a penny?",Bumblebee bat
+AN_19,general,Animal,What animal transmits the disease typanosomiasis to humans and cattle?,Tse-tse fly
+AN_20,general,Animal,"Which bird species has survived more than 70 million years, despite the fact that it lays one egg a year and is nearly blind?",Kiwi
+AN_21,general,Animal,What brighly colored monkey is the world's largest?,The mandrill
+AN_22,general,Animal,Which is the only mammal that can kneel on all fours?,Elephant
+AN_23,general,Animal,Which animal is responsible for the most human deaths worldwide?,Mosquito
+AN_24,general,Animal,What is the most common mammal in the U.S.?,Mouse
+AN_25,general,Animal,"Under their white fur, what color is a polar bear's skin?",Black
+AN_06,general,Animal,How long does it take a sloth to digest a meal?,About two weeks
+AN_27,general,Animal,What is the only type of lizard that has a voice?,Gecko
+AN_28,general,Animal,Which is the only cat that cannot retract its claws?,Cheetah
+AN_29,general,Animal,Which animal can move its eyes in two directions at the same time?,Chameleon
+AN_30,general,Animal,"In the American legal system, evidence provided by which animal is admissible in court?",Bloodhound
+AN_31,general,Animal,What is the only type of animal besides a human that can get a sunburn?,Pig
+AN_32,general,Animal,What's a group of kittens called?,Kindle
+AN_33,general,Animal,"What animal is thought to be immune to most all diseases, including cancer?",Shark
+AN_34,general,Animal,Lobster blood is what color?,Blue
+AN_35,general,Animal,What are male honeybees called?,Drones
+AN_36,general,Animal,Certain types of which animal can be frozen solid and then continue living once thawed?,Frog
+AN_06,general,Animal,How far can a skunk spray?,About 15 feet
+AN_38,general,Animal,What mammal sleeps the most hours each day?,Cat
+AN_39,general,Animal,Which animal's milk does not curdle?,Camel
+AN_40,general,Animal,What is the largest creature without a backbone?,Giant squid
+AN_41,general,Animal,Which species of snake gives birth to its young instead of laying eggs?,Anaconda
+AN_42,general,Animal,What name is given to an eagle's nest?,Aerie
+AN_43,general,Animal,Which animal's tongue is twice the length of its body?,Chameleon
+AN_44,general,Animal,Which animal can survive without ever drinking any water?,Kangaroo rat
+AN_45,general,Animal,"With its 240 mph hunting dive, what species of raptor is the fastest animal on earth?",Peregrine falcon
+AN_46,general,Animal,Babies of which animal species can be six feet at birth?,Giraffes
+AN_47,general,Animal,Which animal was named for what was wrongly thought to be its country of origin?,Turkey
+AN_48,general,Animal,Which animal can have eyes that are a foot in diameter?,Giant squid
+AN_49,general,Animal,"Which insect, one of the fastest, can fly at speeds up to 60 mph?",Dragonflies
+AN_50,general,Animal,What color is insect blood?,Yellow
+AN_51,general,Animal,The Egyptian plover is a bird best known for its symbiotic relationship with what host animal?,The crocodile
+AN_52,general,Animal,What is a female donkey called?,A jenny
+AN_53,general,Animal,Which animal's eyes are bigger than its brain?,Ostrich
+AN_54,general,Animal,What marine mammal has the longest lifespan?,Blue whales
+AN_55,general,Animal,What is the world's deadliest snake?,Black Mamba
+AN_56,general,Animal,What are infant marsupials called?,Joeys
+AN_57,general,Animal,What animal has no vocal cords?,Giraffes
+AN_58,general,Animal,"What kind of animal was Hariet, who died at the Queensland Zoo in 2006 and was claimed to have belonged to Charles Darwin?",A Galapagos giant tortoise
+AN_59,general,Animal,What Asian dog breed is notable for its blue tongue?,The chow chow
+AN_60,general,Animal,Which wild mammal in Africa has killed the highest number of people?,Hippopotamus
+AN_61,general,Animal,What animal lives in a holt?,An otter
+AN_62,general,Animal,What is the largest bird in the world?,Ostrich
+AN_63,general,Animal,Which animal gives birth through the mouth?,The gastric brooding frog
+AN_64,general,Animal,The venom of which spider is more potent than that of a rattlesnake?,Female black widow
+AN_65,general,Animal,Which bird is so small that one of its enemies is an insect?,Hummingbird
+AN_66,general,Animal,"What animal, which eighteenth century settlers called a ""native bear"", has two opposable thumbs on each hand?",Koala
+AN_67,general,Animal,"What kind of animal is Jonathan, the oldest-known land animal alive today at 190 years old?",A Seychelles giant tortoise
+AN_68,general,Animal,What is the biggest land animal in the world?,African elephant
+AN_69,general,Animal,"Which animal has tubular shaped eyeballs, which therefore cannot move?",Owl
+AN_70,general,Animal,Which is the largest species of dolphin?,Orca (Killer Whale)
+AN_71,general,Animal,"What is the only bird that can fly straight up, down, or backward?",Hummingbird
+AN_72,general,Animal,What animal is potentially immortal?,The jellyfish Turritopsis dohrnii
+AN_73,general,Animal,What animal has the longest terrestrial migrations in the world?,Caribou
+AN_74,general,Animal,Which insect can lift up to 50 times its body weight?,Ants
+AN_75,general,Animal,What animal can snap its claws shut to stun its prey and generate a sonic blast louder than the sound of a gunshot reaching 210 decibels?,The pistol shrimp
+AR_01,general,Art,Which pop star is the godmother of both of Elton John's sons?,Lady Gaga
+AR_02,general,Art,What is Rihanna's real name?,Robyn Fenty
+AR_03,general,Art,"Who was the first winner of the show ""The Masked Singer"" in 2019?",T-Pain
+AR_04,general,Art,How many kids does Angelina Jolie have?,"6 (Maddox, Pax, Zahara, Shiloh, Knox, and Vivienne)."
+AR_05,general,Art,What year did Keeping Up with the Kardashians first premier?,2007
+AR_06,general,Art,Who was the only actor of the Star Wars films that was nominated for an Oscar?,Alec Guinness
+AR_07,general,Art,"For the 2019 film ""1917"", which was edited to look like one continuous shot, how many minutes was the longest actual uninterrupted take?",Eight and a half minutes
+AR_08,general,Art,"Which actor, known for his role in the TV sitcom ""Friends"", has part of his middle finger missing?",Matthew Perry
+AR_09,general,Art,Whitney Houston was a producer on which commercially successful coming-of-age comedy film in 2001?,The Princess Diaries
+AR_10,general,Art,What film has the highest production cost?,Pirates of the Caribbean: On Stranger Tides
+AR_11,general,Art,Which movie kicked off the Marvel Cinematic Universe?,Iron Man
+AR_12,general,Art,Who was sued in 1999 by Rosa Parks after they used her name to title a hit song?,OutKast
+AR_13,general,Art,"What is the name of the second film in James Cameron's ""Avatar""'s series?",Avatar: The Way of Water
+AR_14,general,Art,"Which actor gave a reading at Stephen Hawking's funeral after playing Hawking and befriending him during the filming of his biopic ""The Theory of Everything""?",Eddie Redmayne
+AR_15,general,Art,What's the only Best Picture Oscar winner whose title ends with an exclamation point?,Oliver!
+AR_16,general,Art,"Shakespeare mentioned his wife only once in his will, making her the odd bequest of his ""second best"" what? ",Bed
+AR_17,general,Art,"What 1990s one-hit wonder wrote Christina Aguilera's hit ""Beautiful""? ",Linda Perry
+AR_18,general,Art,Which film is shown during NASA's management trianing program with the task of spotting as many errors as possible?,Armageddon
+AR_19,general,Art,Who is actress Rashida Jones's famous mother?,Peggy Lipton
+AR_20,general,Art,Which artist made history in 2020 as the youngest winner of the Grammys' four main categories?,Billie Eilish
+AR_21,general,Art,Which was the only one of his sculptures that Michelangelo signed?,The Pieta
+AR_22,general,Art,What was the first American novel to sell one million copies?,Uncle Tom's Cabin
+AR_23,general,Art,Which actress tried to hire a hitman to kill herself at the age of 22?,Angelina Jolie
+AR_24,general,Art,"The film ""Dallas Buyers Club"", with a budget of $250 for makeup and hairstyling, won which award in 2014?",The Oscars for Best Makeup and Hairstyling
+AR_25,general,Art,"The title of the song ""Kumbaya"" is actually a distortion of what three-word phrase?",Come by her
+AR_26,general,Art,What classic Disney song was inspired by lyricist Robert Sherman's fiver-year old son receiving the Sabin polio vaccine at school?,A Spoonful of Sugar
+AR_27,general,Art,Who was the first woman film director to have a film take in more than $100 million at the box office?,Penny Marshall
+AR_28,general,Art,Who was banned from Saturday Night Live by viewer phone vote in 1982?,Andy Kaufman
+AR_29,general,Art,What eighteen-minute song tells the true story of its writer's arrest for illegally dumping garbage on Thanksgiving Day 1965?,Alice's Restaurant
+AR_30,general,Art,What was Randy Newman's only Top Forty hit?,"""Short People"" "
+AR_31,general,Art,Who was the first host of Saturday Night Live?,George Carlin
+AR_32,general,Art,"According to the Guinness Book of Records, what was the loudest rock band ever?",KISS
+AR_33,general,Art,Who provided the voice for cartoon character Inspector Gadget?,Don Adams
+AR_34,general,Art,What was The Beatles's first song to hit the UK charts?,Love Me Do
+AR_35,general,Art,"What kind of ""pet sounds"" are actually heard at the end of the Beach Boys album of that name? ",Dogs barking
+AR_36,general,Art,"What actor got his unusual nickname from his college roommate Stanley Tucci, who didn't like calling him ""Irving""?",Ving Rhames
+AR_37,general,Art,"What ""Three Faces of Eve"" star got the first star on Hollywood's Walk of Fame? ",Joanne Woodward
+AR_38,general,Art,"What did Kurt Vonnegut describe by saying, ""They are transvestite hermaphrodites, standing for absolutely nothing. All they do is show you've been to college""?",Semicolons
+AR_39,general,Art,"Who had the last number one hit of the 1950s with his song ""Why""? ",Frankie Avalon
+AR_40,general,Art,Who ended his Carnegie Hall concert by loading the audience into thirty-five buses and taking them out for milk and cookies?,Andy Kaufman
+AR_41,general,Art,"Which kung fu choreographer worked on ""The Matrix""?",Woo-Ping Yuen
+AR_42,general,Art,Which prince did Rita Hayworth marry?,Aly Khan
+AR_43,general,Art,"What future radio star had a number one hit with his novelty number ""Disco Duck""?  ",Rick Dees
+AR_44,general,Art,What director of the New York Philharmonic was the first American to conduct at the famous Bayreuth Festival?,Lorin Maazel
+AR_45,general,Art,"What road, which names a 2002 film, divides Wayne County from affluent Oakland and Maycomb Counties?",8 Mile Road
+AR_46,general,Art,"The Hollywood ""Production Code"" of the 1930s was named for what former postmaster general and chairman of the Republican National Committee?",Will Hays
+AR_47,general,Art,Who wrote the song entitled Auld Lang Syne?,Robert Burns
+AR_48,general,Art,"Which entertainer was shot and killed by his father on April 1, 1984? ",Marvin Gaye
+AR_49,general,Art,What famed TV personality wrote the screenplay for 1968's Planet of the Apes?,Rod Serling
+AR_50,general,Art,Pablo Picasso was one of the suspects questioned when what item was stolen in Paris in 1911?,The Mona Lisa
+AR_51,general,Art,Who is actor Miguel Ferrer's famous mother?,Rosemary Clooney
+AR_52,general,Art,What slightly hallucinogenic spice did Malcolm X use to get high while in prison?,Nutmeg
+AR_53,general,Art,"Who released only a single album during his lifetime, the ominously named Ready to Die? ",The Notorious BIG
+AR_54,general,Art,Which celebrity actress once had a job putting cosmetics on corpses?,Whoopi Goldberg
+AR_55,general,Art,"What word is the actual title of the 1979 hit usually called ""The Pina Colada Song""?   ",Escape
+AR_56,general,Art,What Beatles number one hit repeats the title in the lyrics forty-one times?,Let It Be
+AR_57,general,Art,What Oscar-winning Best Picture is named for a type of rose?,American Beauty
+AR_58,general,Art,"Which Alice in Wonderland character is a reference to its author, Lewis Carroll, who used to stutter when saying his own name?",The Dodo
+AR_59,general,Art,"Who's the only character in ""Peter and the Wolf"" represented by a brass instrument?",The wolf (french horn)
+AR_60,general,Art,What singer took his stage name from a Dublin hearing aid billboard?,Bono
+AR_61,general,Art,What was the name of William Shakespeare's wife?,Anne Hathaway
+AR_62,general,Art,In what Edgar Allan Poe story does an old man's oddly clouded eye lead to murder?,The Tell-Tale heart
+AR_63,general,Art,What was the first animated film to win an Academy Award?,Beauty and the Beast
+AR_64,general,Art,"What bay is Otis Redding serenading in ""(Sittin' on) the Dock of the Bay""? ",San Francisco Bay
+AR_65,general,Art,"What Jack Nicholson comedy was translated as ""Mr. Cat Poop"" in Cantonese when it was released in China?",As Good As It Gets
+AR_66,general,Art,Which person has been awarded the most Oscars ever?,Katharine Hepburn
+AR_67,general,Art,"In ""Charlie and the Chocolate Factory"", what animals dispose of Veruca Salt?",Squirrels
+AR_68,general,Art,What Steinbeck novel takes its title from a poem by Julia Ward Howe?,The Grapes of Wrath
+AR_69,general,Art,"Who performs the guest guitar solo on Michael Jackson's ""Beat It""?  ",Eddie Van Halen
+AR_70,general,Art,"According to the title of a 1947 play, how does one get from the New Orleans train station to the apartment at 632 Elysian Fields?",On A Streetcar Named Desire
+AR_71,general,Art,What is the real name of Vanilla Ice?,Robert Van Winkle
+AR_72,general,Art,Which book was written in response to an editor's challenge to write a book using fewer than 50 different words?,Dr. Seuss's Green Eggs and Ham
+AR_73,general,Art,Who wrote the children's story entitled 'The Little Mermaid'?,Hans Christian Andersen
+AR_74,general,Art,"Who plays drums on the Beatles track ""Back in the U.S.S.R""? ",Paul McCartney
+AR_75,general,Art,"What British author wrote ""Keep the Aspidistra Flying"" about his years working as an assistant at a used bookshop in Hampstead?",George Orwell
+FO_01,general,Food,What is the world's most expensive fungus?,White truffle
+FO_02,general,Food,Who made the first hot chocolate drink?,The Maya and Aztec peoples
+FO_03,general,Food,What plant's roots are used to make tapioca?,The cassava's
+FO_04,general,Food,What chili pepper was believed the hottest in the world until the Naga Jolokia pepper was discovered in India in 2000?,Habanero
+FO_05,general,Food,What is a cluster of bananas called?,A hand
+FO_06,general,Food,What diet drink was hyped by Coca-Cola for having only one calorie in 1963?,Tab
+FO_07,general,Food,"What snack did Teressa Bellissimo invent at the Anchor Bar, in upstate New York, on October 3, 1964?",Buffalo wings
+FO_08,general,Food,"What kind of ""oven"" is the official state cooking pot of Utah? ",Dutch Oven
+FO_09,general,Food,What popular drink was first marketed as a brain tonic?,Coca-cola
+FO_10,general,Food,"What whiskey cocktail lends its name to the short glass also called a ""lowball""?",The old-fashioned
+FO_11,general,Food,What everyday food will make a drug test show up positive?,Poppy seeds
+FO_12,general,Food,What Hershey's candy is so named because the original manufacturing process couldn't produce the perfectly round candies the company wanted?,Milk Duds
+FO_13,general,Food,"What kind of wine takes its name from the Spanish town of Jerez, where it's made? ",Sherry
+FO_14,general,Food,"What grape, used to make a popular California wine, is called Primitivo in Europe?  ",Zinfindel
+FO_15,general,Food,The name of what popular beverage is a euphemism for moonshine?,Mountain Dew
+FO_16,general,Food,The Italian government regulates the price of what beverage?,Espresso
+FO_17,general,Food,What semolina product is used to make the Moroccan dessert seffa?,Couscous
+FO_18,general,Food,"What is the world's best-selling brand of cookie, with 6 billion sold each year? ",Oreo
+FO_19,general,Food,What word in the Alfa-Bravo-Charlie alphabet is also an alcoholic drink?,Whiskey
+FO_20,general,Food,What was the original flavor of the cream in Twinkies?,Banana
+FO_21,general,Food,What Kellogg's product was introduced to compete with Post's unsuccessful Country Squares?,Pop-Tarts
+FO_22,general,Food,Which Is the most expensive spice in the world by weight?,Saffron
+FO_23,general,Food,What is the world's most popular grain?,Rice
+FO_24,general,Food,Where do red candies get their color from?,"Carmine, from boiled cochineal bugs"
+FO_25,general,Food,"What object, because of its physical similarities, inspired the early discoverers of pineapples to name it so?",Pine cones
+FO_26,general,Food,What is the name of the scale chefs use to measure the spiciness heat of pepper?,Scoville scale
+FO_27,general,Food,What dish has Indian origin but is the national dish of England?,Chicken Tikka masala
+FO_28,general,Food,Coffee can only be commercially grown in which two states in the US?,California and Hawaii
+FO_29,general,Food,Fiochetti is pasta that comes in what shape?,Bows
+FO_30,general,Food,What are butter beans in the UK called in the US?,Lima beans
+FO_31,general,Food,Gerber's most popular flavor of baby food is what?,Mashed bananas
+FO_32,general,Food,What is the record for the most hotdogs eaten in one sitting at Nathan's Hot Dog Eating Contest?,76 in 10 minutes
+FO_33,general,Food,What are Cantonese mooncakes filled with?,Red bean paste or lotus seed paste
+FO_34,general,Food,What three groups are Kosher foods divided into?,"Meat, dairy and pareve"
+FO_35,general,Food,"What is the proffessional name for cutting vegetables into short, thin strips?",Julienne
+FO_36,general,Food,"In 1930, which food made its debut in Pennsylvania?",The Philly Cheesesteak
+FO_37,general,Food,Which of the world's most widely distributed food crop does not exist naturally in the wild?,Corn
+FO_38,general,Food,What practice to cultivate food is the world's largest industry?,Agriculture
+FO_39,general,Food,Which commonly consumed meat has the highest carbon footprint?,Lamb
+FO_40,general,Food,Which country did brie cheese originate from?,France
+FO_41,general,Food,What is the most widely eaten food in the world?,Rice
+FO_42,general,Food,Where did ketchup originate from?,China
+FO_43,general,Food,What is the most common food allergen?,Nuts
+FO_44,general,Food,Bouillabaisse is a fish stew that comes from which French city?,Marseille
+FO_45,general,Food,Which spice is used in a Paella to give the rice the yellow colour?,Saffron
+FO_46,general,Food,"Instead of the root Wasabia Japonica, which is what real wasabi is made from, what is commercial wasabi the product of?",Horseradish
+FO_47,general,Food,Farmed salmon has to be dyed pink while real wild salmon has naturally pink flesh due to their consumption of what?,Shrimp
+FO_48,general,Food,Where was American cheese invented?,Switzerland
+FO_49,general,Food,What is the most stolen food in the world?,Cheese
+FO_50,general,Food,What brand takes up 25% of the entire world's production of hazelnut?,Nutella
+FO_51,general,Food,In which American state was Coca-Cola was first sold?,"Atlanta, Geogria"
+FO_52,general,Food,Where was the canned pork Spam invented?,Minnesota
+FO_53,general,Food,What deadly chemical can be produced upon consumption of raw lima beans?,Cyanide
+FO_54,general,Food,"What is ""Bird's nest soup"" made up of?",Solidified bird saliva
+FO_55,general,Food,"What method of preserving food did the Incas first use, on potatoes?",Freeze drying
+FO_56,general,Food,"Under ultraviolet light, what popular soft drink can glows bright blue?",Tonic water
+FO_57,general,Food,What was the first modern American supermarket?,"Piggly Wiggly in Memphis, Tennessee"
+FO_58,general,Food,"Before the late 16th century, what color was the original carrot?",Purple
+FO_59,general,Food,What is the study of grape cultivation called?,Viticulture
+FO_60,general,Food,What does the dish Devil on Horseback contain?,Bacon and prunes
+FO_61,general,Food,What tree gives us prunes?,Plum tree
+FO_62,general,Food,"What ingredient in fresh milk is eventually devoured by bacteria, causing the sour taste?",Lactose
+FO_63,general,Food,Cured Salmon is the main ingredient of which food?,Gravlax
+FO_64,general,Food,What is the national food of Italy,Bolognese sauce with tagliatelle pasta.
+FO_65,general,Food,Who developed the first baking ovens?,Egyptians
+FO_66,general,Food,"What condiment, usually consumed in solid form on Earth, is only available in liquid form in space?",Salt and pepper
+FO_67,general,Food,What is the only fruit with seeds on the outside?,Strawberries
+FO_68,general,Food,Which variety of chili pepper is considered the hottest in the world?,The Carolina Reaper
+FO_69,general,Food,What is the common name for the Chinese gooseberry fruit?,Kiwifruit
+FO_70,general,Food,Mozzarella cheese is traditionally made from the milk of what animal?,Water buffalo
+FO_71,general,Food,Where were French fries first invented?,Belgium
+FO_72,general,Food,Which famous American beverage was first invented in 1886?,Coca-cola
+FO_73,general,Food,"Which food considered a delicacy today, was once a working class food?",Lobster
+FO_74,general,Food,Which fruit has the richest source of antioxidants?,Blueberries
+FO_75,general,Food,Mace grows around the outside of which fruit?,Nutmeg
+GE_01,general,Geography,Which country has the most caves in the world?,Slovakia
+GE_02,general,Geography,About half of the population of what Pacific island has the surname Christian?,Pitcairn Island
+GE_03,general,Geography,"Thimpu, the world's only capital city with no traffic lights, is the capital of what tiny kingdom?",Bhutan
+GE_04,general,Geography,What is the least densely populated territory in the world?,Greenland
+GE_05,general,Geography,"What US state advertised ""The Greatest Snow on Earth"" on its license plates?",Utah
+GE_06,general,Geography,What's the most populous city in the Southern Hemisphere?,Sao Paulo
+GE_07,general,Geography,The first suburban shopping center in the U.S. was established in what city?,Kansas City
+GE_08,general,Geography,Which is the only US state that has a pennant-shaped flag instead of a rectangular one?,Ohio
+GE_09,general,Geography,On what namesake Asian island are the first Homo erectus fossils found?,Java
+GE_10,general,Geography,In which country is it most common for divers to be attacked by sharks?,United States
+GE_11,general,Geography,"What port, its state's largest city, is nicknamed the Brick City?","Newark, NJ"
+GE_12,general,Geography,"Which country's terrain is one of the lowest in the world, and is threatened by the global sea level rise?",The Maldives
+GE_13,general,Geography,What EU nation was once led by a president and a prime minister who were identical twins?,Poland
+GE_14,general,Geography,"Of all the countries named for a person, which country is named for the person who lived most recently?",Bolivia
+GE_15,general,Geography,What is the highest peak of the Andes Mountains called?,Mount Aconcagua
+GE_16,general,Geography,"What state's motto is ""friendship"" since that's supposed to have been the meaning of the state's Caddo Indian name?",Texas
+GE_17,general,Geography,"In what state were ""My Governor Can Beat Up Your Governor"" bumper stickers popular beginning in 1998?",Minnesota
+GE_18,general,Geography,"Until 2007, what was the only country in the world not to have registered it's own internet domain suffix, "".kp""?",North Korea
+GE_19,general,Geography,Less than 0.5% of Earth's fresh water is held in what naturally occuring flowing watercourse?,Rivers
+GE_20,general,Geography,What is sinology the study of?,China
+GE_21,general,Geography,What river runs through Dublin?,Liffey
+GE_22,general,Geography,The point on land closest to the North Pole belongs to what nation?,Denmark
+GE_23,general,Geography,"What U.S. state has the slogan ""Native America"" on its license plates?",Oklahoma
+GE_24,general,Geography,What Blue Ridge peak in North Carolina is the highest point east of the Mississippi?,Mount Mitchell
+GE_25,general,Geography,The former penal colony of Devil's Island is located off the coast of what country?,French Guiana
+GE_26,general,Geography,What African country is the only member of the Commonwealth of Nations that was never part of the British Empire?,Mozambique
+GE_27,general,Geography,What's the second most populated continent on Earth?,Africa
+GE_28,general,Geography,What river runs through Melbourne?,Yarra
+GE_29,general,Geography,In which city were the 1982 Commonwealth Games hosted?,Brisbane
+GE_30,general,Geography,What is the smallest country in Africa?,The Gambia
+GE_31,general,Geography,"Of the world's seven most populous islands, what's the only one not in Asia?",Great Britain
+GE_32,general,Geography,"What Ukrainian city hosted the last World War II summit of the ""Big Three""?",Yalta
+GE_33,general,Geography,"Excepting Alaska and Louisiana, what US state is divided into the fewest counties, with only three?",Delaware
+GE_34,general,Geography,"What Pacific inlet was called ""Stingray Bay"" until Captain Cook renamed it for ""the great quantity of plants"" his scientists had discovered?",Botany Bay
+GE_35,general,Geography,In which country would you find the mouth of the Rhine River?,The Netherlands
+GE_36,general,Geography,In which city was Bob Crane killed?,"Scottsdale, Arizona"
+GE_37,general,Geography,What's the US island with the largest population?,Long Island
+GE_38,general,Geography,What country borders both of the world's only two nations with square flags?,Italy
+GE_39,general,Geography,What state depicts Delicate Arch on its license plates?,Utah
+GE_40,general,Geography,What was the world's most populous city before Tokyo surpassed it in the 1960s?,New York City
+GE_41,general,Geography,Three-fourths of Western Australia's population lives in what city?,Perth
+GE_42,general,Geography,What African capital city is named after a U.S. president?,Monrovia
+GE_43,general,Geography,Where is the longest suspension bridge?,Japan
+GE_44,general,Geography,What river runs through Boston?,Charles
+GE_45,general,Geography,Which ocean is the smallest of them all?,Arctic Ocean
+GE_46,general,Geography,"Why is Oneida Lake, near Syracuse, New York, sometimes called ""the thumb""?",It sits beside the Finger Lakes
+GE_47,general,Geography,What nation is home to the only tunnel in the world longer than the Channel?,Japan
+GE_48,general,Geography,What city's harbor is overlooked by Victoria Peak?,Hong Kong
+GE_49,general,Geography,What desert is home to the Ahaggar and Tibesti Mountains?,Sahara
+GE_50,general,Geography,What is the capital of New Zealand?,Wellington
+GE_51,general,Geography,What river runs through Vienna?,Danube
+GE_52,general,Geography,What country's highest decoration is the Most Exalted Order of the White Elephant?,Thailand
+GE_53,general,Geography,In which country would you find the mouth of the Colorado River?,Mexico
+GE_54,general,Geography,What range contains the world's highest mountains not located in Asia?,The Andes
+GE_55,general,Geography,What river runs through Cleveland?,Cuyahoga
+GE_56,general,Geography,"Where would you find the 89,000-foot peak Olympus Mons?",Mars
+GE_57,general,Geography,"What distinction is usually claimed to belong to Gangkhar Puensum, a 24,000-foot peak in Bhutan?",The highest unclimbed mountain in the world
+GE_58,general,Geography,What is the longest cave system on Earth?,Mammoth Cave
+GE_59,general,Geography,Which dam is the world's biggest hydroelectric facility?,The Three Gorges Dam on the Yangtze River
+GE_60,general,Geography,What is the Earth's biggest earthquake belt?,"The rim of the Pacific Ocean, also called the ""Ring of Fire"""
+GE_61,general,Geography,Where is the saltiest landlocked body of water located?,"The Gaet'ale Pond in Afar, Ethiopia"
+GE_62,general,Geography,"On which continent is the most languages spoken (2,301 languages)?",Asia
+GE_63,general,Geography,"Where is the Juan de Fuca Plate, one of the Earth's smallest tectonic plates, located?",Canada
+GE_64,general,Geography,"What is the capital of the State of Washington, United States?",Olympia
+GE_65,general,Geography,What is the capital of Senegal?,Dakar
+GE_66,general,Geography,"Which country has the abbreviation ""CH""?",Switzerland
+GE_67,general,Geography,What country has the most timezones?,France
+GE_68,general,Geography,What is the smallest country in the world?,Vatican City
+GE_69,general,Geography,What is the least populus city in the world?,Vatican City
+GE_70,general,Geography,What is the country with the largest number of Muslims overall?,Indonesia
+GE_71,general,Geography,What is the capital of Mauritius?,Port Louis
+GE_72,general,Geography,Which continent is in all four hemispheres?,Africa
+GE_73,general,Geography,What is The Netherlands also called?,Holland
+GE_74,general,Geography,Which country has the longest coastline in the world?,Canada
+GE_75,general,Geography,"In the US, which is the only state to have a one syllable name?",Maine
