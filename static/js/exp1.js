@@ -1,1 +1,275 @@
-function _0x3684(){var _0x2e23d9=['finishTrial','html-button-response','2588ENaWLu','486414uamWAD','Continue','<div\x20id=\x22instruct\x22>Thank\x20you\x20for\x20participating\x20in\x20this\x20experiment!<p>\x20\x20\x20\x20\x20\x20In\x20this\x20study,\x20we\x20are\x20interested\x20in\x20people\x27s\x20curiosity\x20about\x20different\x20\x20\x20\x20\x20\x20\x20types\x20of\x20questions.</p>\x20\x20\x20\x20\x20\x20<p>We\x20will\x20process\x20your\x20data\x20within\x2048\x20hours\x20and\x20grant\x20an\x20extra\x20$2\x20to\x20any\x20\x20\x20\x20\x20\x20\x20participant\x20that\x20stayed\x20engaged\x20throughout\x20the\x20task.</p></div>','short','init','slice','NO_KEYS','../static/questions.csv','instructions','57100YHlLHA','<div\x20id=\x22instruct\x22><p>For\x20the\x20last\x20part\x20of\x20the\x20experiment,\x20we\x20ask\x20\x20\x20\x20\x20\x20\x20you\x20to\x20answer\x20a\x20few\x20questions\x20about\x20your\x20opinions\x20and\x20beliefs,\x20and\x20about\x20\x20\x20\x20\x20\x20\x20yourself.</p><p>Please\x20answer\x20these\x20questions\x20as\x20truthfully\x20and\x20accurately\x20\x20\x20\x20\x20\x20\x20as\x20possible</p></div>','<div\x20id\x20=\x27instruct\x27><p>Once\x20you\x20press\x20the\x20<i>Next</i>\x20\x20\x20\x20\x20button,\x20your\x20results\x20will\x20be\x20uploaded\x20to\x20the\x20server,\x20and\x20the\x20experiment\x20will\x20\x20\x20\x20be\x20complete.\x20<b>This\x20may\x20take\x20several\x20minutes\x20-\x20please\x20do\x20not\x20\x20\x20\x20\x20refresh\x20or\x20close\x20your\x20browser\x20during\x20this\x20time.</b></p>\x20\x20\x20\x20<p>After\x20your\x20results\x20are\x20uploaded\x20to\x20the\x20server,\x20you\x20will\x20be\x20presented\x20\x20\x20\x20\x20with\x20the\x20completion\x20code\x20for\x20MTurk.\x20\x20\x20\x20<p>Press\x20the\x20<i>Next</i>\x20button\x20to\x20upload\x20your\x20results.</p></div>','debrief','fullscreen','494438WaWJMC','returnValue','save_data','Animal','pre_questionnaires_message','951QBcITX','156ikATwK','getInteractionData','filter','data','1624816znAfUh','_int','<div\x20class=\x27instructions\x27><p>Your\x20results\x20have\x20successfully\x20uploaded.</p>\x20\x20\x20\x20<p>Your\x20completion\x20code\x20for\x20this\x20study\x20is:\x20<br>\x20<b>EK92JK4</b></p>\x20\x20\x20\x20<p>Use\x20it\x20to\x20submit\x20this\x20HIT\x20on\x20MTurk.</p>\x20\x20\x20\x20<p>You\x20may\x20now\x20close\x20this\x20window.</p></div>','5791730BRCiFb','69NynvHP','<div\x20id=\x27instruct\x27><p>Data\x20uploading.\x20To\x20ensure\x20proper\x20completion\x20\x20\x20\x20\x20\x20\x20of\x20the\x20experiment,\x20please\x20don\x27t\x20refresh,\x20\x20\x20\x20\x20\x20\x20close\x20your\x20browser\x20or\x20open\x20another\x20tab.\x20\x20\x20\x20\x20\x20</p></div>','beforeunload','preventDefault','addProperties','html-keyboard-response','includes','Geography','shuffle','csv','parse','<div\x20id=\x27instruct\x27><p>In\x20this\x20study,\x20you\x20will\x20be\x20asked\x20to\x20complete\x20\x20\x20\x20\x20\x20\x20several\x20tasks\x20and\x20answer\x20multiple\x20questions.\x20Throughout\x20the\x20study,\x20we\x20are\x20\x20\x20\x20\x20\x20\x20interested\x20in\x20your\x20own\x20personal\x20judgments,\x20views,\x20and\x20knowledge.</p>\x20\x20\x20\x20\x20\x20<p>It\x20is\x20important\x20that\x20you\x20stay\x20engaged\x20throughout\x20this\x20study.\x20We\x20will\x20\x20\x20\x20\x20\x20monitor\x20the\x20data\x20for\x20use\x20of\x20other\x20apps\x20or\x20lack\x20of\x20attention,\x20and\x20give\x20\x20\x20\x20\x20\x20\x20an\x20extra\x20$2\x20bonus\x20for\x20full\x20engagement\x20with\x20the\x20task.</p><p>Thank\x20you\x20for\x20\x20\x20\x20\x20\x20participating!</p></div>','../static/images/wait_instructions.jpg','workerId','push','80px','addEventListener','Food','getURLVariable','<p>This\x20study\x20runs\x20in\x20fullscreen.\x20To\x20switch\x20to\x20full\x20screen\x20mode\x20\x20\x20\x20\x20\x20\x20and\x20start\x20the\x20experiment,\x20press\x20the\x20button\x20below.</p>','Art','type','3532GWzzVq','concat','length','randomization','get'];_0x3684=function(){return _0x2e23d9;};return _0x3684();}var _0x557cd6=_0x354a;(function(_0x1360b3,_0x24bbda){var _0x4624fa=_0x354a,_0x5bc529=_0x1360b3();while(!![]){try{var _0x2bed68=parseInt(_0x4624fa(0x104))/0x1*(-parseInt(_0x4624fa(0xe0))/0x2)+parseInt(_0x4624fa(0xfb))/0x3*(-parseInt(_0x4624fa(0xe7))/0x4)+-parseInt(_0x4624fa(0xf1))/0x5*(parseInt(_0x4624fa(0xfc))/0x6)+parseInt(_0x4624fa(0xf6))/0x7+parseInt(_0x4624fa(0x100))/0x8+parseInt(_0x4624fa(0xe8))/0x9+parseInt(_0x4624fa(0x103))/0xa;if(_0x2bed68===_0x24bbda)break;else _0x5bc529['push'](_0x5bc529['shift']());}catch(_0x6e2bbe){_0x5bc529['push'](_0x5bc529['shift']());}}}(_0x3684,0x451ca));function _0x354a(_0x182801,_0x5ee920){var _0x3684ec=_0x3684();return _0x354a=function(_0x354a12,_0x1369a2){_0x354a12=_0x354a12-0xcc;var _0x2c2f96=_0x3684ec[_0x354a12];return _0x2c2f96;},_0x354a(_0x182801,_0x5ee920);}var sess=0x1,version=0x1,images=[_0x557cd6(0xd6)],PID=jsPsych[_0x557cd6(0xff)][_0x557cd6(0xdc)](_0x557cd6(0xd7));jsPsych[_0x557cd6(0xff)][_0x557cd6(0xce)]({'n_warnings':0x0});var debug=PID['includes']('debug'),short=PID[_0x557cd6(0xd0)](_0x557cd6(0xeb)),n_for_ratings=short?0xa:0x1e,items,items,items_waiting,items_rating;Papa[_0x557cd6(0xd4)](_0x557cd6(0xef),{'download':!![],'header':!![],'dynamicTyping':!![],'complete':function(_0x192847){var _0x134e26=_0x557cd6;items=_0x192847[_0x134e26(0xff)],postLoad();}});var experiment=[];function postLoad(){var _0xae6926=_0x557cd6,_0x1b739c=[],_0x5a71bc=jsPsych[_0xae6926(0xe3)][_0xae6926(0xd2)]([_0xae6926(0xf9),_0xae6926(0xde),_0xae6926(0xdb),_0xae6926(0xd1)]);for(i=0x0;i<0x4;i++){_0x1b739c[_0xae6926(0xd8)](jsPsych[_0xae6926(0xe3)][_0xae6926(0xd2)](items)[_0xae6926(0xfe)](_0x678390=>_0x678390[_0xae6926(0xdf)]==_0x5a71bc[i])[0x0]);}items=items[_0xae6926(0xfe)](_0x4a66f9=>!_0x1b739c[_0xae6926(0xd0)](_0x4a66f9)),items=jsPsych[_0xae6926(0xe3)][_0xae6926(0xd2)](items),items_waiting=items[_0xae6926(0xed)](0x0,items[_0xae6926(0xe2)]-n_for_ratings),items_rating=items['slice'](items['length']-n_for_ratings,items[_0xae6926(0xe2)]),_0x1b739c=drawTimes(_0x1b739c),items_waiting=drawTimes(items_waiting);var _0xb74749={'type':_0xae6926(0xf5),'fullscreen_mode':!![],'message':_0xae6926(0xdd),'on_finish':function(){var _0x55ed04=_0xae6926,_0x4b1a36=document['styleSheets'][0x0];jsPsych['data'][_0x55ed04(0xce)]({'n_warnings':0x0,'PID':PID,'sess':sess,'version':version});}},_0x3e5a72={'type':_0xae6926(0xe6),'stimulus':_0xae6926(0xd5),'choices':[_0xae6926(0xe9)],'margin_vertical':'80px','data':{'category':'welcome'},'post_trial_gap':0xc8};wait_practice_block={'timeline':wait_timeline,'timeline_variables':_0x1b739c},wait_block1={'timeline':wait_timeline,'timeline_variables':items_waiting};var _0x2fdfb0={'timeline':rating_trial,'timeline_variables':items_rating,'randomize_order':!![]},_0x205f46={'type':_0xae6926(0xe6),'stimulus':_0xae6926(0xf2),'choices':[_0xae6926(0xe9)],'margin_vertical':_0xae6926(0xd9),'data':{'category':_0xae6926(0xfa)},'post_trial_gap':0xc8},_0x6da8d5=[{'type':_0xae6926(0xf0),'pages':[_0xae6926(0xea)],'show_clickable_nav':!![],'allow_keys':![],'data':{'category':_0xae6926(0xf4)}},{'type':_0xae6926(0xf5),'fullscreen_mode':![]},{'type':_0xae6926(0xf0),'pages':[_0xae6926(0xf3)],'show_clickable_nav':!![],'allow_keys':![],'data':{'category':_0xae6926(0xf4)}},{'type':_0xae6926(0xcf),'data':{'category':_0xae6926(0xf8)},'stimulus':_0xae6926(0x105),'choices':jsPsych[_0xae6926(0xee)],'on_load':function(){var _0x4023dc=_0xae6926,_0x28c648=new Date();saveData(PID,sess,'',jsPsych[_0x4023dc(0xff)][_0x4023dc(0xe4)]()[_0x4023dc(0xd3)](),function(){var _0x4103aa=_0x4023dc;saveData(PID,sess,_0x4103aa(0x101),jsPsych[_0x4103aa(0xff)][_0x4103aa(0xfd)]()[_0x4103aa(0xd3)](),jsPsych[_0x4103aa(0xe5)]);});}},{'type':_0xae6926(0xcf),'data':{'category':'data_saved'},'stimulus':_0xae6926(0x102),'choices':jsPsych[_0xae6926(0xee)]}];experiment[_0xae6926(0xd8)](_0xb74749),experiment[_0xae6926(0xd8)](_0x3e5a72),experiment=experiment[_0xae6926(0xe1)](wait_instructions1),experiment[_0xae6926(0xd8)](wait_practice_block),experiment['push'](wait_instructions_post_practice),experiment[_0xae6926(0xd8)](wait_block1),experiment[_0xae6926(0xd8)](wait_instructions_post_task),experiment[_0xae6926(0xd8)](rating_instructions),experiment['push'](_0x2fdfb0),experiment[_0xae6926(0xd8)](post_rating),experiment[_0xae6926(0xd8)](_0x205f46),experiment['push'](regfocus_message),experiment=experiment[_0xae6926(0xe1)](reg_focus),experiment[_0xae6926(0xd8)](impulse_message),experiment=experiment[_0xae6926(0xe1)](impulsive),experiment[_0xae6926(0xd8)](apathy_message),experiment=experiment[_0xae6926(0xe1)](apathy),experiment[_0xae6926(0xd8)](pleasure_message),experiment=experiment[_0xae6926(0xe1)](pleasure),experiment[_0xae6926(0xd8)](demog_message),experiment=experiment[_0xae6926(0xe1)](demographic_block),experiment=experiment['concat'](_0x6da8d5),!debug&&(document[_0xae6926(0xda)]('contextmenu',_0x26abba=>_0x26abba[_0xae6926(0xcd)]()),window[_0xae6926(0xda)](_0xae6926(0xcc),function(_0x5e65ce){var _0x4cf65c=_0xae6926;_0x5e65ce[_0x4cf65c(0xcd)](),_0x5e65ce[_0x4cf65c(0xf7)]='';})),jsPsych[_0xae6926(0xec)]({'timeline':experiment,'preload_images':images});}
+// generated with brms 2.16.3
+functions {
+ /* compute correlated group-level effects
+  * Args: 
+  *   z: matrix of unscaled group-level effects
+  *   SD: vector of standard deviation parameters
+  *   L: cholesky factor correlation matrix
+  * Returns: 
+  *   matrix of scaled group-level effects
+  */ 
+  matrix scale_r_cor(matrix z, vector SD, matrix L) {
+    // r is stored in another dimension order than z
+    return transpose(diag_pre_multiply(SD, L) * z);
+  }
+  /* cumulative-logit log-PDF for a single response
+   * Args:
+   *   y: response category
+   *   mu: latent mean parameter
+   *   disc: discrimination parameter
+   *   thres: ordinal thresholds
+   * Returns:
+   *   a scalar to be added to the log posterior
+   */
+   real cumulative_logit_lpmf(int y, real mu, real disc, vector thres) {
+     int nthres = num_elements(thres);
+     if (y == 1) {
+       return log_inv_logit(disc * (thres[1] - mu));
+     } else if (y == nthres + 1) {
+       return log1m_inv_logit(disc * (thres[nthres] - mu));
+     } else {
+       return log_diff_exp(
+         log_inv_logit(disc * (thres[y] - mu)), 
+         log_inv_logit(disc * (thres[y - 1] - mu))
+       );
+     }
+   }
+  /* cumulative-logit log-PDF for a single response and merged thresholds
+   * Args:
+   *   y: response category
+   *   mu: latent mean parameter
+   *   disc: discrimination parameter
+   *   thres: vector of merged ordinal thresholds
+   *   j: start and end index for the applid threshold within 'thres'
+   * Returns:
+   *   a scalar to be added to the log posterior
+   */
+   real cumulative_logit_merged_lpmf(int y, real mu, real disc, vector thres, int[] j) {
+     return cumulative_logit_lpmf(y | mu, disc, thres[j[1]:j[2]]);
+   }
+  /* ordered-logistic log-PDF for a single response and merged thresholds
+   * Args:
+   *   y: response category
+   *   mu: latent mean parameter
+   *   thres: vector of merged ordinal thresholds
+   *   j: start and end index for the applid threshold within 'thres'
+   * Returns:
+   *   a scalar to be added to the log posterior
+   */
+   real ordered_logistic_merged_lpmf(int y, real mu, vector thres, int[] j) {
+     return ordered_logistic_lpmf(y | mu, thres[j[1]:j[2]]);
+   }
+}
+data {
+  int<lower=1> N;  // total number of observations
+  int<lower=1> N_useful;  // number of observations
+  int Y_useful[N_useful];  // response variable
+  int<lower=2> nthres_useful;  // number of thresholds
+  int<lower=1> Ksp_useful;  // number of special effects terms
+  int idxl_useful_x_1[N_useful];  // matching indices
+  int<lower=1> N_x;  // number of observations
+  vector[N_x] Y_x;  // response variable
+  int<lower=0> Nmi_x;  // number of missings
+  int<lower=1> Jmi_x[Nmi_x];  // positions of missings
+  int<lower=1> K_x;  // number of population-level effects
+  matrix[N_x, K_x] X_x;  // population-level design matrix
+  int<lower=1> N_waited;  // number of observations
+  int Y_waited[N_waited];  // response variable
+  int<lower=1> K_waited;  // number of population-level effects
+  matrix[N_waited, K_waited] X_waited;  // population-level design matrix
+  int<lower=1> Ksp_waited;  // number of special effects terms
+  int idxl_waited_x_1[N_waited];  // matching indices
+  // data for group-level effects of ID 1
+  int<lower=1> N_1;  // number of grouping levels
+  int<lower=1> M_1;  // number of coefficients per level
+  int<lower=1> J_1_x[N_x];  // grouping indicator per observation
+  // group-level predictor values
+  vector[N_x] Z_1_x_1;
+  vector[N_x] Z_1_x_2;
+  int<lower=1> NC_1;  // number of group-level correlations
+  // data for group-level effects of ID 2
+  int<lower=1> N_2;  // number of grouping levels
+  int<lower=1> M_2;  // number of coefficients per level
+  int<lower=1> J_2_x[N_x];  // grouping indicator per observation
+  // group-level predictor values
+  vector[N_x] Z_2_x_1;
+  // data for group-level effects of ID 3
+  int<lower=1> N_3;  // number of grouping levels
+  int<lower=1> M_3;  // number of coefficients per level
+  int<lower=1> J_3_waited[N_waited];  // grouping indicator per observation
+  // group-level predictor values
+  vector[N_waited] Z_3_waited_1;
+  vector[N_waited] Z_3_waited_2;
+  int<lower=1> NC_3;  // number of group-level correlations
+  // data for group-level effects of ID 4
+  int<lower=1> N_4;  // number of grouping levels
+  int<lower=1> M_4;  // number of coefficients per level
+  int<lower=1> J_4_waited[N_waited];  // grouping indicator per observation
+  // group-level predictor values
+  vector[N_waited] Z_4_waited_1;
+  vector[N_waited] Z_4_waited_2;
+  int<lower=1> NC_4;  // number of group-level correlations
+  int prior_only;  // should the likelihood be ignored?
+}
+transformed data {
+  int Kc_x = K_x - 1;
+  matrix[N_x, Kc_x] Xc_x;  // centered version of X_x without an intercept
+  vector[Kc_x] means_X_x;  // column means of X_x before centering
+  int Kc_waited = K_waited - 1;
+  matrix[N_waited, Kc_waited] Xc_waited;  // centered version of X_waited without an intercept
+  vector[Kc_waited] means_X_waited;  // column means of X_waited before centering
+  for (i in 2:K_x) {
+    means_X_x[i - 1] = mean(X_x[, i]);
+    Xc_x[, i - 1] = X_x[, i] - means_X_x[i - 1];
+  }
+  for (i in 2:K_waited) {
+    means_X_waited[i - 1] = mean(X_waited[, i]);
+    Xc_waited[, i - 1] = X_waited[, i] - means_X_waited[i - 1];
+  }
+}
+parameters {
+  ordered[nthres_useful] Intercept_useful;  // temporary thresholds for centered predictors
+  vector[Ksp_useful] bsp_useful;  // special effects coefficients
+  vector[Nmi_x] Ymi_x;  // estimated missings
+  vector[Kc_x] b_x;  // population-level effects
+  real Intercept_x;  // temporary intercept for centered predictors
+  real<lower=0> sigma_x;  // dispersion parameter
+  vector[Kc_waited] b_waited;  // population-level effects
+  real Intercept_waited;  // temporary intercept for centered predictors
+  vector[Ksp_waited] bsp_waited;  // special effects coefficients
+  vector<lower=0>[M_1] sd_1;  // group-level standard deviations
+  matrix[M_1, N_1] z_1;  // standardized group-level effects
+  cholesky_factor_corr[M_1] L_1;  // cholesky factor of correlation matrix
+  vector<lower=0>[M_2] sd_2;  // group-level standard deviations
+  vector[N_2] z_2[M_2];  // standardized group-level effects
+  vector<lower=0>[M_3] sd_3;  // group-level standard deviations
+  matrix[M_3, N_3] z_3;  // standardized group-level effects
+  cholesky_factor_corr[M_3] L_3;  // cholesky factor of correlation matrix
+  vector<lower=0>[M_4] sd_4;  // group-level standard deviations
+  matrix[M_4, N_4] z_4;  // standardized group-level effects
+  cholesky_factor_corr[M_4] L_4;  // cholesky factor of correlation matrix
+}
+transformed parameters {
+  real<lower=0> disc_useful = 1;  // discrimination parameters
+  matrix[N_1, M_1] r_1;  // actual group-level effects
+  // using vectors speeds up indexing in loops
+  vector[N_1] r_1_x_1;
+  vector[N_1] r_1_x_2;
+  vector[N_2] r_2_x_1;  // actual group-level effects
+  matrix[N_3, M_3] r_3;  // actual group-level effects
+  // using vectors speeds up indexing in loops
+  vector[N_3] r_3_waited_1;
+  vector[N_3] r_3_waited_2;
+  vector[N_3] r_3_waited_3;
+  matrix[N_4, M_4] r_4;  // actual group-level effects
+  // using vectors speeds up indexing in loops
+  vector[N_4] r_4_waited_1;
+  vector[N_4] r_4_waited_2;
+  vector[N_4] r_4_waited_3;
+  // compute actual group-level effects
+  r_1 = scale_r_cor(z_1, sd_1, L_1);
+  r_1_x_1 = r_1[, 1];
+  r_1_x_2 = r_1[, 2];
+  r_2_x_1 = (sd_2[1] * (z_2[1]));
+  // compute actual group-level effects
+  r_3 = scale_r_cor(z_3, sd_3, L_3);
+  r_3_waited_1 = r_3[, 1];
+  r_3_waited_2 = r_3[, 2];
+  r_3_waited_3 = r_3[, 3];
+  // compute actual group-level effects
+  r_4 = scale_r_cor(z_4, sd_4, L_4);
+  r_4_waited_1 = r_4[, 1];
+  r_4_waited_2 = r_4[, 2];
+  r_4_waited_3 = r_4[, 3];
+}
+model {
+  // likelihood including constants
+  if (!prior_only) {
+    // vector combining observed and missing responses
+    vector[N_x] Yl_x = Y_x;
+    // initialize linear predictor term
+    vector[N_useful] mu_useful = rep_vector(0.0, N_useful);
+    // initialize linear predictor term
+    vector[N_x] mu_x = Intercept_x + Xc_x * b_x;
+    // initialize linear predictor term
+    vector[N_waited] mu_waited = Intercept_waited + Xc_waited * b_waited;
+    Yl_x[Jmi_x] = Ymi_x;
+    for (n in 1:N_useful) {
+      // add more terms to the linear predictor
+      mu_useful[n] += (bsp_useful[1]) * Yl_x[idxl_useful_x_1[n]];
+    }
+    for (n in 1:N_x) {
+      // add more terms to the linear predictor
+      mu_x[n] += r_1_x_1[J_1_x[n]] * Z_1_x_1[n] + r_1_x_2[J_1_x[n]] * Z_1_x_2[n] + r_2_x_1[J_2_x[n]] * Z_2_x_1[n];
+    }
+    for (n in 1:N_waited) {
+      // add more terms to the linear predictor
+      mu_waited[n] += (bsp_waited[1] + r_3_waited_3[J_3_waited[n]] + r_4_waited_3[J_4_waited[n]]) * Yl_x[idxl_waited_x_1[n]] + r_3_waited_1[J_3_waited[n]] * Z_3_waited_1[n] + r_3_waited_2[J_3_waited[n]] * Z_3_waited_2[n] + r_4_waited_1[J_4_waited[n]] * Z_4_waited_1[n] + r_4_waited_2[J_4_waited[n]] * Z_4_waited_2[n];
+    }
+    for (n in 1:N_useful) {
+      target += ordered_logistic_lpmf(Y_useful[n] | mu_useful[n], Intercept_useful);
+    }
+    target += normal_lpdf(Yl_x | mu_x, sigma_x);
+    target += bernoulli_logit_lpmf(Y_waited | mu_waited);
+  }
+  // priors including constants
+  target += std_normal_lpdf(Intercept_useful);
+  target += normal_lpdf(bsp_useful | 1, 1e-10);
+  target += std_normal_lpdf(b_x);
+  target += std_normal_lpdf(Intercept_x);
+  target += normal_lpdf(sigma_x | 1, 1e-10)
+    - 1 * normal_lccdf(0 | 1, 1e-10);
+  target += std_normal_lpdf(b_waited);
+  target += std_normal_lpdf(Intercept_waited);
+  target += std_normal_lpdf(bsp_waited);
+  target += std_normal_lpdf(sd_1)
+    - 2 * std_normal_lccdf(0);
+  target += std_normal_lpdf(to_vector(z_1));
+  target += lkj_corr_cholesky_lpdf(L_1 | 2);
+  target += std_normal_lpdf(sd_2)
+    - 1 * std_normal_lccdf(0);
+  target += std_normal_lpdf(z_2[1]);
+  target += std_normal_lpdf(sd_3)
+    - 3 * std_normal_lccdf(0);
+  target += std_normal_lpdf(to_vector(z_3));
+  target += lkj_corr_cholesky_lpdf(L_3 | 2);
+  target += std_normal_lpdf(sd_4)
+    - 3 * std_normal_lccdf(0);
+  target += std_normal_lpdf(to_vector(z_4));
+  target += lkj_corr_cholesky_lpdf(L_4 | 2);
+}
+generated quantities {
+  // compute actual thresholds
+  vector[nthres_useful] b_useful_Intercept = Intercept_useful;
+  // actual population-level intercept
+  real b_x_Intercept = Intercept_x - dot_product(means_X_x, b_x);
+  // actual population-level intercept
+  real b_waited_Intercept = Intercept_waited - dot_product(means_X_waited, b_waited);
+  // compute group-level correlations
+  corr_matrix[M_1] Cor_1 = multiply_lower_tri_self_transpose(L_1);
+  vector<lower=-1,upper=1>[NC_1] cor_1;
+  // compute group-level correlations
+  corr_matrix[M_3] Cor_3 = multiply_lower_tri_self_transpose(L_3);
+  vector<lower=-1,upper=1>[NC_3] cor_3;
+  // compute group-level correlations
+  corr_matrix[M_4] Cor_4 = multiply_lower_tri_self_transpose(L_4);
+  vector<lower=-1,upper=1>[NC_4] cor_4;
+  // extract upper diagonal of correlation matrix
+  for (k in 1:M_1) {
+    for (j in 1:(k - 1)) {
+      cor_1[choose(k - 1, 2) + j] = Cor_1[j, k];
+    }
+  }
+  // extract upper diagonal of correlation matrix
+  for (k in 1:M_3) {
+    for (j in 1:(k - 1)) {
+      cor_3[choose(k - 1, 2) + j] = Cor_3[j, k];
+    }
+  }
+  // extract upper diagonal of correlation matrix
+  for (k in 1:M_4) {
+    for (j in 1:(k - 1)) {
+      cor_4[choose(k - 1, 2) + j] = Cor_4[j, k];
+    }
+  }
+}

@@ -61,17 +61,3 @@ var reg_focus_items = [
     });
   }
   
-  // Message that shows up before regulatory focus questionnaire
-var regfocus_message = {
-  type: "html-button-response",
-  stimulus: '<div id="instruct">\
-  Please read each of the following statements, then use the scale below them to indicate how much \
-  you agree with each statement according to your beliefs and experiences.</p> \
-  <p>There are no right or wrong answers.</p></div>',
-    choices: ["Continue"],
-    margin_vertical: "80px",
-    data: {
-      category: 'regfocus_message'
-    },
-    post_trial_gap: 200
-}

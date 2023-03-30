@@ -61,21 +61,4 @@ var impulsive_items = [
       }
     });
   }
-
-  // Message that shows up before impulsiveness questionnaire
-var impulse_message = {
-  type: "html-button-response",
-  stimulus: '<div id="instruct"><p>You will now continue answering questions about yourself.</p> \
-  <p>People differ in the ways they act and think in different situations.</p> \
-  Please read each of the following statements carefully and use the scale below them to indicate \
-  the option that best describes how often you act or behave that way.</p> \
-  <p>Please answer these questions as truthfully and accurately as possible.</p></div>',
-    choices: ["Continue"],
-    margin_vertical: "80px",
-    data: {
-      category: 'impulse_message'
-    },
-    post_trial_gap: 200
-}
-
   

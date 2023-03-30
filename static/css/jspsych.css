@@ -6,6 +6,17 @@
  */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
 
+.answer{
+  max-width: 650px;
+  text-align: left;
+  line-height: 170%;
+}
+
+.question {
+  max-width: 650px;
+  line-height: 170%;
+}
+
 #satsifaction_prompt{
   font-size: 90%;
   color: #444444
@@ -27,7 +38,7 @@
 
 /* New custom css above this line */
 html {
-  background-color: grey;
+  background-color: white;
 }
 
 .jspsych-display-element {

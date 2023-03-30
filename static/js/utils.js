@@ -1,8 +1,6 @@
 // Functions and routines needed throughout the experiment
 // Parameters
-var maxWarining = 10, // Number of warining to give a participant before terminating experiment
-  postTooSlowTime = 800, // ITI post warning message
-  tooSlowTime = 1000; // Duration of warning message
+var maxWarining = 10; // Number of warining to give a participant before terminating experiment
 
 // Code
 
@@ -40,25 +38,6 @@ var kick_out = {
     category: 'kick-out'
   }
 }
-
-// Show question response deadline warning, and update the warning counter
-var too_slow = [kick_out, {
-  type: 'html-keyboard-response',
-  stimulus: '<div style="font-size: 150%">Please choose more quickly</div>',
-  choices: jsPsych.NO_KEYS,
-  trial_duration: tooSlowTime,
-  on_finish: function() {
-    var up_to_now = parseInt(jsPsych.data.get().last(1).select('n_warnings').values);
-    jsPsych.data.addProperties({
-      n_warnings: up_to_now + 1
-    });
-  },
-  data: {
-    category: 'too-slow'
-  },
-  post_trial_gap: postTooSlowTime
-}];
-
 
 // Make sure fullscreen is kept, warn otherwise and return to full screen
 var fullscreen_prompt = {

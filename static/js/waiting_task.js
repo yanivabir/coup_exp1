@@ -1,1 +1,494 @@
-var _0x37c8e4=_0x143e;function _0x143e(_0x2feb93,_0x19243f){var _0x539b18=_0x539b();return _0x143e=function(_0x143e98,_0x2fcceb){_0x143e98=_0x143e98-0x1de;var _0x19921b=_0x539b18[_0x143e98];return _0x19921b;},_0x143e(_0x2feb93,_0x19243f);}function _0x539b(){var _0x42e5ce=['<div\x20id=\x22instruct\x22><p>When\x20you\x20are\x20first\x20shown\x20the\x20trivia\x20question,\x20the\x20screen\x20will\x20look\x20like\x20this:<p>\x20\x20<center><img\x20width=\x2250%\x22\x20src=\x22../static/images/wait_instructions.jpg\x22\x20border=\x221\x22></center>\x20\x20<p>You\x20will\x20use\x20your\x20mouse\x20to\x20click\x20one\x20of\x20the\x20buttons\x20to\x20indicate\x20whether\x20you\x20would\x20like\x20to\x20skip\x20the\x20question,\x20wait\x20for\x20the\x20answer,\x20or\x20that\x20you\x20know\x20its\x20answer.</p>\x20\x20<p>The\x20number\x20next\x20to\x20the\x20word\x20\x22Wait\x22\x20tells\x20you\x20how\x20much\x20time\x20in\x20seconds\x20will\x20pass\x20before\x20the\x20answer\x20is\x20revealed.</p></div>','disabled','pre_geography','randomization','wait_satisfaction','9TAgSGh','wait_answer','wait_question','\x20minutes,\x20regardless\x20of\x20whether\x20I\x20press\x20SKIP,\x20KNOW,\x20or\x20WAIT.','wait_wait','False','\x20minutes\x20long,\x20regardless\x20of\x20how\x20many\x20questions\x20you\x20choose\x20to\x20skip\x20or\x20wait\x20\x20\x20\x20\x20for,\x20so\x20please\x20base\x20your\x20decisions\x20on\x20how\x20interested\x20you\x20are\x20in\x20learning\x20\x20\x20\x20\x20the\x20answers.</p></div>','slice','NO_KEYS','splice','<div\x20id=\x27instruct\x27><p>You\x20are\x20ready\x20for\x20a\x20short\x20practice.\x20Please\x20use\x20this\x20time\x20to\x20get\x20used\x20to\x20pressing\x20the\x20different\x20buttons\x20and\x20to\x20the\x20amount\x20of\x20time\x20you\x20have\x20to\x20respond\x20to\x20the\x20different\x20prompts.</p>\x20\x20\x20\x20<p>Press\x20<i>Continue</i>\x20to\x20start\x20the\x20short\x20training\x20block.</p></div>','If\x20I\x20choose\x20\x22SKIP\x22\x20or\x20\x22KNOW,\x22\x20I\x20will\x20not\x20see\x20the\x20answer\x20to\x20the\x20trivia\x20question.','html-keyboard-response','repeat','length','4267197XQyAEP','6yYgWYf','I\x20should\x20press\x20KNOW\x20only\x20if\x20I\x27m\x20100%\x20sure\x20I\x20know\x20the\x20answer\x20to\x20the\x20question.','There\x20are\x20four\x20categories\x20of\x20questions:\x20Animal,\x20Art,\x20Food,\x20and\x20Geography','ceil','button','1<br>Not\x20at\x20all','The\x20arts','getURLVariable','now','html-button-response','button_pressed','<div\x20id=\x22instruct\x22><p>The\x20task\x20will\x20continue\x20for\x20','n_warnings','<div\x20id=\x22fixation\x22>...</div>','shuffle','pre_art','<div\x20id=\x22instruct\x22><p>You\x20will\x20soon\x20do\x20a\x20short\x20practice\x20version\x20to\x20get\x20comfortable\x20with\x20the\x20task.\x20Please\x20use\x20this\x20time\x20to\x20get\x20used\x20to\x20pressing\x20the\x20different\x20buttons\x20and\x20to\x20the\x20amount\x20of\x20time\x20you\x20have\x20to\x20respond\x20to\x20the\x20different\x20prompts.<p></div>','html-button-response-min-time','355869DyrFqW','wait_instructions_post','values','ansewr-no-respond','select','block','True','The\x20trivia\x20task\x20will\x20take\x20','Please\x20answer\x20these\x20questions:','parse','Animals','4672248tprWxM','<div\x20id=\x22instruct\x22><p>If\x20you\x20choose\x20to\x20wait\x20for\x20a\x20question,\x20you\x20will\x20be\x20asked\x20to\x20rate\x20if\x20the\x20answer\x20was\x20worth\x20waiting\x20for\x20on\x20a\x20scale\x20of\x201\x20=\x20not\x20worth\x20it\x20up\x20to\x205\x20=\x20extremely\x20worth\x20it.</p></div>','Geography','<div\x20id=\x22instruct\x22><p>You\x20will\x20now\x20begin\x20the\x20full\x20version\x20of\x20the\x20\x20\x20task.\x20The\x20task\x20will\x20continue\x20for\x20','concat','prop','<div\x20id=\x22instruct\x22><p>Before\x20we\x20proceed,\x20please\x20rate\x20how\x20interested\x20you\x20are\x20to\x20learn\x20new\x20information\x20in\x20each\x20of\x20the\x20following\x20topics:</p></div>','513212IHxcpH','questionId','936710aMMvkX','get','wait_fixation','survey-multi-choice','question','data','wait_skip_ITI','\x20minutes.</p>\x20\x20</div>','80px','wait_time','\x20minutes.\x20The\x20task\x20takes\x20the\x20same\x20amount\x20of\x20time\x20regardless\x20of\x20how\x20many\x20questions\x20you\x20choose\x20to\x20skip\x20or\x20wait\x20for,\x20so\x20please\x20base\x20your\x20decisions\x20on\x20how\x20interested\x20you\x20are\x20in\x20learning\x20the\x20answers.</p></div>','filter','244750jmRgXO','<div\x20id=\x22instruct\x22><p>Press\x20the\x20<i>Next</i>\x20button\x20to\x20begin\x20the\x20next\x20round\x20of\x20the\x20task.</p></div>','instructions','630232tkoCXd','addProperties','pre_task_preferences','wait_instructions1','<div\x20id=\x22instruct\x22><p>You\x20will\x20now\x20do\x20a\x20computer\x20task\x20about\x20curiosity.\x20Press\x20the\x20<i>Next</i>\x20button\x20to\x20read\x20the\x20instructions\x20for\x20this\x20task.</p></div>','SKIP','timelineVariable','responses','Continue','type','40px','wait_start_time','ITI_next','last','<div\x20id=\x22fixation\x22>+</div>','<div\x20id=\x22instruct\x22><p>You\x20will\x20first\x20be\x20asked\x20to\x20answer\x20some\x20questions\x20to\x20ensure\x20that\x20you\x20understood\x20the\x20instructions.</p>\x20\x20<p>Please\x20answer\x20to\x20the\x20best\x20of\x20your\x20ability.</p>\x20\x20<p>If\x20you\x20miss\x20a\x20question,\x20you\x20will\x20be\x20sent\x20back\x20to\x20review\x20the\x20instructions\x20and\x20re-take\x20the\x20test.\x20You\x20must\x20get\x20all\x20questions\x20correct\x20before\x20you\x20can\x20move\x20on\x20to\x20the\x20practice\x20round\x20of\x20the\x20task.</p></div>','5<br>Very\x20interested'];_0x539b=function(){return _0x42e5ce;};return _0x539b();}(function(_0x5b67a4,_0x3337b7){var _0x33e634=_0x143e,_0x5a2040=_0x5b67a4();while(!![]){try{var _0x4fe4bb=parseInt(_0x33e634(0x204))/0x1+parseInt(_0x33e634(0x224))/0x2+-parseInt(_0x33e634(0x1e2))/0x3*(-parseInt(_0x33e634(0x216))/0x4)+parseInt(_0x33e634(0x218))/0x5*(-parseInt(_0x33e634(0x1f2))/0x6)+-parseInt(_0x33e634(0x20f))/0x7+-parseInt(_0x33e634(0x227))/0x8+parseInt(_0x33e634(0x1f1))/0x9;if(_0x4fe4bb===_0x3337b7)break;else _0x5a2040['push'](_0x5a2040['shift']());}catch(_0x1b3131){_0x5a2040['push'](_0x5a2040['shift']());}}}(_0x539b,0x628f5));var maxStimDuration=0x2710,minResponseTime=0x5dc,satisfactionMaxTime=0xdac,maxAnswerTime=0x1b58,fixationTime=0x1f4,maxTaskTime=0x14,waits=[0x3,0x4,0x5,0x6,0x7,0x8,0x9],ITI_range=[0x1f4,0x4b0],PID=jsPsych[_0x37c8e4(0x21d)][_0x37c8e4(0x1f9)]('workerId'),short=PID['includes']('short');maxTaskTime=short?0x3:maxTaskTime;var answer_n_respond=[kick_out,{'type':_0x37c8e4(0x1ee),'stimulus':'<div\x20style=\x22font-size:\x20150%\x22>Please\x20press\x20continue\x20after\x20reading\x20the\x20answer</div>','choices':jsPsych[_0x37c8e4(0x1ea)],'trial_duration':tooSlowTime,'on_finish':function(){var _0x84209a=_0x37c8e4,_0x4a9f6a=parseInt(jsPsych[_0x84209a(0x21d)][_0x84209a(0x219)]()[_0x84209a(0x234)](0x1)[_0x84209a(0x208)](_0x84209a(0x1fe))['values']);jsPsych[_0x84209a(0x21d)][_0x84209a(0x228)]({'n_warnings':_0x4a9f6a+0x1});},'data':{'category':_0x37c8e4(0x207)},'post_trial_gap':postTooSlowTime}],wait_trial_answer=[{'type':_0x37c8e4(0x1ee),'stimulus':_0x37c8e4(0x1ff),'choices':jsPsych[_0x37c8e4(0x1ea)],'trial_duration':function(){var _0x34ef58=_0x37c8e4;return jsPsych['timelineVariable'](_0x34ef58(0x221),!![])*0x3e8;},'data':{'category':_0x37c8e4(0x1e6),'questionId':jsPsych['timelineVariable'](_0x37c8e4(0x217)),'wait_duration':jsPsych[_0x37c8e4(0x22d)](_0x37c8e4(0x221)),'type':jsPsych[_0x37c8e4(0x22d)](_0x37c8e4(0x230)),'block':jsPsych[_0x37c8e4(0x22d)]('block')}},{'type':'html-button-response','stimulus':jsPsych[_0x37c8e4(0x22d)]('answer'),'choices':[_0x37c8e4(0x22f)],'margin_vertical':_0x37c8e4(0x220),'trial_duration':maxAnswerTime,'data':{'category':_0x37c8e4(0x1e3),'questionId':jsPsych[_0x37c8e4(0x22d)](_0x37c8e4(0x217)),'wait_duration':jsPsych[_0x37c8e4(0x22d)](_0x37c8e4(0x221)),'type':jsPsych[_0x37c8e4(0x22d)]('type'),'block':jsPsych[_0x37c8e4(0x22d)](_0x37c8e4(0x209))},'post_trial_gap':0xc8},{'timeline':answer_n_respond,'conditional_function':function(){var _0x467fe1=_0x37c8e4,_0x4ca4c9=jsPsych[_0x467fe1(0x21d)][_0x467fe1(0x219)]()[_0x467fe1(0x223)]({'category':'wait_answer'})[_0x467fe1(0x234)](0x1)[_0x467fe1(0x208)]('button_pressed')[_0x467fe1(0x206)][0x0];return _0x4ca4c9==null?!![]:![];}},{'type':_0x37c8e4(0x1fb),'stimulus':'Was\x20the\x20answer\x20worth\x20the\x20wait?','choices':['1','2','3','4','5'],'post_trial_gap':jsPsych[_0x37c8e4(0x22d)](_0x37c8e4(0x233)),'trial_duration':satisfactionMaxTime,'prompt':'<div\x20id=\x27satsifaction_prompt\x27><i>1</i>\x20=\x20Not\x20at\x20all,\x20<i>5</i>\x20=\x20Extremely\x20worth\x20it</div>','margin_horizontal':'30px','margin_vertical':_0x37c8e4(0x220),'data':{'category':_0x37c8e4(0x1e1),'ITI_next':jsPsych[_0x37c8e4(0x22d)]('ITI_next'),'questionId':jsPsych[_0x37c8e4(0x22d)](_0x37c8e4(0x217)),'wait_duration':jsPsych['timelineVariable']('wait_time'),'type':jsPsych['timelineVariable']('type'),'block':jsPsych['timelineVariable'](_0x37c8e4(0x209))}},{'timeline':too_slow,'conditional_function':function(){var _0x33c3d0=_0x37c8e4,_0xaeeb94=jsPsych['data'][_0x33c3d0(0x219)]()[_0x33c3d0(0x223)]({'category':_0x33c3d0(0x1e1)})['last'](0x1)[_0x33c3d0(0x208)](_0x33c3d0(0x1fc))[_0x33c3d0(0x206)][0x0];return _0xaeeb94==null?!![]:![];}}],wait_trial=[fullscreen_prompt,{'type':_0x37c8e4(0x1ee),'stimulus':_0x37c8e4(0x235),'choices':jsPsych[_0x37c8e4(0x1ea)],'trial_duration':fixationTime,'data':{'category':_0x37c8e4(0x21a),'questionId':jsPsych[_0x37c8e4(0x22d)]('questionId'),'wait_duration':jsPsych['timelineVariable'](_0x37c8e4(0x221)),'type':jsPsych[_0x37c8e4(0x22d)](_0x37c8e4(0x230)),'block':jsPsych[_0x37c8e4(0x22d)](_0x37c8e4(0x209))}},{'type':_0x37c8e4(0x203),'stimulus':jsPsych['timelineVariable'](_0x37c8e4(0x21c)),'choices':function(){var _0x20dbda=_0x37c8e4;return[_0x20dbda(0x22c),'WAIT\x20'+jsPsych['timelineVariable'](_0x20dbda(0x221),!![]),'KNOW'];},'margin_horizontal':_0x37c8e4(0x231),'margin_vertical':_0x37c8e4(0x220),'trial_duration':maxStimDuration,'min_response_time':minResponseTime,'on_load':function(){var _0x3604bb=_0x37c8e4;$(_0x3604bb(0x1f6))[_0x3604bb(0x214)](_0x3604bb(0x1de),!![]),setTimeout(function(){var _0x266690=_0x3604bb;$(_0x266690(0x1f6))[_0x266690(0x214)]('disabled',![]);},minResponseTime);},'data':{'category':_0x37c8e4(0x1e4),'questionId':jsPsych[_0x37c8e4(0x22d)](_0x37c8e4(0x217)),'wait_duration':jsPsych[_0x37c8e4(0x22d)](_0x37c8e4(0x221)),'type':jsPsych[_0x37c8e4(0x22d)]('type'),'block':jsPsych['timelineVariable'](_0x37c8e4(0x209))}},{'timeline':too_slow,'conditional_function':function(){var _0x1ac9aa=_0x37c8e4,_0xaac374=jsPsych['data']['get']()[_0x1ac9aa(0x223)]({'category':'wait_question'})[_0x1ac9aa(0x234)](0x1)[_0x1ac9aa(0x208)](_0x1ac9aa(0x1fc))[_0x1ac9aa(0x206)][0x0];return _0xaac374==null?!![]:![];}},{'timeline':wait_trial_answer,'conditional_function':function(){var _0x5f2ce2=_0x37c8e4,_0xdb9c9a=jsPsych[_0x5f2ce2(0x21d)][_0x5f2ce2(0x219)]()['filter']({'category':_0x5f2ce2(0x1e4)})[_0x5f2ce2(0x234)](0x1)[_0x5f2ce2(0x208)](_0x5f2ce2(0x1fc))[_0x5f2ce2(0x206)][0x0];return _0xdb9c9a=='1'?!![]:![];}},{'timeline':[{'type':_0x37c8e4(0x1ee),'stimulus':'','choices':jsPsych['NO_KEYS'],'trial_duration':jsPsych[_0x37c8e4(0x22d)](_0x37c8e4(0x233)),'data':{'category':_0x37c8e4(0x21e),'ITI_next':jsPsych[_0x37c8e4(0x22d)](_0x37c8e4(0x233))}}],'conditional_function':function(){var _0x54c8c2=_0x37c8e4,_0x404602=jsPsych[_0x54c8c2(0x21d)][_0x54c8c2(0x219)]()[_0x54c8c2(0x223)]({'category':_0x54c8c2(0x1e4)})[_0x54c8c2(0x234)](0x1)[_0x54c8c2(0x208)]('button_pressed')[_0x54c8c2(0x206)][0x0];return _0x404602=='1'?![]:!![];}}],wait_timeline=[{'timeline':wait_trial,'conditional_function':function(){var _0x563a17=_0x37c8e4;data=jsPsych['data'][_0x563a17(0x219)]()['last'](0x1)['values']()[0x0];if(Date[_0x563a17(0x1fa)]()<data[_0x563a17(0x232)]+maxTaskTime*0x3c*0x3e8)return!![];return![];}}],pre_waiting_qs=jsPsych[_0x37c8e4(0x1e0)]['shuffle']([{'prompt':_0x37c8e4(0x20e),'labels':[_0x37c8e4(0x1f7),'2','3','4',_0x37c8e4(0x237)],'required':!![],'name':'pre_animals'},{'prompt':_0x37c8e4(0x211),'labels':[_0x37c8e4(0x1f7),'2','3','4','5<br>Very\x20interested'],'required':!![],'name':_0x37c8e4(0x1df)},{'prompt':_0x37c8e4(0x1f8),'labels':[_0x37c8e4(0x1f7),'2','3','4',_0x37c8e4(0x237)],'required':!![],'name':_0x37c8e4(0x201)},{'prompt':'Food','labels':[_0x37c8e4(0x1f7),'2','3','4',_0x37c8e4(0x237)],'required':!![],'name':'pre_food'}]),wait_instructions1=[{'timeline':[{'type':'survey-likert','preamble':_0x37c8e4(0x215),'timeline':[{'questions':pre_waiting_qs[_0x37c8e4(0x1eb)](0x0,0x2)},{'questions':pre_waiting_qs}],'randomize_question_order':!![],'scale_width':0x1f4,'data':{'category':_0x37c8e4(0x229)}},{'type':'instructions','pages':[_0x37c8e4(0x22b),'<div\x20id=\x22instruct\x22><p>In\x20this\x20task,\x20you\x20will\x20be\x20shown\x20a\x20series\x20of\x20trivia\x20questions\x20about\x20animals,\x20the\x20arts,\x20food\x20or\x20geography.</p></div>'],'show_clickable_nav':!![],'allow_keys':![],'data':{'category':_0x37c8e4(0x22a)}},{'type':_0x37c8e4(0x226),'pages':['<div\x20id=\x22instruct\x22><p>For\x20each\x20question,\x20you\x20must\x20decide\x20if\x20you\x20want\x20to\x20know\x20the\x20answer\x20to\x20the\x20question.<br></p><p>If\x20you\x20want\x20to\x20find\x20out\x20the\x20answer,\x20you\x20will\x20have\x20to\x20wait\x20a\x20certain\x20amount\x20of\x20time.</p><p>If\x20you\x20do\x20not\x20want\x20to\x20wait\x20to\x20see\x20the\x20answer,\x20you\x20can\x20choose\x20to\x20skip\x20the\x20question.</p><p>If\x20you\x20are\x20100%\x20certain\x20that\x20you\x20already\x20know\x20the\x20answer\x20to\x20the\x20question,\x20you\x20may\x20indicate\x20that\x20you\x20already\x20know\x20it.</p><p>If\x20you\x20choose\x20to\x20skip\x20or\x20indicate\x20that\x20you\x20know\x20the\x20answer,\x20you\x20will\x20NOT\x20see\x20the\x20answer\x20to\x20the\x20question.</p></div>',_0x37c8e4(0x238),_0x37c8e4(0x210),_0x37c8e4(0x1fd)+maxTaskTime+_0x37c8e4(0x222),_0x37c8e4(0x202),_0x37c8e4(0x236)],'show_clickable_nav':!![],'allow_keys':![],'data':{'category':'wait_instructions1'}},{'type':_0x37c8e4(0x21b),'data':{'category':'wait_instructions_quiz'},'questions':[{'prompt':_0x37c8e4(0x1ed),'options':['True',_0x37c8e4(0x1e7)],'required':!![],'horizontal':!![]},{'prompt':_0x37c8e4(0x20b)+maxTaskTime+_0x37c8e4(0x1e5),'options':[_0x37c8e4(0x20a),_0x37c8e4(0x1e7)],'required':!![],'horizontal':!![]},{'prompt':_0x37c8e4(0x1f3),'options':[_0x37c8e4(0x20a),_0x37c8e4(0x1e7)],'required':!![],'horizontal':!![]},{'prompt':_0x37c8e4(0x1f4),'options':[_0x37c8e4(0x20a),'False'],'required':!![],'horizontal':!![]}],'randomize_question_order':!![],'preamble':_0x37c8e4(0x20c)}],'loop_function':function(){var _0x353beb=_0x37c8e4,_0x21d32e=JSON[_0x353beb(0x20d)](jsPsych['data'][_0x353beb(0x219)]()[_0x353beb(0x234)](0x1)[_0x353beb(0x208)](_0x353beb(0x22e))[_0x353beb(0x206)][0x0]);for(i=0x0;i<0x3;i++){if(_0x21d32e['Q'+i]==_0x353beb(0x1e7))return!![];}return![];}},{'type':_0x37c8e4(0x1fb),'stimulus':_0x37c8e4(0x1ec),'choices':[_0x37c8e4(0x22f)],'margin_vertical':'80px','data':{'category':_0x37c8e4(0x22a)},'post_trial_gap':0xc8,'on_finish':function(){var _0x2b1cf3=_0x37c8e4;jsPsych['data'][_0x2b1cf3(0x228)]({'wait_start_time':Date[_0x2b1cf3(0x1fa)]()});}}],wait_instructions_post_practice={'type':_0x37c8e4(0x226),'pages':[_0x37c8e4(0x212)+maxTaskTime+_0x37c8e4(0x21f)],'show_clickable_nav':!![],'allow_keys':![],'data':{'category':'wait_instructions_post_practice'},'on_finish':function(){var _0x3b4bba=_0x37c8e4;jsPsych[_0x3b4bba(0x21d)][_0x3b4bba(0x228)]({'wait_start_time':Date[_0x3b4bba(0x1fa)]()});}},wait_instructions2={'type':_0x37c8e4(0x226),'pages':['<div\x20id=\x22instruct\x22><p>You\x20will\x20now\x20continue\x20to\x20another\x20round\x20of\x20the\x20same\x20task\x20with\x20different\x20questions.</p></div>','<div\x20id=\x22instruct\x22><p>This\x20block\x20is\x20also\x20'+maxTaskTime+_0x37c8e4(0x1e8),_0x37c8e4(0x225)],'show_clickable_nav':!![],'allow_keys':![],'data':{'category':_0x37c8e4(0x22a)},'on_finish':function(){var _0x460944=_0x37c8e4;jsPsych[_0x460944(0x21d)]['addProperties']({'wait_start_time':Date['now']()});}},wait_instructions_post_task={'type':_0x37c8e4(0x226),'pages':['<div\x20id=\x22instruct\x22><p>You\x20finished\x20the\x20first\x20task\x20in\x20this\x20study.</p>\x20\x20\x20\x20<p>Press\x20next\x20to\x20continue\x20to\x20the\x20next\x20task.</p></div>'],'show_clickable_nav':!![],'allow_keys':![],'data':{'category':_0x37c8e4(0x205)}};function drawTimes(_0x4af3e9){var _0x44da18=_0x37c8e4,_0x404a72=jsPsych[_0x44da18(0x1e0)][_0x44da18(0x1ef)](waits,Math[_0x44da18(0x1f5)](_0x4af3e9['length']/waits[_0x44da18(0x1f0)]),![]);for(i=0x0;i<_0x4af3e9[_0x44da18(0x1f0)];i++){_0x4af3e9[i]['wait_time']=_0x404a72[i],_0x4af3e9[i][_0x44da18(0x233)]=Math['random']()*(ITI_range[0x1]-ITI_range[0x0])+ITI_range[0x0];}return _0x4af3e9;}function pseudoShuffle(_0xd7b927,_0x4867d2,_0x3cff27=0x6){var _0x3205a4=_0x37c8e4,_0x37cbfb=_0xd7b927[_0x3205a4(0x223)](_0x114bc8=>_0x114bc8['type']==_0x4867d2[0x0]),_0x180749=_0xd7b927[_0x3205a4(0x223)](_0x163f4b=>_0x163f4b[_0x3205a4(0x230)]==_0x4867d2[0x1]);_0x37cbfb=jsPsych[_0x3205a4(0x1e0)][_0x3205a4(0x200)](_0x37cbfb),_0x180749=jsPsych[_0x3205a4(0x1e0)][_0x3205a4(0x200)](_0x180749);var _0x218eed=[];for(i=0x0;i<Math[_0x3205a4(0x1f5)](_0x37cbfb[_0x3205a4(0x1f0)]/(_0x3cff27/0x2));i++){var _0x28cadf=_0x37cbfb[_0x3205a4(0x1e9)](i*(_0x3cff27/0x2),i*(_0x3cff27/0x2)+_0x3cff27/0x2)[_0x3205a4(0x213)](_0x180749[_0x3205a4(0x1e9)](i*(_0x3cff27/0x2),i*(_0x3cff27/0x2)+_0x3cff27/0x2));_0x28cadf=jsPsych['randomization'][_0x3205a4(0x200)](_0x28cadf),_0x218eed=_0x218eed[_0x3205a4(0x213)](_0x28cadf);}return _0x218eed;}
+// Javascript functions and routines for waiting task ------------------------
+// This file contains the needed variables and functions to run the waiting task on your
+// main js file. In order to do so, you use 'wait_timeline', defining a block of the waiting task
+// like this:
+//    block = {
+//      timeline: wait_timeline,
+//      timeline_variables: items
+//    }
+//
+// where items is an array of objects, each defining a trial. Each trial has the following attributes:
+// questionId: and identifier for the question
+// question: the text of the question
+// answer: the text of the answer
+// type: another string describing the question. could be an experimental variable
+//
+// Additionally, drawTimes(itmes) needs to be run on the array items to add waiting times and ITIs, 
+// based on the parameters below.
+
+// Parameters
+var maxStimDuration = 15000, // Response deadline for questions
+  minResponseTime = 1500, // Minimum response time for questions
+  satisfactionMaxTime = 5000, // Maximum response time for satisfaction rating
+  tooSlowTime = 1000, // Duration of warning message
+  maxAnswerTime = 90000, // Response deadline for answers
+  postTooSlowTime = 800, // ITI post warning message
+  fixationTime = 500, // Duration of fixation period b/w trials
+  maxTaskTime = 7.5, // Total duration of block
+  waits = [3, 4, 5, 6, 7, 8, 9], // Wait times in task
+  ITI_range = [500, 1200]; // Range of ITIs in task. Drawn from a uniform distribution on this range.
+
+// WTW Trials -----------------------------------------------
+
+// Show question response deadline warning, and update the warning counter
+var too_slow = [kick_out, {
+  type: 'html-keyboard-response',
+  stimulus: '<div style="font-size: 150%">Please choose more quickly</div>',
+  choices: jsPsych.NO_KEYS,
+  trial_duration: tooSlowTime,
+  on_finish: function() {
+    var up_to_now = parseInt(jsPsych.data.get().last(1).select('n_warnings').values);
+    jsPsych.data.addProperties({
+      n_warnings: up_to_now + 1
+    });
+  },
+  data: {
+    category: 'too-slow'
+  },
+  post_trial_gap: postTooSlowTime
+}];
+
+// Show answer response deadline warning, and update the warning counter
+var answer_n_respond = [kick_out, {
+  type: 'html-keyboard-response',
+  stimulus: '<div style="font-size: 150%">Please press continue after reading the answer</div>',
+  choices: jsPsych.NO_KEYS,
+  trial_duration: tooSlowTime,
+  on_finish: function() {
+    var up_to_now = parseInt(jsPsych.data.get().last(1).select('n_warnings').values);
+    jsPsych.data.addProperties({
+      n_warnings: up_to_now + 1
+    });
+  },
+  data: {
+    category: 'ansewr-no-respond'
+  },
+  post_trial_gap: postTooSlowTime
+}];
+
+// Present the answer to the question
+var wait_trial_answer = [{
+    // Wait time
+    type: 'html-keyboard-response',
+    stimulus: '<div id="fixation">...</div>',
+    choices: jsPsych.NO_KEYS,
+    trial_duration: function() {
+      return jsPsych.timelineVariable('wait_time', true) * 1000
+    },
+    data: {
+      category: 'wait_wait',
+      questionId: jsPsych.timelineVariable('questionId'),
+      wait_duration: jsPsych.timelineVariable('wait_time'),
+      type: jsPsych.timelineVariable('type'),
+      block: jsPsych.timelineVariable('block')
+    }
+  },
+  {
+    // Answer
+    type: 'html-button-response',
+    stimulus: function() {
+      return "<div class='answer'>" + jsPsych.timelineVariable('answer', true) + "</div>"
+    },
+    choices: ["Continue"],
+    margin_vertical: "80px",
+    trial_duration: maxAnswerTime,
+    data: {
+      category: 'wait_answer',
+      questionId: jsPsych.timelineVariable('questionId'),
+      wait_duration: jsPsych.timelineVariable('wait_time'),
+      type: jsPsych.timelineVariable('type'),
+      block: jsPsych.timelineVariable('block')
+    },
+    post_trial_gap: 200
+  },
+  {
+    timeline: answer_n_respond,
+    conditional_function: function() {
+      // Got to answer only if wait selected
+      var resp = jsPsych.data.get().filter({
+        category: "wait_answer"
+      }).last(1).select("button_pressed").values[0]
+
+      return resp == null ? true : false
+    }
+  },
+  {
+    // Satisfaction rating
+    //Add a new rating questions: 50% "Was the answer worth the wait?"; 50% "Would you be curious to learn more about this topic?".
+    type: "html-button-response",
+    stimulus: jsPsych.timelineVariable('postanswer_stimulus'),
+    choices: ["1", "2", "3", "4", "5"],
+    post_trial_gap: jsPsych.timelineVariable('ITI_next'),
+    trial_duration: satisfactionMaxTime,
+    prompt: function() {
+      return "<div id='satsifaction_prompt'><i>1</i> = Not at all, <i>5</i> = Extremely " +
+        (jsPsych.timelineVariable('postanswer_item', true) == 'satisfaction' ? "worth it" : "curious") + "</div>"
+    },
+    margin_horizontal: "30px",
+    margin_vertical: "80px",
+    data: {
+      category: jsPsych.timelineVariable('postanswer_item'),
+      ITI_next: jsPsych.timelineVariable('ITI_next'),
+      questionId: jsPsych.timelineVariable('questionId'),
+      wait_duration: jsPsych.timelineVariable('wait_time'),
+      type: jsPsych.timelineVariable('type'),
+      block: jsPsych.timelineVariable('block')
+    }
+  },
+  {
+    timeline: too_slow,
+    conditional_function: function() {
+      // Got to answer only if wait selected
+      var resp = jsPsych.data.get().
+      last(1).select("button_pressed").values[0]
+
+      return resp == null ? true : false
+    }
+  }
+];
+
+// Full WTW task trial
+var wait_trial = [fullscreen_prompt, {
+    // Fixation
+    type: 'html-keyboard-response',
+    stimulus: '<div id="fixation">+</div>',
+    choices: jsPsych.NO_KEYS,
+    trial_duration: fixationTime,
+    data: {
+      category: 'wait_fixation',
+      questionId: jsPsych.timelineVariable('questionId'),
+      wait_duration: jsPsych.timelineVariable('wait_time'),
+      type: jsPsych.timelineVariable('type'),
+      block: jsPsych.timelineVariable('block')
+    },
+  }, {
+    // Question
+    type: 'html-button-response-min-time',
+    stimulus: function() {
+      return "<div class='question'>" + jsPsych.timelineVariable('question', true) + "</div>"
+    },
+    choices: function() {
+      return [
+        'SKIP',
+        "WAIT " + jsPsych.timelineVariable('wait_time', true),
+        "KNOW"
+      ]
+    },
+    margin_horizontal: "40px",
+    margin_vertical: "80px",
+    trial_duration: maxStimDuration,
+    min_response_time: minResponseTime,
+    on_load: function(){ // Disable the buttons for the minimal response time so that it's clear
+      $('button').prop('disabled', true);
+      setTimeout(function(){$('button').prop('disabled', false);}, minResponseTime)
+    },
+    data: {
+      category: 'wait_question',
+      questionId: jsPsych.timelineVariable('questionId'),
+      wait_duration: jsPsych.timelineVariable('wait_time'),
+      type: jsPsych.timelineVariable('type'),
+      block: jsPsych.timelineVariable('block')
+    }
+  },
+  {
+    timeline: too_slow,
+    conditional_function: function() {
+      // Got to answer only if wait selected
+      var resp = jsPsych.data.get().filter({
+        category: "wait_question"
+      }).last(1).select("button_pressed").values[0]
+
+      return resp == null ? true : false
+    }
+  },
+  {
+    timeline: wait_trial_answer,
+    conditional_function: function() {
+      // Got to answer only if wait selected
+      var resp = jsPsych.data.get().filter({
+        category: "wait_question"
+      }).last(1).select("button_pressed").values[0]
+
+      return resp == "1" ? true : false
+    }
+  },
+  {
+    timeline: [{
+      type: "html-keyboard-response",
+      stimulus: "",
+      choices: jsPsych.NO_KEYS,
+      trial_duration: jsPsych.timelineVariable('ITI_next'),
+      data: {
+        category: "wait_skip_ITI",
+        ITI_next: jsPsych.timelineVariable('ITI_next')
+      }
+    }],
+    conditional_function: function() {
+      // If skipped or know - add ITI here
+      var resp = jsPsych.data.get().filter({
+        category: "wait_question"
+      }).last(1).select("button_pressed").values[0]
+
+      return resp == "1" ? false : true
+    }
+  }
+];
+
+// Full timeline for WTW task. This is what you use in your main js file
+var wait_timeline = [{
+  timeline: wait_trial,
+  conditional_function: function() {
+    data = jsPsych.data.get().last(1).values()[0];
+    if (Date.now() < data.wait_start_time + maxTaskTime * 60 * 1000) {
+      return true
+    }
+    return false
+  }
+}];
+
+// Instructions for the waiting task ---------------------------
+var check_quiz_function = function() {
+  var resps = JSON.parse(jsPsych.data.get().filter({category: "wait_instructions_quiz"}).last(1).select("responses").values[0]);
+  console.log(resps)
+  for (i = 0; i < 3; i++) {
+    if (resps["Q" + i] == "False") {
+      return true
+    }
+  }
+  return false
+}
+
+var wait_instructions1 = [{
+    timeline: [{
+        type: 'instructions',
+        pages: function () {
+            return['<div id="instruct"><p>You\'ll start with a computer task about curiosity. Press the <i>Next</i> button to read the instructions for this task.</p></div>',
+            '<div id="instruct"><p>In this first task, you will be shown a series of questions.<br></p><p>If you want to find out the answer to the question, you will have to wait a certain amount of time.</p><p>If you do not want to wait, you can choose to skip the question.</p><p>If you are 100% certain that you already know the answer to the question, you may indicate that you already know it.</p><p>If you choose to skip or indicate that you know the answer, you will NOT see the answer to the question.</p></div>',
+            '<div id="instruct"><p>When you are first shown the question, the screen will look like this:<p>\
+              <center><div style="border:1px solid black; width: 500px; height: 200px">\
+              <div id="jspsych-html-button-response-stimulus" style="padding-top: 5%">What was the first successful vaccine to be developed?</div>\
+              <div id="jspsych-html-button-response-btngroup">\
+              <div class="jspsych-html-button-response-button" style="display: inline-block; margin: 80px 8px"><button class="jspsych-btn">SKIP</button></div>\
+              <div class="jspsych-html-button-response-button" style="display: inline-block; margin: 80px 8px"><button class="jspsych-btn">WAIT 4</button></div>\
+              <div class="jspsych-html-button-response-button" style="display: inline-block; margin: 80px 8px"><button class="jspsych-btn">KNOW</button></div></div></div></center>\
+              <p>Use the mouse to indicate that you would like to wait for the answer, skip the question, or that you know its answer.</p></div>',
+            '<div id="instruct"><p>If you choose to wait for an answer to a question, you will be asked to give your opinion about the answer.</p><p> You may be asked to rate if the answer was worth waiting for, on a scale of 1 = not worth it up to 5 = extremely worth it.</p>\
+              <p>Or, you may be asked to rate if you are curious to learn more about the topic, on a scale of 1 = not at all curious up to 5 = extremely curious.</p></div>',
+            '<div id="instruct"><p>The task will continue for ' + maxTaskTime + ' minutes. The task takes the same amount of time regardless of how many questions you choose to skip or wait for, so please base your decisions on how interested you are in learning the answers.</p></div>',
+            '<div id="instruct"><p>The questions you will see in this task were ' + (firstBlock == "NYT" ? 
+              'presented in the headlines of newspaper articles.<br>You must decide if you want to see the answer given in the first paragraph of the article.' :
+              'asked online in a general knowledge forum.<br>You must decide if you want to see the answer to the question as given on the forum.') + '</p></div>',
+            '<div id="instruct"><p>You will soon do a short practice version to get comfortable with the task. Please use this time to get used to pressing the different buttons and to the amount of time you have to respond to the different prompts.<p></div>',
+            '<div id="instruct"><p>You will first be asked to answer some questions to ensure that you understood the instructions.</p>\
+              <p>Please answer to the best of your ability.</p>\
+              <p>If you miss a question, you will be sent back to review the instructions and re-take the test. You must get all questions correct before you can move on to the practice round of the task.</p></div>'
+        ]},
+        show_clickable_nav: true,
+        allow_keys: false,
+        data: {
+          category: "wait_instructions1"
+        }
+      },
+      {
+        type: 'survey-multi-choice',
+        data: {
+          category: "wait_instructions_quiz"
+        },
+        questions: [{
+            prompt: 'If I choose "SKIP" or "KNOW," I will not see the answer to the question.',
+            options: ['True', 'False'],
+            required: true,
+            horizontal: true
+          },
+          {
+            prompt: 'The task will take ' + maxTaskTime +
+              ' minutes, regardless of whether I press SKIP, KNOW, or WAIT.',
+            options: ['True', 'False'],
+            required: true,
+            horizontal: true
+          },
+          {
+            prompt: 'I should press KNOW only if I\'m 100% sure I know the answer to the question.',
+            options: ['True', 'False'],
+            required: true,
+            horizontal: true
+          }
+        ],
+        randomize_question_order: true,
+        preamble: 'Please answer these questions:'
+      },
+      {
+        timeline: [{
+          type: "html-button-response",
+          stimulus: "<div id='instruct'>You did not answer all of the quiz questions correctly. Press <i>Continue</i> to review the instructions and retake the quiz.</div>",
+          choices: ["Continue"],
+          margin_vertical: "80px",
+          data: {
+            category: 'wait_instructions_quiz_failure'
+          },
+          post_trial_gap: 200
+        }],
+        conditional_function: check_quiz_function
+      }, ],
+    loop_function: check_quiz_function
+  },
+  {
+    type: "html-button-response",
+    stimulus: "<div id='instruct'>Press <i>Continue</i> to start the short training block.</div>",
+    choices: ["Continue"],
+    margin_vertical: "80px",
+    data: {
+      category: 'wait_instructions1'
+    },
+    post_trial_gap: 200,
+    on_finish: function() {
+      jsPsych.data.addProperties({
+        wait_start_time: Date.now()
+      });
+    }
+  },
+];
+
+// Wait instructions after the practice blocks
+var wait_instructions_post_practice_reddit = {
+  type: "instructions",
+  pages: ['<div id="instruct"><p>You will now begin the full version of the task, where you will be presented with general questions people asked online. \
+  You must decide if you want to see the answer to the question.<br></p><p>The task will continue for ' + maxTaskTime + ' minutes.</p>\
+  </div>'
+  ],
+  show_clickable_nav: true,
+  allow_keys: false,
+  data: {
+    category: "wait_instructions_post_practice"
+  },
+  on_finish: function() {
+    jsPsych.data.addProperties({
+      wait_start_time: Date.now()
+    });
+  }
+}
+
+var wait_instructions_post_practice_NYT = {
+  type: "instructions",
+  pages: ['<div id="instruct"><p>You will now begin the full version of the task, where you will be presented with newspaper headlines that contain a question. \
+  You must decide if you want to see the first paragraph of the article.<br></p><p>The task will continue for ' + maxTaskTime + ' minutes.</p>\
+  </div>'
+  ],
+  show_clickable_nav: true,
+  allow_keys: false,
+  data: {
+    category: "wait_instructions_post_practice"
+  },
+  on_finish: function() {
+    jsPsych.data.addProperties({
+      wait_start_time: Date.now()
+    });
+  }
+}
+
+// Wait instructions before the Reddit task (2nd Block)
+var wait_instructions_reddit2= {
+  type: 'instructions',
+  pages: ['<div id="instruct"><p>You finished the first task in this study.</p>\
+  <p>Press next to continue to the next task.</p></div>',
+  '<div id="instruct"><p>In the next task, you will be reading a different type of questions. You will see general questions people asked online. You must decide if you want to see the answer to the question.<br></p><p>If you want to read the answer, you will have to wait a certain amount of time.</p><p>If you do not want to wait, you can choose to skip the question.</p><p>If you are 100% certain that you already know the answer to the question, you may indicate that you already know it.</p><p>If you choose to skip or indicate that you know the answer, you will NOT see the answer.</p></div>',
+    '<div id="instruct"><p>This block is also ' + maxTaskTime +
+    ' minutes long, regardless of how many questions you choose to skip or wait \
+    for, so please base your decisions on how interested you are in learning \
+    the answers.</p></div>',
+    '<div id="instruct"><p>Press the <i>Next</i> button to begin the next round of the task.</p></div>'
+  ],
+  show_clickable_nav: true,
+  allow_keys: false,
+  data: {
+    category: "wait_instructions2_reddit"
+  },
+  on_finish: function() {
+    jsPsych.data.addProperties({
+      wait_start_time: Date.now()
+    });
+  }
+};
+
+// Wait instructions before the NYT task (2nd Block)
+var wait_instructions_NYT2 = {
+  type: 'instructions',
+  pages: ['<div id="instruct"><p>You finished the first task in this study.</p>\
+    <p>Press next to continue to the next task.</p></div>',
+    '<div id="instruct"><p>In the next task, you will be reading a different type of questions. \
+    You will see newspaper headlines that present a question. You must decide if you want to see the \
+    first paragraph of the newspaper article.<br></p><p>\
+    If you want to read the first paragraph of the newspaper article, you will have to wait a certain amount of time.</p>\
+    <p>If you do not want to wait, you can choose to skip the question.</p>\
+    <p>If you are 100% certain that you already know the answer to the question presented by the newspaper headline, you may indicate that you already know it.</p>\
+    <p>If you choose to skip or indicate that you know the answer, you will NOT see the first paragraph of the article.</p></div>',
+    '<div id="instruct"><p>This block is also ' + maxTaskTime +
+    ' minutes long, regardless of how many questions you choose to skip or wait \
+    for, so please base your decisions on how interested you are in learning \
+    the answers.</p></div>',
+    '<div id="instruct"><p>Press the <i>Next</i> button to begin the next round of the task.</p></div>'
+  ],
+  show_clickable_nav: true,
+  allow_keys: false,
+  data: {
+    category: "wait_instructions2_nytimes"
+  },
+  on_finish: function() {
+    jsPsych.data.addProperties({
+      wait_start_time: Date.now()
+    });
+  }
+};
+
+var wait_instructions_post_task = {
+  type: 'instructions',
+  pages: ['<div id="instruct"><p>You finished the second task in this study.</p>\
+    <p>Press next to continue to the next task.</p></div>'],
+  show_clickable_nav: true,
+  allow_keys: false,
+  data: {
+    category: "wait_instructions_post"
+  }
+}
+
+// A function that assigns waiting tines and ITIs to a list of trials
+// Added the new satisfaction_rating variable to the for loop
+function drawTimes(items) {
+  var wait_times = jsPsych.randomization.repeat(waits,
+    Math.ceil(items.length / waits.length), false);
+
+  for (i = 0; i < items.length; i++) {
+    var postanswer = Math.random() > 0.5 ? "satisfaction":"further_curiosity"
+    items[i]["postanswer_stimulus"] = postanswer == "satisfaction" ? "Was the answer worth the wait?" : "How curious are you to learn more?"
+    items[i] ['postanswer_item'] = postanswer
+    items[i]["wait_time"] = wait_times[i];
+    items[i]["ITI_next"] = Math.random() * (ITI_range[1] - ITI_range[0]) +
+      ITI_range[0]
+  }
+  return items
+}
+
+// A function that shuffles a list of trials of two types, 
+// making sure you don't have a long sequence only of one type
+function pseudoShuffle(items, types, bin_size = 6) {
+
+  // Separate by type of question
+  var cond0 = items.filter(item => item["type"] == types[0]),
+    cond1 = items.filter(item => item["type"] == types[1]);
+
+  // Random order each type
+  cond0 = jsPsych.randomization.shuffle(cond0);
+  cond1 = jsPsych.randomization.shuffle(cond1);
+
+  var shuf_items = [];
+
+  for (i = 0; i < Math.ceil(cond0.length / (bin_size / 2)); i++) {
+    var this_add = cond0.slice(i * (bin_size / 2), i * (bin_size / 2) + (bin_size / 2)).concat(
+      cond1.slice(i * (bin_size / 2), i * (bin_size / 2) + (bin_size / 2))
+    );
+    this_add = jsPsych.randomization.shuffle(this_add);
+
+    shuf_items = shuf_items.concat(this_add);
+  }
+  return shuf_items
+}

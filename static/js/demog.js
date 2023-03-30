@@ -99,16 +99,3 @@ demographic_block = [
     }
   }, 
 ]
-
-// Message that shows up before demographic section
-var demog_message = {
-type: "html-button-response",
-stimulus: '<div id="instruct"><p>You will now answer a few questions \
-  about your demographic information.</p></div>',
-  choices: ["Continue"],
-  margin_vertical: "80px",
-  data: {
-    category: 'demog_message'
-  },
-  post_trial_gap: 200
-}

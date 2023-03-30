@@ -44,18 +44,4 @@ var pleasure_items = [
       }
     });
   }
-
-// Message that shows up before pleasure questionnaire
-var pleasure_message = {
-  type: "html-button-response",
-  stimulus: '<div id="instruct"><p>You will now continue answering questions about yourself.</p> \
-  You will read statements people often use to describe themselves. Please use the scale below each statement\
-  to indicate the degree to which these statements accurately describe you.</p> \
-  <p>There are no right or wrong answers.</p></div>',
-    choices: ["Continue"],
-    margin_vertical: "80px",
-    data: {
-      category: 'pleasure_message'
-    },
-    post_trial_gap: 200
-}
+  

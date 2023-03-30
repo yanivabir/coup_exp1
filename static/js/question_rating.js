@@ -1,43 +1,149 @@
-// Javascript functions and varialbes for measuring ratings about questions
-var rating_ITI = 500,
-  minResponseTime = 1500,
-  maxStimDuration = 10000;
+// Javascript functions and varialbes for meusring ratings about questions
+
+// This is the list of probes each question should be rated on
+var rating_probes = [[{
+    prompt: "...is probably complicated",
+    labels: ["1<br>Not complicated at all", "2", "3", "4", "5", "6", "7<br>Very complicated"],
+    required: true,
+    name: "pars_complicated"
+  },
+  {
+    prompt: "...is probably simple",
+    labels: ["1<br>Not simple at all", "2", "3", "4", "5", "6", "7<br>Very simple"],
+    required: true,
+    name: "pars_simple"
+  }],
+  [{
+    prompt: "...is something that has an element of randomness",
+    labels: ["1<br>Not at all", "2", "3", "4", "5", "6", "7<br>Very much"],
+    required: true,
+    name: "epstm_random_element"
+  },
+  {
+    prompt: "...is determined by a chance factor",
+    labels: ["1<br>Not at all", "2", "3", "4", "5", "6", "7<br>Very much"],
+    required: true,
+    name: "epstm_detemined_chance"
+  }],
+  [{
+    prompt: "...is knowable in principle, given enough information",
+    labels: ["1<br>Not at all", "2", "3", "4", "5", "6", "7<br>Very much"],
+    required: true,
+    name: "epstm_knowable"
+  },
+  {
+    prompt: "…is something that well-informed people would agree on",
+    labels: ["1<br>Not at all", "2", "3", "4", "5", "6", "7<br>Very much"],
+    required: true,
+    name: "epstm_informed_agree"
+  }],
+  [{
+    prompt: "...would be easy to remember in the long term",
+    labels: ["1<br>Not easy at all", "2", "3", "4", "5", "6", "7<br>Very easy"],
+    required: true,
+    name: "memory_easy"
+  },
+  {
+    prompt: "…would be difficult to remember in the long term",
+    labels: ["1<br>Not dificult at all", "2", "3", "4", "5", "6", "7<br>Very difficult"],
+    required: true,
+    name: "memory_difficult"
+  }],
+  [{
+    prompt: "...would be useful for me to know",
+    labels: ["1<br>Not useful at all", "2", "3", "4", "5", "6", "7<br>Very useful"],
+    required: true,
+    name: "useful_me"
+  },
+  {
+    prompt: "...would be useful for me to know",
+    labels: ["1<br>Not useful at all", "2", "3", "4", "5", "6", "7<br>Very useful"],
+    required: true,
+    name: "useful_me"
+  }],
+  [{
+    prompt: "It is easy to imagine what the answer to this question might be.",
+    labels: ["1<br>Not easy at all", "2", "3", "4", "5", "6", "7<br>Very easy"],
+    required: true,
+    name: "simulate_easy"
+  },
+  {
+    prompt: "It is difficult to imagine what the answer to this question might be.",
+    labels: ["1<br>Not at all", "2", "3", "4", "5", "6", "7<br>Very difficult"],
+    required: true,
+    name: "simulate_difficult"
+  }]
+]
+
+// Choose one of each pair of probes
+var chosen_rating_probes = []
+for (j = 0; j < rating_probes.length; j++) {
+    chosen_rating_probes.push(rating_probes[j][(Math.random()>0.5)+0])  
+}
 
 // Rating trial
 var rating_trial = [fullscreen_prompt,
+  // Introduce questions
   {
-    // Curiosity rating
-    type: 'html-button-response-min-time',
+    type: "html-button-response",
     stimulus: function() {
-      return "<i>How curious are you to know:</i><br>" + 
-        jsPsych.timelineVariable('question', true) +
-        ""} ,
-    choices: ["Know","1", "2", "3", "4", "5"],
-    prompt: "<div id='satisfaction_prompt'><i>1</i> = Not at all, <i>5</i> = Extremely curious</div>",
-    margin_horizontal: "30px",
-    margin_vertical: "80px",
-    post_trial_gap: rating_ITI,
-    trial_duration: maxStimDuration,
-    min_response_time: minResponseTime,
-    on_load: function(){ // Disable the buttons for the minimal response time so that it's clear
-      $('button').prop('disabled', true);
-      setTimeout(function(){$('button').prop('disabled', false);}, minResponseTime)
+      return "<div id='instruct'><p>We are interested in your judgment about this question:</p>\
+      <p><i>" + jsPsych.timelineVariable('question', true) + "</i></p></div>"
     },
-    data: {
-      category: "curiosity_rating",
-      questionId: jsPsych.timelineVariable('questionId'),
-      type: jsPsych.timelineVariable('type'),
-      block: jsPsych.timelineVariable('block')
+    choices: ["Continue"],
+    data:{
+      category: "rating_intro_question",
+      questionId: jsPsych.timelineVariable('questionId')
     }
   },
+  // First page of probes
   {
-    timeline: too_slow,
-    conditional_function: function() {
-      // Got to answer only if wait selected
-      var resp = jsPsych.data.get().
-      last(1).select("button_pressed").values[0]
-
-      return resp == null ? true : false
+    type: "survey-likert",
+    preamble: function() {
+      return "<p><i>" + jsPsych.timelineVariable('question', true) + "</i></p>\
+      <p>The answer to this question...</p>"
+    },
+    questions: function() {
+      return chosen_rating_probes.slice(0, 3)
+    },
+    scale_width: 400,
+    post_trial_gap: 100,
+    data:{
+      category: "rating_question1",
+      questionId: jsPsych.timelineVariable('questionId')
+    }
+  },
+  // Second page of probes
+  {
+    type: "survey-likert",
+    preamble: function() {
+      return "<p><i>" + jsPsych.timelineVariable('question', true) + "</i></p>\
+      <p>The answer to this question...</p>"
+    },
+    questions: function() {
+      return chosen_rating_probes.slice(3, 5)
+    },
+    scale_width: 400,
+    post_trial_gap: 300,
+    data:{
+      category: "rating_question2",
+      questionId: jsPsych.timelineVariable('questionId')
+    }
+  },
+  // Third page of probes
+  {
+    type: "survey-likert",
+    preamble: function() {
+      return "<p><i>" + jsPsych.timelineVariable('question', true) + "</i></p>"
+    },
+    questions: function() {
+      return chosen_rating_probes.slice(5, 6)
+    },
+    scale_width: 400,
+    post_trial_gap: 300,
+    data:{
+      category: "rating_question3",
+      questionId: jsPsych.timelineVariable('questionId')
     }
   },
 ]
@@ -47,13 +153,9 @@ var rating_instructions = {
   type: "instructions",
   pages: [
     "<div id='instruct'><p>In the next part of this experiment, you will be \
-    presented with 30 qustions. We would like your curiosity to know the answer \
-    to each of these questions.<br>You will rate your curiosity on a scale of \
-    <i>1 - Not curious at all</i> to <i>5 - Extremely curious</i></p></div>",
-    "<div id='instruct'><p>If you are 100% confident that you know the answer \
-    to the question press 'Know' instead of rating your curiosity. \
-    Only use this option for questions you are absolutely sure you know the answer to. </p></div>",
-    "<div id='instruct'><p>In this study we are interested in your own personal \
+    presented with 14 questions. We would like you to rate each of these \
+    questions on several scales.</p></div>",
+    "<div id='instruct'><p>We are interested in your own personal \
     judgment. Therefore it is important that you rely only on your own \
     knowledge and give your best answer \"off the top of your head.\"</p></div>",
     "<div id='instruct'><p>Press the <i>Next</i> button to begin this part of \
@@ -65,42 +167,3 @@ var rating_instructions = {
     category: "rating_instructions1"
   }
 }
-
-var post_rating_qs = jsPsych.randomization.shuffle([{
-          prompt: "Trivia about animals",
-          labels: ["1<br>Not at all", "2", "3", "4", "5<br>Very interesting"],
-          required: true,
-          name: "post_animals"
-        },
-        {
-          prompt: "Trivia about geography",
-          labels: ["1<br>Not at all", "2", "3", "4", "5<br>Very interesting"],
-          required: true,
-          name: "post_geography"
-        },
-        {
-          prompt: "Trivia about the arts",
-          labels: ["1<br>Not at all", "2", "3", "4", "5<br>Very interesting"],
-          required: true,
-          name: "post_art"
-        },
-        {
-          prompt: "Trivia about food",
-          labels: ["1<br>Not at all", "2", "3", "4", "5<br>Very interesting"],
-          required: true,
-          name: "post_food"
-        }]);
-
-var post_rating = {
-  type: "survey-likert",
-  preamble: '<div id="instruct"><p>Plese rate how interesting you found the information, both waiting and rating tasks, presented so far for each topic in this study:</p></div>',
-  randomize_question_order: true,
-  scale_width: 500,
-  data: {
-    category: "post_task_preferences"
-  },
-  timeline: [
-    {questions: post_rating_qs.splice(0,2)},
-    {questions: post_rating_qs}
-  ]
-  }

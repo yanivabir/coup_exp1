@@ -1,68 +1,94 @@
 // Parameters
 var sess = 1, // Session number
-  version = 1.0; // Code version number
+  version = 1.0, // Code version number
+  n_for_ratings = 5; // How many items to save for rating measurement
 var images = ["../static/images/wait_instructions.jpg"]; // Images to preload
 
 // Get participant id form url
-var PID = jsPsych.data.getURLVariable('workerId')
-jsPsych.data.addProperties({n_warnings: 0});
+var PID = jsPsych.data.getURLVariable('workerId'),
+  firstBlock = Math.random() > 0.5 ? "NYT" : "reddit";
 
 // Is this a debug run?
-var debug = PID.includes("debug"),
-  short = PID.includes("short");
-
-var n_for_ratings = short ? 10 : 30;//20; // How many items to save for rating measurement
+var debug = PID.includes("debug");
 
 // Keep important variables in global scope for convenience while debugging
-var items,
-  items,
-  items_waiting,
-  items_rating;
+var NYT_items,
+  reddit_items,
+  NYT_items_curiosity,
+  NYT_items_rating,
+  reddit_items_curiosity,
+  reddit_items_rating;
 
 // Load questions from local csv file
-Papa.parse("../static/questions.csv", {
+// Changed corona to NYT and general to reddit; removed third block.
+Papa.parse("../static/NYT_questions.csv", {
   download: true,
   header: true,
   dynamicTyping: true,
   complete: function(results) {
-    items = results.data;
-    postLoad()
-  }
-});
+    NYT_items = results.data;
+    Papa.parse("../static/reddit_questions.csv", {
+      download: true,
+      header: true,
+      dynamicTyping: true,
+      complete: function(results) {
+        reddit_items = results.data;
+            postLoad();
+          }
+        });
+      }
+    });
 
 var experiment = [];
 
 // Loading csvs takes time. That's why we wrap everything else in a function that only
 // runs after the csvs load
 function postLoad() {
-var practice_items=[]
-  var Categories = jsPsych.randomization.shuffle(
-    ["Animal", "Art", "Food", "Geography"])
-  for (i=0;i<4;i++)
-  {practice_items.push (jsPsych.randomization.shuffle(
-    items).filter(x => x['type'] == Categories[i])[0])}
-// Remove them from general list, n-4
-items = items.filter(x => !practice_items.includes(x));
-  
+
+  // Separate 2 items for practice block - one from each type
+  if (firstBlock == "NYT") {
+    // Pick 1 from each type at random
+    practice_items = jsPsych.randomization.shuffle(
+      NYT_items).splice(0,2);
+    // Remove them from NYT list
+    NYT_items = NYT_items.filter(x => !practice_items.includes(x));
+  } else {
+    // Pick 1 from each type at random
+    practice_items = jsPsych.randomization.shuffle(
+      reddit_items).splice(0,2);
+    // Remove them from general list
+    reddit_items = reddit_items.filter(x => !practice_items.includes(x));
+  }
 
   // Split items to curiosity and ratings sets ----
-  // First shuffle items makeing sure both types are evenly disperesed throughout list
-  
-items = jsPsych.randomization.shuffle(items);
+
+  // First shuffle items making sure both types are evenly disperesed throughout list
+  // Removed the "useful" and "not useful" filters
+  NYT_items = pseudoShuffle(NYT_items, 6);
+  reddit_items = pseudoShuffle(reddit_items, 6);
 
   // Choose items for wtw task and ratings for each block
-  items_waiting = items.slice(0,
-    items.length - n_for_ratings);
-  items_rating = items.slice(
-    items.length - n_for_ratings, items.length);
+  NYT_items_curiosity = NYT_items.slice(0,
+    NYT_items.length - n_for_ratings);
+  NYT_items_rating = NYT_items.slice(
+    NYT_items.length - n_for_ratings, NYT_items.length);
 
-
+  reddit_items_curiosity = reddit_items.slice(0,
+    reddit_items.length - n_for_ratings);
+  reddit_items_rating = reddit_items.slice(
+    reddit_items.length - n_for_ratings, reddit_items.length);
 
   // Set timing parameters for waiting task practice block
-  practice_items = drawTimes(practice_items);
+  practice_items[0]["wait_time"] = waits[1];
+  practice_items[1]["wait_time"] = waits[0];
+  practice_items[0]["ITI_next"] = Math.random() * (ITI_range[1] - ITI_range[0]) +
+    ITI_range[0];
+  practice_items[1]["ITI_next"] = Math.random() * (ITI_range[1] - ITI_range[0]) +
+    ITI_range[0];
 
   // Draw timing parameters for waiting task
-  items_waiting = drawTimes(items_waiting);
+  NYT_items_curiosity = drawTimes(NYT_items_curiosity);
+  reddit_items_curiosity = drawTimes(reddit_items_curiosity);
 
   // Set up the first trial, the transitions to fullscreen.
   // This trial also saves the PID to the data, and sets the counterbalanced
@@ -79,7 +105,7 @@ items = jsPsych.randomization.shuffle(items);
       jsPsych.data.addProperties({
         n_warnings: 0,
         PID: PID,
-       
+        firstBlock: firstBlock,
         sess: sess,
         version: version
       });
@@ -112,13 +138,43 @@ items = jsPsych.randomization.shuffle(items);
 
   wait_block1 = {
     timeline: wait_timeline,
-    timeline_variables: items_waiting 
+    timeline_variables: firstBlock == "NYT" ? NYT_items_curiosity : NYT_items_curiosity
   }
-  
-  // Rating block variable
-  var rating_block = {
+
+  wait_block2 = {
+    timeline: wait_timeline,
+    timeline_variables: firstBlock == "NYT" ? reddit_items_curiosity : NYT_items_curiosity
+  }
+
+  // Shuffle probe order across NYT trial
+  for (i = 0; i < NYT_items_rating.length; i++) {
+    var this_trial = []
+    for (j = 0; j < rating_probes.length; j++) {
+    this_trial.push(rating_probes[j][(Math.random()>0.5)+0])  
+    } 
+    NYT_items_rating[i]["probes"] = this_trial;
+  }
+
+  // NYT rating block variable
+  var NYT_rating_block = {
     timeline: rating_trial,
-    timeline_variables: items_rating,
+    timeline_variables: NYT_items_rating,
+    randomize_order: true
+  }
+
+  // Shuffle probe order across Reddit trial
+  for (i = 0; i < reddit_items_rating.length; i++) {
+    var this_trial = []
+    for (j = 0; j < rating_probes.length; j++) {
+    this_trial.push(rating_probes[j][(Math.random()>0.5)+0])  
+    } 
+    reddit_items_rating[i]["probes"] = this_trial;
+  }
+
+  // Reddit rating block variable
+  var reddit_rating_block = {
+    timeline: rating_trial,
+    timeline_variables: reddit_items_rating,
     randomize_order: true
   }
 
@@ -141,10 +197,18 @@ items = jsPsych.randomization.shuffle(items);
   var debrief = [{
       type: "instructions",
       pages: ['<div id="instruct">Thank you for participating in this experiment!<p>\
-      In this study, we are interested in people\'s curiosity about different \
+      In this study we were interested in people\'s curiosity about different \
       types of questions.</p>\
-      <p>We will process your data within 48 hours and grant an extra $2 to any \
-      participant that stayed engaged throughout the task.</p></div>'],
+      <p>Any health information presented in this experiment was based on the \
+      researchers’ reading of current publicly available information from the \
+      Center for Disease Control and other reputable health and news media \
+      websites but should not be taken as medical advice. If you have any \
+      questions about your health, you should seek the judgment of a medical \
+      professional.</p>\
+      <p>We will process your data within 48h and grant you an extra $2 to any \
+      participant that stayed engaged throughout the task.</p>\
+      <p>You will recieve an email invitiation for the next session early next week.</p>\
+      <p>You\'ll  recieve $2 special bonus for participating in another session.</p></div>'],
       show_clickable_nav: true,
       allow_keys: false,
       data: {
@@ -159,7 +223,7 @@ items = jsPsych.randomization.shuffle(items);
       type: "instructions",
       pages: ["<div id ='instruct'><p>Once you press the <i>Next</i> \
     button, your results will be uploaded to the server, and the experiment will\
-    be complete. <b>This may take several minutes - please do not \
+    complete. <b>This may take several minutes - do not \
     refresh or close your browser during this time.</b></p>\
     <p>After your results are uploaded to the server, you will be presented \
     with the completion code for MTurk.\
@@ -195,7 +259,7 @@ items = jsPsych.randomization.shuffle(items);
         category: "data_saved"
       },
       stimulus: "<div class='instructions'><p>Your results have successfully uploaded.</p>\
-    <p>Your completion code for this study is: <br> <b>EK92JK4</b></p>\
+    <p>Your completion code for this study is: <br> <b>EK64HN7</b></p>\
     <p>Use it to submit this HIT on MTurk.</p>\
     <p>You may now close this window.</p></div>",
       choices: jsPsych.NO_KEYS
@@ -210,22 +274,24 @@ items = jsPsych.randomization.shuffle(items);
   experiment.push(wait_practice_block);
   experiment.push(wait_instructions_post_practice);
   experiment.push(wait_block1);
-  experiment.push(wait_instructions_post_task);
+  experiment.push(wait_instructions2);
+  experiment.push(wait_block2);
+  experiment.push(wait_instructions2);
   experiment.push(rating_instructions);
-  experiment.push(rating_block);
-  experiment.push(post_rating);
-  experiment.push(pre_questionnaires_message);
-  experiment.push(regfocus_message);
-  experiment = experiment.concat(reg_focus);
-  experiment.push(impulse_message);
-  experiment = experiment.concat(impulsive);
-  experiment.push(apathy_message);
-  experiment = experiment.concat(apathy);
-  experiment.push(pleasure_message);
-  experiment = experiment.concat(pleasure);
-  experiment.push(demog_message);
-  experiment = experiment.concat(demographic_block);
-  experiment = experiment.concat(debrief);
+  experiment.push(NYT_rating_block);
+  experiment.push(reddit_rating_block);
+  //experiment.push(forced_choice_instructions1);
+  //experiment = experiment.concat(forced_choice_trial);
+  //experiment.push(forced_choice_instructions2);
+  //experiment.push(read_fact_block);
+  //experiment.push(pre_questionnaires_message);
+  //experiment = experiment.concat(five_d);
+  //experiment = experiment.concat(gallup_block);
+  //experiment = experiment.concat(resilience_quest);
+  //experiment = experiment.concat(anxiety);
+  //experiment = experiment.concat(corona_perception_block);
+  //experiment = experiment.concat(demographic_block);
+  //experiment = experiment.concat(debrief);
 
   // Prevent right clicking and refreshing the page
   if (!debug) {

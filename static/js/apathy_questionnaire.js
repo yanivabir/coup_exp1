@@ -44,18 +44,4 @@ var apathy_items = [
       }
     });
   }
-
-// Message that shows up before apathy questionnaire
-var apathy_message = {
-  type: "html-button-response",
-  stimulus: '<div id="instruct"><p>You will now continue answering questions about yourself.</p> \
-  Please read each of the following questions and provide an answer to each one by selecting the item\
-  on the scale that best describes you.</p> \
-  <p>There are no right or wrong answers.</p></div>',
-    choices: ["Continue"],
-    margin_vertical: "80px",
-    data: {
-      category: 'apathy_message'
-    },
-    post_trial_gap: 200
-}
+  
