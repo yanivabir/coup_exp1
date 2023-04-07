@@ -20,7 +20,7 @@ var coup_items,
   general_items_rating;
 
 // Load questions from local csv file
-// Changed corona to coup and general to general; removed third block.
+// Changed coup to coup and general to general; removed third block.
 Papa.parse("../static/coup_questions.csv", {
   download: true,
   header: true,
@@ -45,37 +45,38 @@ var experiment = [];
 // runs after the csvs load
 function postLoad() {
 
-  // Separate 2 items for practice block - one from each type
-  if (firstBlock == "coup") {
-    // Pick 1 from each type at random
-    practice_items = coup_items.slice(0,2);
-    // Remove them from coup list
-    coup_items = coup_items.filter(x => !practice_items.includes(x));
-  } else {
-    // Pick 1 from each type at random
-    practice_items = general_items.slice(0,2);
-    // Remove them from general list
-    general_items = general_items.filter(x => !practice_items.includes(x));
-  }
-
-  // Split items to curiosity and ratings sets ----
-
-  // First shuffle items making sure both types are evenly disperesed throughout list
-  // Removed the "useful" and "not useful" filters
-  // Changed shuffle function to jsPsych.randomization
-  coup_items = jsPsych.randomization.shuffle(coup_items);
-  general_items = jsPsych.randomization.shuffle(general_items);
-
-  // Choose items for wtw task and ratings for each block
-  coup_items_curiosity = coup_items.slice(0,
-    coup_items.length - n_for_ratings);
-  coup_items_rating = coup_items.slice(
-    coup_items.length - n_for_ratings, coup_items.length);
-
-  general_items_curiosity = general_items.slice(0,
-    general_items.length - n_for_ratings);
-  general_items_rating = general_items.slice(
-    general_items.length - n_for_ratings, general_items.length);
+    // Separate 2 items for practice block - one from each type
+    if (firstBlock == "coup") {
+      // Pick 1 from each type at random
+      practice_items = jsPsych.randomization.shuffle(
+        coup_items).filter(x => x['type'] == "Useful").splice(0,1).concat(
+          jsPsych.randomization.shuffle(coup_items).filter(x =>
+          x['type'] == "Not useful").splice(0,1));
+      // Remove them from coup list
+      coup_items = coup_items.filter(x => !practice_items.includes(x));
+    } else {
+      // Pick 1 from each type at random
+      practice_items = jsPsych.randomization.shuffle(
+        general_items).filter(x => x['type'] ==
+        "Useful").splice(0,1).concat(jsPsych.randomization.shuffle(general_items).filter(x =>
+          x['type'] == "Not useful").splice(0,1));
+      // Remove them from general list
+      general_items = general_items.filter(x => !practice_items.includes(x));
+    }
+  
+    // Split items to curiosity and covariate ratings sets
+    coup_items = pseudoShuffle(coup_items, ["useful", "not useful"], 6);
+    general_items = pseudoShuffle(general_items, ["useful", "not useful"], 6);
+  
+    coup_items_curiosity = coup_items.slice(0,
+      coup_items.length - n_for_covariates);
+    coup_items_covariate = coup_items.slice(
+      coup_items.length - n_for_covariates, coup_items.length);
+  
+    general_items_curiosity = general_items.slice(0,
+      general_items.length - n_for_covariates);
+    general_items_covariate = general_items.slice(
+      general_items.length - n_for_covariates, general_items.length);
 
   // Set timing parameters for waiting task practice block
   practice_items = drawTimes (practice_items)
@@ -91,8 +92,7 @@ function postLoad() {
   var fullscreen = {
     type: 'fullscreen',
     fullscreen_mode: true,
-    message: '<p>This study runs in fullscreen. To switch to full screen mode \
-      and start the study, press the button below.</p>',
+    message: '<p>אתר המחקר פועל רק במצב מסך מלא. בכדי לעבור למסך מלא, ולהתחיל את המחקר, לחצו על הכפתור מטה</p>'
     on_finish: function() {
       // Hide mouse
       var stylesheet = document.styleSheets[0];
