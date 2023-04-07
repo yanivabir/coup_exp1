@@ -6,33 +6,33 @@ var images = ["../static/images/wait_instructions.jpg"]; // Images to preload
 
 // Get participant id form url
 var PID = jsPsych.data.getURLVariable('workerId'),
-  firstBlock = Math.random() > 0.5 ? "NYT" : "reddit";
+  firstBlock = Math.random() > 0.5 ? "coup" : "general";
 
 // Is this a debug run?
 var debug = PID.includes("debug");
 
 // Keep important variables in global scope for convenience while debugging
-var NYT_items,
-  reddit_items,
-  NYT_items_curiosity,
-  NYT_items_rating,
-  reddit_items_curiosity,
-  reddit_items_rating;
+var coup_items,
+  general_items,
+  coup_items_curiosity,
+  coup_items_rating,
+  general_items_curiosity,
+  general_items_rating;
 
 // Load questions from local csv file
-// Changed corona to NYT and general to reddit; removed third block.
-Papa.parse("../static/NYT_questions.csv", {
+// Changed corona to coup and general to general; removed third block.
+Papa.parse("../static/coup_questions.csv", {
   download: true,
   header: true,
   dynamicTyping: true,
   complete: function(results) {
-    NYT_items = results.data;
-    Papa.parse("../static/reddit_questions.csv", {
+    coup_items = results.data;
+    Papa.parse("../static/general_questions.csv", {
       download: true,
       header: true,
       dynamicTyping: true,
       complete: function(results) {
-        reddit_items = results.data;
+        general_items = results.data;
             postLoad();
           }
         });
@@ -46,16 +46,16 @@ var experiment = [];
 function postLoad() {
 
   // Separate 2 items for practice block - one from each type
-  if (firstBlock == "NYT") {
+  if (firstBlock == "coup") {
     // Pick 1 from each type at random
-    practice_items = NYT_items.slice(0,2);
-    // Remove them from NYT list
-    NYT_items = NYT_items.filter(x => !practice_items.includes(x));
+    practice_items = coup_items.slice(0,2);
+    // Remove them from coup list
+    coup_items = coup_items.filter(x => !practice_items.includes(x));
   } else {
     // Pick 1 from each type at random
-    practice_items = reddit_items.slice(0,2);
+    practice_items = general_items.slice(0,2);
     // Remove them from general list
-    reddit_items = reddit_items.filter(x => !practice_items.includes(x));
+    general_items = general_items.filter(x => !practice_items.includes(x));
   }
 
   // Split items to curiosity and ratings sets ----
@@ -63,26 +63,26 @@ function postLoad() {
   // First shuffle items making sure both types are evenly disperesed throughout list
   // Removed the "useful" and "not useful" filters
   // Changed shuffle function to jsPsych.randomization
-  NYT_items = jsPsych.randomization.shuffle(NYT_items);
-  reddit_items = jsPsych.randomization.shuffle(reddit_items);
+  coup_items = jsPsych.randomization.shuffle(coup_items);
+  general_items = jsPsych.randomization.shuffle(general_items);
 
   // Choose items for wtw task and ratings for each block
-  NYT_items_curiosity = NYT_items.slice(0,
-    NYT_items.length - n_for_ratings);
-  NYT_items_rating = NYT_items.slice(
-    NYT_items.length - n_for_ratings, NYT_items.length);
+  coup_items_curiosity = coup_items.slice(0,
+    coup_items.length - n_for_ratings);
+  coup_items_rating = coup_items.slice(
+    coup_items.length - n_for_ratings, coup_items.length);
 
-  reddit_items_curiosity = reddit_items.slice(0,
-    reddit_items.length - n_for_ratings);
-  reddit_items_rating = reddit_items.slice(
-    reddit_items.length - n_for_ratings, reddit_items.length);
+  general_items_curiosity = general_items.slice(0,
+    general_items.length - n_for_ratings);
+  general_items_rating = general_items.slice(
+    general_items.length - n_for_ratings, general_items.length);
 
   // Set timing parameters for waiting task practice block
   practice_items = drawTimes (practice_items)
 
   // Draw timing parameters for waiting task
-  NYT_items_curiosity = drawTimes(NYT_items_curiosity);
-  reddit_items_curiosity = drawTimes(reddit_items_curiosity);
+  coup_items_curiosity = drawTimes(coup_items_curiosity);
+  general_items_curiosity = drawTimes(general_items_curiosity);
 
 
   // Set up the first trial, the transitions to fullscreen.
@@ -133,35 +133,35 @@ function postLoad() {
 
   wait_block1 = {
     timeline: wait_timeline,
-    timeline_variables: firstBlock == "NYT" ? NYT_items_curiosity : reddit_items_curiosity
+    timeline_variables: firstBlock == "coup" ? coup_items_curiosity : general_items_curiosity
   }
 
   wait_block2 = {
     timeline: wait_timeline,
-    timeline_variables: firstBlock == "NYT" ? reddit_items_curiosity : NYT_items_curiosity
+    timeline_variables: firstBlock == "coup" ? general_items_curiosity : coup_items_curiosity
   }
 
-  // Shuffle probe order across NYT trial
-  for (i = 0; i < NYT_items_rating.length; i++) {
+  // Shuffle probe order across coup trial
+  for (i = 0; i < coup_items_rating.length; i++) {
     var this_trial = []
   }
 
-  // NYT rating block variable
-  var NYT_rating_block = {
+  // coup rating block variable
+  var coup_rating_block = {
     timeline: rating_trial,
-    timeline_variables: NYT_items_rating,
+    timeline_variables: coup_items_rating,
     randomize_order: true
   }
 
-  // Shuffle probe order across Reddit trial
-  for (i = 0; i < reddit_items_rating.length; i++) {
+  // Shuffle probe order across general trial
+  for (i = 0; i < general_items_rating.length; i++) {
     var this_trial = []
   }
 
-  // Reddit rating block variable
-  var reddit_rating_block = {
+  // general rating block variable
+  var general_rating_block = {
     timeline: rating_trial,
-    timeline_variables: reddit_items_rating,
+    timeline_variables: general_items_rating,
     randomize_order: true
   }
 
@@ -355,22 +355,22 @@ var depression_message = {
   experiment.push(welcome);
   experiment = experiment.concat(wait_instructions1);
   experiment.push(wait_practice_block);
-  if (firstBlock == "NYT"){
-    experiment.push(wait_instructions_post_practice_NYT);
+  if (firstBlock == "coup"){
+    experiment.push(wait_instructions_post_practice_coup);
   }else{
-    experiment.push(wait_instructions_post_practice_reddit);
+    experiment.push(wait_instructions_post_practice_general);
   };
   experiment.push(wait_block1);
-  if (firstBlock == "NYT"){
-   experiment.push(wait_instructions_reddit2);
+  if (firstBlock == "coup"){
+   experiment.push(wait_instructions_general2);
   }else{
-   experiment.push(wait_instructions_NYT2);
+   experiment.push(wait_instructions_coup2);
   };
   experiment.push(wait_block2);
   experiment.push(wait_instructions_post_task);
   experiment.push(rating_instructions);
-  experiment.push(NYT_rating_block);
-  experiment.push(reddit_rating_block);
+  experiment.push(coup_rating_block);
+  experiment.push(general_rating_block);
   experiment.push(pre_questionnaires_message);
   experiment.push(anxiety_message);
   experiment = experiment.concat(anxiety);
