@@ -352,11 +352,7 @@ var depression_message = {
   experiment.push(welcome);
   experiment = experiment.concat(wait_instructions1);
   experiment.push(wait_practice_block);
-//   if (firstBlock == "coup"){
-//     experiment.push(wait_instructions_post_practice_coup);
-//   }else{
-//     experiment.push(wait_instructions_post_practice);
-//   };
+  experiment.push(wait_instructions_post_practice);
   experiment.push(wait_block1);
 //   if (firstBlock == "coup"){
 //    experiment.push(wait_instructions_general2);

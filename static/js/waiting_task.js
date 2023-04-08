@@ -355,14 +355,13 @@ var wait_instructions1 = [{
 ];
 
 // Wait instructions after the practice blocks
-var wait_instructions_post_practice_reddit = {
-  type: "instructions",
-  pages: ['<div id="instruct"><p>You will now begin the full version of the task, where you will be presented with general questions people asked online. \
-  You must decide if you want to see the answer to the question.<br></p><p>The task will continue for ' + maxTaskTime + ' minutes.</p>\
-  </div>'
-  ],
-  show_clickable_nav: true,
-  allow_keys: false,
+var wait_instructions_post_practice = {
+  type: "html-button-response",
+  stimulus: '<div id="instruct"><p>כעת תמשיכו לגרסה המלאה של המשימה. \
+  חלק זה ימשך ' + maxTaskTime + ' דקות.</p>\
+  <p><b>אנא הקדישו את מלוא תשומת לבכם למשימה במשך  ' + maxTaskTime +
+    ' הדקות הבאות.</p></div>',
+  choices: ["המשך"],
   data: {
     category: "wait_instructions_post_practice"
   },
@@ -373,70 +372,18 @@ var wait_instructions_post_practice_reddit = {
   }
 }
 
-var wait_instructions_post_practice_NYT = {
-  type: "instructions",
-  pages: ['<div id="instruct"><p>You will now begin the full version of the task, where you will be presented with newspaper headlines that contain a question. \
-  You must decide if you want to see the first paragraph of the article.<br></p><p>The task will continue for ' + maxTaskTime + ' minutes.</p>\
-  </div>'
-  ],
-  show_clickable_nav: true,
-  allow_keys: false,
-  data: {
-    category: "wait_instructions_post_practice"
-  },
-  on_finish: function() {
-    jsPsych.data.addProperties({
-      wait_start_time: Date.now()
-    });
-  }
-}
-
-// Wait instructions before the Reddit task (2nd Block)
-var wait_instructions_reddit2= {
+// Wait instructions before the 2nd Block
+var wait_instructions2 = {
   type: 'instructions',
-  pages: ['<div id="instruct"><p>You finished the first task in this study.</p>\
-  <p>Press next to continue to the next task.</p></div>',
-  '<div id="instruct"><p>In the next task, you will be reading a different type of questions. You will see general questions people asked online. You must decide if you want to see the answer to the question.<br></p><p>If you want to read the answer, you will have to wait a certain amount of time.</p><p>If you do not want to wait, you can choose to skip the question.</p><p>If you are 100% certain that you already know the answer to the question, you may indicate that you already know it.</p><p>If you choose to skip or indicate that you know the answer, you will NOT see the answer.</p></div>',
-    '<div id="instruct"><p>This block is also ' + maxTaskTime +
-    ' minutes long, regardless of how many questions you choose to skip or wait \
-    for, so please base your decisions on how interested you are in learning \
-    the answers.</p></div>',
-    '<div id="instruct"><p>Press the <i>Next</i> button to begin the next round of the task.</p></div>'
+  pages: ['<div id="instruct"><p>כעת נמשיך בסיבוב נוסף של אותה משימה, עם שאלות אחרות.</p></div>',
+    '<div id="instruct"><p>גם הפעם אורך המשימה  ' + maxTaskTime +
+    ' דקות, בלי קשר למספר הפעים שתבחרו להמתין או לדלג על תשובות. \
+    על כן, אנא בחרו לפי העניין האישי שלכם.</p></div>',
+    '<div id="instruct"><p>לחצו על המשך כדי להמשיך לחלק הבא.</p></div>'
   ],
-  show_clickable_nav: true,
-  allow_keys: false,
+  choices: ["המשך"],
   data: {
-    category: "wait_instructions2_reddit"
-  },
-  on_finish: function() {
-    jsPsych.data.addProperties({
-      wait_start_time: Date.now()
-    });
-  }
-};
-
-// Wait instructions before the NYT task (2nd Block)
-var wait_instructions_NYT2 = {
-  type: 'instructions',
-  pages: ['<div id="instruct"><p>You finished the first task in this study.</p>\
-    <p>Press next to continue to the next task.</p></div>',
-    '<div id="instruct"><p>In the next task, you will be reading a different type of questions. \
-    You will see newspaper headlines that present a question. You must decide if you want to see the \
-    first paragraph of the newspaper article.<br></p><p>\
-    If you want to read the first paragraph of the newspaper article, you will have to wait a certain amount of time.</p>\
-    <p>If you do not want to wait, you can choose to skip the question.</p>\
-    <p>If you are 100% certain that you already know the answer to the question presented by the newspaper headline, you may indicate that you already know it.</p>\
-    <p>If you choose to skip or indicate that you know the answer, you will NOT see the first paragraph of the article.</p></div>',
-    '<div id="instruct"><p>This block is also ' + maxTaskTime +
-    ' minutes long, regardless of how many questions you choose to skip or wait \
-    for, so please base your decisions on how interested you are in learning \
-    the answers.</p></div>',
-    '<div id="instruct"><p>Press the <i>Next</i> button to begin the next round of the task.</p></div>'
-  ],
-  show_clickable_nav: true,
-  allow_keys: false,
-  data: {
-    category: "wait_instructions2_nytimes"
+    category: "wait_instructions1"
   },
   on_finish: function() {
     jsPsych.data.addProperties({
@@ -447,25 +394,20 @@ var wait_instructions_NYT2 = {
 
 var wait_instructions_post_task = {
   type: 'instructions',
-  pages: ['<div id="instruct"><p>You finished the second task in this study.</p>\
-    <p>Press next to continue to the next task.</p></div>'],
-  show_clickable_nav: true,
-  allow_keys: false,
-  data: {
+  pages: ['<div id="instruct"><p>סיימתם את המשימה השניה במחקר.</p>\
+    <p>לחצו על המשך כדי להמשיך לחל הבא</p></div>'],
+    choices: ["המשך"],
+    data: {
     category: "wait_instructions_post"
   }
 }
 
 // A function that assigns waiting tines and ITIs to a list of trials
-// Added the new satisfaction_rating variable to the for loop
 function drawTimes(items) {
   var wait_times = jsPsych.randomization.repeat(waits,
     Math.ceil(items.length / waits.length), false);
 
   for (i = 0; i < items.length; i++) {
-    var postanswer = Math.random() > 0.5 ? "satisfaction":"further_curiosity"
-    items[i]["postanswer_stimulus"] = postanswer == "satisfaction" ? "Was the answer worth the wait?" : "How curious are you to learn more?"
-    items[i] ['postanswer_item'] = postanswer
     items[i]["wait_time"] = wait_times[i];
     items[i]["ITI_next"] = Math.random() * (ITI_range[1] - ITI_range[0]) +
       ITI_range[0]
