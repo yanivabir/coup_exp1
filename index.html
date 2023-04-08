@@ -101,7 +101,7 @@
 				var glasses = document.getElementsByName('glasses')[0].checked || document.getElementsByName('glasses')[1].checked
 				if (!safari) {
 					if (age.checked && otherWin.checked && quiet.checked && glasses) {
-						popup = window.open('/templates/consent.html' + window.location.search, 'Popup', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,width=' + 1024 + ',height=' +
+						popup = window.open('./templates/consent.html' + window.location.search, 'Popup', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,width=' + 1024 + ',height=' +
 							768 + '');
 					} else {
 						alert("You cannot proceed without affirming these statements. If they don't apply to you, you will not be able to participate in this experiment. Please return the HIT to Amazon.");
