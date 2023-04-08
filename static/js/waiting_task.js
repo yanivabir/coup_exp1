@@ -251,7 +251,7 @@ var check_quiz_function = function() {
   var resps = JSON.parse(jsPsych.data.get().filter({category: "wait_instructions_quiz"}).last(1).select("responses").values[0]);
   console.log(resps)
   for (i = 0; i < 3; i++) {
-    if (resps["Q" + i] == "False") {
+    if (resps["Q" + i] == "שקר") {
       return true
     }
   }
@@ -325,8 +325,8 @@ var wait_instructions1 = [{
       {
         timeline: [{
           type: "html-button-response",
-          stimulus: "<div id='instruct'>You did not answer all of the quiz questions correctly. Press <i>Continue</i> to review the instructions and retake the quiz.</div>",
-          choices: ["Continue"],
+          stimulus: "<div id='instruct'>חלק מהתשובות היו שגויות. לחצו <i>המשך</i> כדי לחזור על ההוראות והבוחן.</div>",
+          choices: ["המשך"],
           margin_vertical: "80px",
           data: {
             category: 'wait_instructions_quiz_failure'
@@ -339,8 +339,8 @@ var wait_instructions1 = [{
   },
   {
     type: "html-button-response",
-    stimulus: "<div id='instruct'>Press <i>Continue</i> to start the short training block.</div>",
-    choices: ["Continue"],
+    stimulus: "<div id='instruct'>לחצו <i>המשך</i> כדי להתחיל באימון קצר.</div>",
+    choices: ["המשך"],
     margin_vertical: "80px",
     data: {
       category: 'wait_instructions1'
