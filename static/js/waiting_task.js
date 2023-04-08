@@ -89,7 +89,7 @@ var wait_trial_answer = [{
     stimulus: function() {
       return "<div class='answer'>" + jsPsych.timelineVariable('answer', true) + "</div>"
     },
-    choices: ["Continue"],
+    choices: ["המשך"],
     margin_vertical: "80px",
     trial_duration: maxAnswerTime,
     data: {
