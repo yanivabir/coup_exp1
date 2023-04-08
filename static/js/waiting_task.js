@@ -24,7 +24,7 @@ var maxStimDuration = 15000, // Response deadline for questions
   maxAnswerTime = 90000, // Response deadline for answers
   postTooSlowTime = 800, // ITI post warning message
   fixationTime = 500, // Duration of fixation period b/w trials
-  maxTaskTime = 7.5, // Total duration of block
+  maxTaskTime = 5, // Total duration of block
   waits = [3, 4, 5, 6, 7, 8, 9], // Wait times in task
   ITI_range = [500, 1200]; // Range of ITIs in task. Drawn from a uniform distribution on this range.
 
@@ -169,9 +169,9 @@ var wait_trial = [fullscreen_prompt, {
     },
     choices: function() {
       return [
-        'ידוע',
+        'לדלג',
         "לחכות " + jsPsych.timelineVariable('wait_time', true),
-        "לדלג"
+        "ידוע"
       ]
     },
     margin_horizontal: "40px",
