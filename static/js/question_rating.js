@@ -2,76 +2,44 @@
 
 // This is the list of probes each question should be rated on
 var rating_probes = [[{
-    prompt: "...is probably complicated",
-    labels: ["1<br>Not complicated at all", "2", "3", "4", "5", "6", "7<br>Very complicated"],
+    prompt: "זה יהיה מועיל בשבילי לדעת את התשובה לשאלה",
     required: true,
-    name: "pars_complicated"
+    name: "useful_pos"
   },
   {
-    prompt: "...is probably simple",
-    labels: ["1<br>Not simple at all", "2", "3", "4", "5", "6", "7<br>Very simple"],
+    prompt: "מיותר לדעת את התשובה לשאלה",
     required: true,
-    name: "pars_simple"
+    name: "useful_neg"
   }],
   [{
-    prompt: "...is something that has an element of randomness",
-    labels: ["1<br>Not at all", "2", "3", "4", "5", "6", "7<br>Very much"],
+    prompt: "אני יודע/ת את התשובה לשאלה בביטחון מלא",
     required: true,
-    name: "epstm_random_element"
+    name: "confidence_pos"
   },
   {
-    prompt: "...is determined by a chance factor",
-    labels: ["1<br>Not at all", "2", "3", "4", "5", "6", "7<br>Very much"],
+    prompt: "אני לגמרי חסר/ת ביטחון לגבי מהי התשובה לשאלה",
     required: true,
-    name: "epstm_detemined_chance"
+    name: "confidence_neg"
   }],
   [{
-    prompt: "...is knowable in principle, given enough information",
-    labels: ["1<br>Not at all", "2", "3", "4", "5", "6", "7<br>Very much"],
+    prompt: "התשובה לשאלה תגרום לי להרגיש טוב יותר כשאקרא אותה",
     required: true,
-    name: "epstm_knowable"
+    name: "affect_pos"
   },
   {
-    prompt: "…is something that well-informed people would agree on",
-    labels: ["1<br>Not at all", "2", "3", "4", "5", "6", "7<br>Very much"],
+    prompt: "התשובה לשאלה תגרום לי להרגיע גרוע יותר כשאקרא אותה",
     required: true,
-    name: "epstm_informed_agree"
+    name: "affect_neg"
   }],
   [{
-    prompt: "...would be easy to remember in the long term",
-    labels: ["1<br>Not easy at all", "2", "3", "4", "5", "6", "7<br>Very easy"],
+    prompt: "התשובה לשאלה צפויה להתאים לעמדות והדעות שלי",
     required: true,
-    name: "memory_easy"
+    name: "congruence_pos"
   },
   {
-    prompt: "…would be difficult to remember in the long term",
-    labels: ["1<br>Not dificult at all", "2", "3", "4", "5", "6", "7<br>Very difficult"],
+    prompt: "התשובה לשאלה צפויה לסתור את העמדות והדעות שלי",
     required: true,
-    name: "memory_difficult"
-  }],
-  [{
-    prompt: "...would be useful for me to know",
-    labels: ["1<br>Not useful at all", "2", "3", "4", "5", "6", "7<br>Very useful"],
-    required: true,
-    name: "useful_me"
-  },
-  {
-    prompt: "...would be useful for me to know",
-    labels: ["1<br>Not useful at all", "2", "3", "4", "5", "6", "7<br>Very useful"],
-    required: true,
-    name: "useful_me"
-  }],
-  [{
-    prompt: "It is easy to imagine what the answer to this question might be.",
-    labels: ["1<br>Not easy at all", "2", "3", "4", "5", "6", "7<br>Very easy"],
-    required: true,
-    name: "simulate_easy"
-  },
-  {
-    prompt: "It is difficult to imagine what the answer to this question might be.",
-    labels: ["1<br>Not at all", "2", "3", "4", "5", "6", "7<br>Very difficult"],
-    required: true,
-    name: "simulate_difficult"
+    name: "congruence_neg"
   }]
 ]
 
@@ -87,10 +55,10 @@ var rating_trial = [fullscreen_prompt,
   {
     type: "html-button-response",
     stimulus: function() {
-      return "<div id='instruct'><p>We are interested in your judgment about this question:</p>\
+      return "<div id='instruct'><p>קראו את השאלה, ודרגו עד כמה אתם מסכימים עם האמירות הבאות המתייחסות אליה:</p>\
       <p><i>" + jsPsych.timelineVariable('question', true) + "</i></p></div>"
     },
-    choices: ["Continue"],
+    choices: ["המשך"],
     data:{
       category: "rating_intro_question",
       questionId: jsPsych.timelineVariable('questionId')
@@ -100,11 +68,11 @@ var rating_trial = [fullscreen_prompt,
   {
     type: "survey-likert",
     preamble: function() {
-      return "<p><i>" + jsPsych.timelineVariable('question', true) + "</i></p>\
-      <p>The answer to this question...</p>"
+      return "<div id='instruct'><p>קראו את השאלה, ודרגו עד כמה אתם מסכימים עם האמירות הבאות המתייחסות אליה:</p>\
+      <p><i>" + jsPsych.timelineVariable('question', true) + "</i></p></div>"
     },
     questions: function() {
-      return chosen_rating_probes.slice(0, 3)
+      return chosen_rating_probes.slice(0, 2)
     },
     scale_width: 400,
     post_trial_gap: 100,
@@ -117,11 +85,15 @@ var rating_trial = [fullscreen_prompt,
   {
     type: "survey-likert",
     preamble: function() {
-      return "<p><i>" + jsPsych.timelineVariable('question', true) + "</i></p>\
-      <p>The answer to this question...</p>"
+      return "<div id='instruct'><p>קראו את השאלה, ודרגו עד כמה אתם מסכימים עם האמירות הבאות המתייחסות אליה:</p>\
+      <p><i>" + jsPsych.timelineVariable('question', true) + "</i></p></div>"
     },
     questions: function() {
-      return chosen_rating_probes.slice(3, 5)
+      if (jsPsych.timelineVariable('block', true) == "coup"){
+        return chosen_rating_probes.slice(2, 4)
+      }else{
+        return chosen_rating_probes.slice(2, 3)
+      }
     },
     scale_width: 400,
     post_trial_gap: 300,
@@ -129,23 +101,7 @@ var rating_trial = [fullscreen_prompt,
       category: "rating_question2",
       questionId: jsPsych.timelineVariable('questionId')
     }
-  },
-  // Third page of probes
-  {
-    type: "survey-likert",
-    preamble: function() {
-      return "<p><i>" + jsPsych.timelineVariable('question', true) + "</i></p>"
-    },
-    questions: function() {
-      return chosen_rating_probes.slice(5, 6)
-    },
-    scale_width: 400,
-    post_trial_gap: 300,
-    data:{
-      category: "rating_question3",
-      questionId: jsPsych.timelineVariable('questionId')
-    }
-  },
+  }
 ]
 
 // Rating instructions
