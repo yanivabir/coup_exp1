@@ -14,6 +14,8 @@
 			color: black;
 			font-weight: 300;
 			font-size: 13pt;
+			direction: rtl;
+			text-align: right;
 		}
 
 		#landinglogo {
@@ -50,43 +52,43 @@
 				</div>
 				<div class="col-xs-10">
 
-					<h1>Thank you for participating in this experiment!</h1>
+					<h1>תודה על השתתפותך במחקר!</h1>
 					<p>
-						By clicking the following URL link, you will be taken to the study, including complete instructions and an informed consent agreement. Before doing so, you must confirm the following:
+						לחיצה על הכפתור למטה תוביל לאתר המחקר, שיכלול טופס הסכמה מדעת, והוראות מלאות להשתתפות. לפני כן, אנא וודאו כי אתם עומדים בקריטריונים הבאים:
 					</p>
 					<p>
-						I hereby confirm that:
+						הריני לאשר כי:
 						<br>
-						<input type="checkbox" id="age_checkbox" /> I am over 18 years old.
+						<input type="checkbox" id="age_checkbox" /> אני מעל גיל 18.
 					</p>
 					<div class="alert alert-warning">
-						<b>Warning</b>: Please disable pop-up blockers before continuing.
-						<br> Please close all other browser windows and applications, and plug in if you're using a laptop computer. Images in this study will not display properly otherwise.
+						<b>שימו לב</b>: יש לכבות חוסמי פופ-אפים.
+						<br> אנא סגרו את כל האפליקציות האחרות הפועלות במחשב, ולשוניות אחרות בדפדפן. אם אתם משתמשים במחשב נייד, אנא חברו אותו לחשמל.
 						<br>
 						<p>
-							<input type="checkbox" id="close_windows_checkbox" /> I closed all other windows and tabs.
+							<input type="checkbox" id="close_windows_checkbox" /> סגרתי את כל האפליקציות והלשוניות האחרות.
 						</p>
 					</div>
 					<div class="alert alert-warning">
-						Please make sure you are performing this task in a quiet room, without any distractions.
+						אנחנו מבקשים שתשלימו את המחקר בחדר שקט, לבדכם.
 						<br>
 						<p>
-							<input type="checkbox" id="quiet_checkbox" /> I am in a quiet environment.
+							<input type="checkbox" id="quiet_checkbox" /> אני בסביבה שקטה.
 						</p>
 						<br>
-						Please put on your reading glasses if you need them.
+						אנא הרכיבו משקפי קריאה אם אתם זקוקים להם.
 						<br>
 						<p>
 							<form action="" id="glasses_form">
-								<input type="radio" name="glasses" value='no_need'> I don't need reading glasses<br>
-								<input type="radio" name="glasses" value='have'> I need reading glasses and have them on<br>
-								<input type="radio" name="glasses" value = 'fail'> I need reading glasses and don't have them on
+								<input type="radio" name="glasses" value='no_need'> אין לי צורך במשקפיים<br>
+								<input type="radio" name="glasses" value='have'> אני משתמש/ת במשקפי קריאה ומרכיב/ה אותם עכשיו<br>
+								<input type="radio" name="glasses" value = 'fail'> אני משתמש/ת במשקפי קריאה ואיני מרכיב/ה אותם עכשיו
 							</form>
 						</p>
 					</div>
 
 					<button type="button" class="btn btn-primary btn-lg" onClick="openwindow();">
-								  Begin Study
+								  המשך
 								</button>
 				</div>
 			</div>
@@ -104,10 +106,10 @@
 						popup = window.open('./templates/consent.html' + window.location.search, 'Popup', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,width=' + 1024 + ',height=' +
 							768 + '');
 					} else {
-						alert("You cannot proceed without affirming these statements. If they don't apply to you, you will not be able to participate in this experiment. Please return the HIT to Amazon.");
+						alert("אי אפשר להתחיל במחקר מבלי לאשר את כל ההצהרות. אם אינך עומד/ת בקריטריונים, יש לחזור לאתר פרויקט המדגם.");
 					}
 				} else {
-					alert("It seems that you are using Safari as your browser. This HIT is not compatible with Safari. Please use Chrome or Firefox instead");
+					alert("נראה כי הנך משתמש/ת בדפדפן ספארי. אתר המחקר עובד רק עם פיירפוקס או כרום.");
 				}
 			}
 		</script>
