@@ -110,13 +110,9 @@ function postLoad() {
   // Welcome message
   var welcome = {
     type: "html-button-response",
-    stimulus: "<div id='instruct'><p>In this study, you will be asked to complete \
-      several tasks and answer multiple questions. Throughout the study, we are \
-      interested in your own personal judgments, views, and knowledge.</p>\
-      <p>It is important that you stay engaged throughout this study. \
-      We will monitor the data for use of other apps or lack of attention and give $2 bonus for\
-      full engagement with the task.<p>Thank you for\
-      participating!</p></div>",
+    stimulus: "<div id='instruct'><p>כחלק מהמחקר, תתבקשו להשלים כמה משימות, ולמלא כמה שאלונים. בכל שלבי המחקר אנו רוצים לשמוע על הדעות והידע האישיים שלכם.</p>\
+      <p>חשוב לנו שתקדישו את כל תשומת הלב למשימות בזמן השתתפותכם. אנו בודקים את תגובותיכם לוודא שהקדשתם תשומת לב, ושלא השתמשתם באפליקציות אחרות בזמן המחקר. מי שיקידש את תשומת לבו המלאה, יקבל בונוס של ₪10 בנוסף לתשלום על ההשתתפות.<p>\
+      תודה על השתתפותך במחקר!</p></div>",
       choices: ["Continue"],
       margin_vertical: "80px",
       data: {

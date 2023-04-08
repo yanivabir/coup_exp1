@@ -23,7 +23,8 @@
 }
 
 #instruct{
-  text-align: left;
+  text-align: right;
+  direction: rtl;
   max-width: 800px;
 }
 
