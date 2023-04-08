@@ -93,6 +93,7 @@ function postLoad() {
     type: 'fullscreen',
     fullscreen_mode: true,
     message: '<p>אתר המחקר פועל רק במצב מסך מלא. בכדי לעבור למסך מלא, ולהתחיל את המחקר, לחצו על הכפתור מטה</p>',
+    button_label: 'המשך',
     on_finish: function() {
       // Hide mouse
       var stylesheet = document.styleSheets[0];
@@ -113,12 +114,12 @@ function postLoad() {
     stimulus: "<div id='instruct'><p>כחלק מהמחקר, תתבקשו להשלים כמה משימות, ולמלא כמה שאלונים. בכל שלבי המחקר אנו רוצים לשמוע על הדעות והידע האישיים שלכם.</p>\
       <p>חשוב לנו שתקדישו את כל תשומת הלב למשימות בזמן השתתפותכם. אנו בודקים את תגובותיכם לוודא שהקדשתם תשומת לב, ושלא השתמשתם באפליקציות אחרות בזמן המחקר. מי שיקידש את תשומת לבו המלאה, יקבל בונוס של ₪10 בנוסף לתשלום על ההשתתפות.<p>\
       תודה על השתתפותך במחקר!</p></div>",
-      choices: ["Continue"],
-      margin_vertical: "80px",
-      data: {
-        category: 'welcome'
-      },
-      post_trial_gap: 200
+    choices: ["המשך"],
+    margin_vertical: "80px",
+    data: {
+    category: 'welcome'
+    },
+    post_trial_gap: 200
   }
 
   // Build waiting task blocks

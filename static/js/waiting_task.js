@@ -33,7 +33,7 @@ var maxStimDuration = 15000, // Response deadline for questions
 // Show question response deadline warning, and update the warning counter
 var too_slow = [kick_out, {
   type: 'html-keyboard-response',
-  stimulus: '<div style="font-size: 150%">Please choose more quickly</div>',
+  stimulus: '<div style="font-size: 150%; direction: rtl">אנא בחרו מהר יותר</div>',
   choices: jsPsych.NO_KEYS,
   trial_duration: tooSlowTime,
   on_finish: function() {
@@ -51,7 +51,7 @@ var too_slow = [kick_out, {
 // Show answer response deadline warning, and update the warning counter
 var answer_n_respond = [kick_out, {
   type: 'html-keyboard-response',
-  stimulus: '<div style="font-size: 150%">Please press continue after reading the answer</div>',
+  stimulus: '<div style="font-size: 150%; direction: rtl">אנא לחצו המשך אחרי שקראתם את התשובה</div>',
   choices: jsPsych.NO_KEYS,
   trial_duration: tooSlowTime,
   on_finish: function() {
@@ -169,9 +169,9 @@ var wait_trial = [fullscreen_prompt, {
     },
     choices: function() {
       return [
-        'SKIP',
-        "WAIT " + jsPsych.timelineVariable('wait_time', true),
-        "KNOW"
+        'ידוע',
+        "לחכות " + jsPsych.timelineVariable('wait_time', true),
+        "לדלג"
       ]
     },
     margin_horizontal: "40px",
@@ -258,37 +258,46 @@ var check_quiz_function = function() {
   return false
 }
 
+var wait_instructions1_text_list = ['<div id="instruct"><p>נתחיל במשימה העוסקת בסקרנות. לחצו על הכפתור בכדי לקרוא את ההוראות למשימה.</p></div>',
+  '<div id="instruct"><p>במשימה זו, תוצג בפניכם בכל פעם שאלה אחת.<br></p><p>אם ברצונכם לקרוא את התשובה לשאלה, תצטרכו להמתין מספר שניות.</p><p>אם אינכם רוצים להמתין, תוכלו לדלג על השאלה.</p><p>אם אתם בטוחים ב100% שאתם יודעים את התשובה, תוכלו לסמן שהתשובה ידועה.</p><p>אם תבחרו לדלג, או שתסמנו שהתשובה ידועה, <b>לא תוכלו</b> לקרוא את התשובה.</p></div>',
+  '<div id="instruct"><p>כל שאלה תוצג על המסך באופן הזה:<p>\
+    <center><div style="border:1px solid black; width: 500px; height: 200px">\
+    <div id="jspsych-html-button-response-stimulus" style="padding-top: 5%">מה היה החיסון היעיל הראשון שפותח?</div>\
+    <div id="jspsych-html-button-response-btngroup">\
+    <div class="jspsych-html-button-response-button" style="display: inline-block; margin: 80px 8px"><button class="jspsych-btn">לדלג</button></div>\
+    <div class="jspsych-html-button-response-button" style="display: inline-block; margin: 80px 8px"><button class="jspsych-btn">להמתין 4</button></div>\
+    <div class="jspsych-html-button-response-button" style="display: inline-block; margin: 80px 8px"><button class="jspsych-btn">ידוע</button></div></div></div></center>\
+    <p>תצטרכו לבחור בעזרת העכבר אם לדלג על התשובה, להמתין לה, או שהיא כבר ידועה לכם.</p></div>',
+  '<div id="instruct"><p>If you choose to wait for an answer to a question, you will be asked to give your opinion about the answer.</p><p> You may be asked to rate if the answer was worth waiting for, on a scale of 1 = not worth it up to 5 = extremely worth it.</p>\
+    <p>Or, you may be asked to rate if you are curious to learn more about the topic, on a scale of 1 = not at all curious up to 5 = extremely curious.</p></div>',
+  '<div id="instruct"><p>The task will continue for ' + maxTaskTime + ' minutes. The task takes the same amount of time regardless of how many questions you choose to skip or wait for, so please base your decisions on how interested you are in learning the answers.</p></div>',
+  '<div id="instruct"><p>The questions you will see in this task were ' + (true == "NYT" ? 
+    'presented in the headlines of newspaper articles.<br>You must decide if you want to see the answer given in the first paragraph of the article.' :
+    'asked online in a general knowledge forum.<br>You must decide if you want to see the answer to the question as given on the forum.') + '</p></div>',
+  '<div id="instruct"><p>You will soon do a short practice version to get comfortable with the task. Please use this time to get used to pressing the different buttons and to the amount of time you have to respond to the different prompts.<p></div>',
+  '<div id="instruct"><p>You will first be asked to answer some questions to ensure that you understood the instructions.</p>\
+    <p>Please answer to the best of your ability.</p>\
+    <p>If you miss a question, you will be sent back to review the instructions and re-take the test. You must get all questions correct before you can move on to the practice round of the task.</p></div>'
+  ]
+
+var wait_instructions1_text = []
+
+for (i=0; i < wait_instructions1_text_list.length; i++){
+  wait_instructions1_text.push({text: wait_instructions1_text_list[i]})
+}
+
 var wait_instructions1 = [{
-    timeline: [{
-        type: 'instructions',
-        pages: function () {
-            return['<div id="instruct"><p>You\'ll start with a computer task about curiosity. Press the <i>Next</i> button to read the instructions for this task.</p></div>',
-            '<div id="instruct"><p>In this first task, you will be shown a series of questions.<br></p><p>If you want to find out the answer to the question, you will have to wait a certain amount of time.</p><p>If you do not want to wait, you can choose to skip the question.</p><p>If you are 100% certain that you already know the answer to the question, you may indicate that you already know it.</p><p>If you choose to skip or indicate that you know the answer, you will NOT see the answer to the question.</p></div>',
-            '<div id="instruct"><p>When you are first shown the question, the screen will look like this:<p>\
-              <center><div style="border:1px solid black; width: 500px; height: 200px">\
-              <div id="jspsych-html-button-response-stimulus" style="padding-top: 5%">What was the first successful vaccine to be developed?</div>\
-              <div id="jspsych-html-button-response-btngroup">\
-              <div class="jspsych-html-button-response-button" style="display: inline-block; margin: 80px 8px"><button class="jspsych-btn">SKIP</button></div>\
-              <div class="jspsych-html-button-response-button" style="display: inline-block; margin: 80px 8px"><button class="jspsych-btn">WAIT 4</button></div>\
-              <div class="jspsych-html-button-response-button" style="display: inline-block; margin: 80px 8px"><button class="jspsych-btn">KNOW</button></div></div></div></center>\
-              <p>Use the mouse to indicate that you would like to wait for the answer, skip the question, or that you know its answer.</p></div>',
-            '<div id="instruct"><p>If you choose to wait for an answer to a question, you will be asked to give your opinion about the answer.</p><p> You may be asked to rate if the answer was worth waiting for, on a scale of 1 = not worth it up to 5 = extremely worth it.</p>\
-              <p>Or, you may be asked to rate if you are curious to learn more about the topic, on a scale of 1 = not at all curious up to 5 = extremely curious.</p></div>',
-            '<div id="instruct"><p>The task will continue for ' + maxTaskTime + ' minutes. The task takes the same amount of time regardless of how many questions you choose to skip or wait for, so please base your decisions on how interested you are in learning the answers.</p></div>',
-            '<div id="instruct"><p>The questions you will see in this task were ' + (firstBlock == "NYT" ? 
-              'presented in the headlines of newspaper articles.<br>You must decide if you want to see the answer given in the first paragraph of the article.' :
-              'asked online in a general knowledge forum.<br>You must decide if you want to see the answer to the question as given on the forum.') + '</p></div>',
-            '<div id="instruct"><p>You will soon do a short practice version to get comfortable with the task. Please use this time to get used to pressing the different buttons and to the amount of time you have to respond to the different prompts.<p></div>',
-            '<div id="instruct"><p>You will first be asked to answer some questions to ensure that you understood the instructions.</p>\
-              <p>Please answer to the best of your ability.</p>\
-              <p>If you miss a question, you will be sent back to review the instructions and re-take the test. You must get all questions correct before you can move on to the practice round of the task.</p></div>'
-        ]},
-        show_clickable_nav: true,
-        allow_keys: false,
+    timeline: [
+      {timeline: [{
+        type: 'html-button-response',
+        choices: ['המשך'],
+        stimulus: jsPsych.timelineVariable('text'),
         data: {
           category: "wait_instructions1"
         }
-      },
+      }],
+      timeline_variables: wait_instructions1_text
+    },
       {
         type: 'survey-multi-choice',
         data: {
