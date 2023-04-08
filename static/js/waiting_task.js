@@ -320,7 +320,8 @@ var wait_instructions1 = [{
           }
         ],
         randomize_question_order: true,
-        preamble: 'בבקשה ענו על השאלות הבאות:'
+        preamble: 'בבקשה ענו על השאלות הבאות:',
+        button_label: "המשך"
       },
       {
         timeline: [{
