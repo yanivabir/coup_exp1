@@ -26,7 +26,7 @@ var maxStimDuration = 15000, // Response deadline for questions
   fixationTime = 500, // Duration of fixation period b/w trials
   maxTaskTime = 5, // Total duration of block
   waits = [3, 6, 9, 12], // Wait times in task
-  ITI_range = [500, 1200]; // Range of ITIs in task. Drawn from a uniform distribution on this range.
+  ITI_range = [500, 900]; // Range of ITIs in task. Drawn from a uniform distribution on this range.
 
 // WTW Trials -----------------------------------------------
 
