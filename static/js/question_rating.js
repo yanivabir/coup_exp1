@@ -3,42 +3,50 @@
 // This is the list of probes each question should be rated on
 var rating_probes = [[{
     prompt: "זה יהיה מועיל בשבילי לדעת את התשובה לשאלה",
+    labels: ["1<br>כלל לא מסכימ/ה", "2", "3", "4", "5<br>מסכים מאוד"],
     required: true,
     name: "useful_pos"
   },
   {
     prompt: "מיותר לדעת את התשובה לשאלה",
     required: true,
+    labels: ["1<br>כלל לא מסכימ/ה", "2", "3", "4", "5<br>מסכים מאוד"],
     name: "useful_neg"
   }],
   [{
     prompt: "אני יודע/ת את התשובה לשאלה בביטחון מלא",
     required: true,
+    labels: ["1<br>כלל לא מסכימ/ה", "2", "3", "4", "5<br>מסכים מאוד"],
     name: "confidence_pos"
   },
   {
     prompt: "אני לגמרי חסר/ת ביטחון לגבי מהי התשובה לשאלה",
     required: true,
+    labels: ["1<br>כלל לא מסכימ/ה", "2", "3", "4", "5<br>מסכים מאוד"],
     name: "confidence_neg"
   }],
   [{
     prompt: "התשובה לשאלה תגרום לי להרגיש טוב יותר כשאקרא אותה",
     required: true,
+    labels: ["1<br>כלל לא מסכימ/ה", "2", "3", "4", "5<br>מסכים מאוד"],
     name: "affect_pos"
   },
   {
     prompt: "התשובה לשאלה תגרום לי להרגיע גרוע יותר כשאקרא אותה",
     required: true,
+    labels: ["1<br>כלל לא מסכימ/ה", "2", "3", "4", "5<br>מסכים מאוד"],
     name: "affect_neg"
   }],
   [{
     prompt: "התשובה לשאלה צפויה להתאים לעמדות והדעות שלי",
     required: true,
+    labels: ["1<br>כלל לא מסכימ/ה", "2", "3", "4", "5<br>מסכים מאוד"],
     name: "congruence_pos"
   },
   {
     prompt: "התשובה לשאלה צפויה לסתור את העמדות והדעות שלי",
     required: true,
+    labels: ["1<br>כלל לא מסכימ/ה", "2", "3", "4", "5<br>מסכים מאוד"],
     name: "congruence_neg"
   }]
 ]
