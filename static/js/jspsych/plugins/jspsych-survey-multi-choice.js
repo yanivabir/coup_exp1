@@ -81,9 +81,9 @@ jsPsych.plugins['survey-multi-choice'] = (function() {
 
     // inject CSS for trial
     html += '<style id="jspsych-survey-multi-choice-css">';
-    html += ".jspsych-survey-multi-choice-question { margin-top: 2em; margin-bottom: 2em; text-align: left; }"+
+    html += ".jspsych-survey-multi-choice-question { margin-top: 2em; margin-bottom: 2em; text-align: right; }"+
       ".jspsych-survey-multi-choice-text span.required {color: darkred;}"+
-      ".jspsych-survey-multi-choice-horizontal .jspsych-survey-multi-choice-text {  text-align: left;}"+
+      ".jspsych-survey-multi-choice-horizontal .jspsych-survey-multi-choice-text {  text-align: right;}"+
       ".jspsych-survey-multi-choice-option { line-height: 2; }"+
       ".jspsych-survey-multi-choice-horizontal .jspsych-survey-multi-choice-option {  display: inline-block;  margin-left: 1em;  margin-right: 1em;  vertical-align: top;}"+
       "label.jspsych-survey-multi-choice-text input[type='radio'] {margin-right: 1em;}";

@@ -37,6 +37,11 @@
   max-width: 800px;
 }
 
+#jspsych-survey-multi-choice-form{
+  direction: rtl;
+  text-align: right;
+}
+
 /* New custom css above this line */
 html {
   background-color: white;
@@ -64,6 +69,7 @@ html {
   /* this is mainly an IE 10-11 fix */
   text-align: center;
   margin: auto;
+  direction: rtl;
   /* this is for overflowing content */
 }
 

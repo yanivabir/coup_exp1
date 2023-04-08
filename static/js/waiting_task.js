@@ -300,27 +300,27 @@ var wait_instructions1 = [{
           category: "wait_instructions_quiz"
         },
         questions: [{
-            prompt: 'If I choose "SKIP" or "KNOW," I will not see the answer to the question.',
-            options: ['True', 'False'],
+            prompt: 'אם אבחר לדלג או שאסמן שהתשובה ידועה, לא אראה את התשובה לשאלה',
+            options: ['אמת', 'שקר'],
             required: true,
             horizontal: true
           },
           {
-            prompt: 'The task will take ' + maxTaskTime +
-              ' minutes, regardless of whether I press SKIP, KNOW, or WAIT.',
-            options: ['True', 'False'],
+            prompt: 'המשימה תארך ' + maxTaskTime +
+              ' דקות, בלי קשר למספר הפעים שאבחר לדלג, להמתין או שאסמן שהתשובה ידועה.',
+            options: ['אמת', 'שקר'],
             required: true,
             horizontal: true
           },
           {
-            prompt: 'I should press KNOW only if I\'m 100% sure I know the answer to the question.',
-            options: ['True', 'False'],
+            prompt: 'עלי ללחוץ ״ידוע״ רק אם התשובה ידועה לי ב-100% ודאות.',
+            options: ['אמת', 'שקר'],
             required: true,
             horizontal: true
           }
         ],
         randomize_question_order: true,
-        preamble: 'Please answer these questions:'
+        preamble: 'בבקשה ענו על השאלות הבאות:'
       },
       {
         timeline: [{
