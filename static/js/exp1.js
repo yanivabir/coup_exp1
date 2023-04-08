@@ -64,19 +64,19 @@ function postLoad() {
       general_items = general_items.filter(x => !practice_items.includes(x));
     }
   
-    // Split items to curiosity and covariate ratings sets
+    // Split items to curiosity and rating  sets
     coup_items = pseudoShuffle(coup_items, ["useful", "not useful"], 6);
     general_items = pseudoShuffle(general_items, ["useful", "not useful"], 6);
   
     coup_items_curiosity = coup_items.slice(0,
-      coup_items.length - n_for_covariates);
-    coup_items_covariate = coup_items.slice(
-      coup_items.length - n_for_covariates, coup_items.length);
+      coup_items.length - n_for_ratings);
+    coup_items_rating = coup_items.slice(
+      coup_items.length - n_for_ratings, coup_items.length);
   
     general_items_curiosity = general_items.slice(0,
-      general_items.length - n_for_covariates);
-    general_items_covariate = general_items.slice(
-      general_items.length - n_for_covariates, general_items.length);
+      general_items.length - n_for_ratings);
+    general_items_rating = general_items.slice(
+      general_items.length - n_for_ratings, general_items.length);
 
   // Set timing parameters for waiting task practice block
   practice_items = drawTimes (practice_items)
@@ -92,7 +92,7 @@ function postLoad() {
   var fullscreen = {
     type: 'fullscreen',
     fullscreen_mode: true,
-    message: '<p>אתר המחקר פועל רק במצב מסך מלא. בכדי לעבור למסך מלא, ולהתחיל את המחקר, לחצו על הכפתור מטה</p>'
+    message: '<p>אתר המחקר פועל רק במצב מסך מלא. בכדי לעבור למסך מלא, ולהתחיל את המחקר, לחצו על הכפתור מטה</p>',
     on_finish: function() {
       // Hide mouse
       var stylesheet = document.styleSheets[0];
@@ -355,33 +355,33 @@ var depression_message = {
   experiment.push(welcome);
   experiment = experiment.concat(wait_instructions1);
   experiment.push(wait_practice_block);
-  if (firstBlock == "coup"){
-    experiment.push(wait_instructions_post_practice_coup);
-  }else{
-    experiment.push(wait_instructions_post_practice_general);
-  };
+//   if (firstBlock == "coup"){
+//     experiment.push(wait_instructions_post_practice_coup);
+//   }else{
+//     experiment.push(wait_instructions_post_practice);
+//   };
   experiment.push(wait_block1);
-  if (firstBlock == "coup"){
-   experiment.push(wait_instructions_general2);
-  }else{
-   experiment.push(wait_instructions_coup2);
-  };
+//   if (firstBlock == "coup"){
+//    experiment.push(wait_instructions_general2);
+//   }else{
+//    experiment.push(wait_instructions_coup2);
+//   };
   experiment.push(wait_block2);
   experiment.push(wait_instructions_post_task);
   experiment.push(rating_instructions);
   experiment.push(coup_rating_block);
   experiment.push(general_rating_block);
   experiment.push(pre_questionnaires_message);
-  experiment.push(anxiety_message);
-  experiment = experiment.concat(anxiety);
-  experiment.push(impulse_message);
-  experiment = experiment.concat(impulsive);
-  experiment.push(regfocus_message);
-  experiment = experiment.concat(reg_focus);
-  experiment.push(apathy_message);
-  experiment = experiment.concat(apathy);
-  experiment.push(pleasure_message);
-  experiment = experiment.concat(pleasure);
+//   experiment.push(anxiety_message);
+//   experiment = experiment.concat(anxiety);
+//   experiment.push(impulse_message);
+//   experiment = experiment.concat(impulsive);
+//   experiment.push(regfocus_message);
+//   experiment = experiment.concat(reg_focus);
+//   experiment.push(apathy_message);
+//   experiment = experiment.concat(apathy);
+//   experiment.push(pleasure_message);
+//   experiment = experiment.concat(pleasure);
   experiment.push(demog_message);
   experiment = experiment.concat(demographic_block);
   experiment = experiment.concat(debrief);
