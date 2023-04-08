@@ -268,16 +268,12 @@ var wait_instructions1_text_list = ['<div id="instruct"><p>נתחיל במשימ
     <div class="jspsych-html-button-response-button" style="display: inline-block; margin: 80px 8px"><button class="jspsych-btn">להמתין 4</button></div>\
     <div class="jspsych-html-button-response-button" style="display: inline-block; margin: 80px 8px"><button class="jspsych-btn">ידוע</button></div></div></div></center>\
     <p>תצטרכו לבחור בעזרת העכבר אם לדלג על התשובה, להמתין לה, או שהיא כבר ידועה לכם.</p></div>',
-  '<div id="instruct"><p>If you choose to wait for an answer to a question, you will be asked to give your opinion about the answer.</p><p> You may be asked to rate if the answer was worth waiting for, on a scale of 1 = not worth it up to 5 = extremely worth it.</p>\
-    <p>Or, you may be asked to rate if you are curious to learn more about the topic, on a scale of 1 = not at all curious up to 5 = extremely curious.</p></div>',
-  '<div id="instruct"><p>The task will continue for ' + maxTaskTime + ' minutes. The task takes the same amount of time regardless of how many questions you choose to skip or wait for, so please base your decisions on how interested you are in learning the answers.</p></div>',
-  '<div id="instruct"><p>The questions you will see in this task were ' + (true == "NYT" ? 
-    'presented in the headlines of newspaper articles.<br>You must decide if you want to see the answer given in the first paragraph of the article.' :
-    'asked online in a general knowledge forum.<br>You must decide if you want to see the answer to the question as given on the forum.') + '</p></div>',
-  '<div id="instruct"><p>You will soon do a short practice version to get comfortable with the task. Please use this time to get used to pressing the different buttons and to the amount of time you have to respond to the different prompts.<p></div>',
-  '<div id="instruct"><p>You will first be asked to answer some questions to ensure that you understood the instructions.</p>\
-    <p>Please answer to the best of your ability.</p>\
-    <p>If you miss a question, you will be sent back to review the instructions and re-take the test. You must get all questions correct before you can move on to the practice round of the task.</p></div>'
+    '<div id="instruct"><p>אם תבחרו להמתין לתשובה תתבקשו לדרג עד כמה התשובה הייתה שווה את ההמתנה. <br> .תדרגו זאת על סולם של 1 = לא שווה כלל, עד 5 = שווה מאוד</p></div>',
+    '<div id="instruct"><p>המשימה תארך ' + maxTaskTime + ' דקות. אורך המשימה יהיה זהה, לא משנה על כמה פעמים תבחרו להמתין לתשובה או לדלג לשאלה הבאה. לכן, בחרו אם להמתין או לדלג לפי העניין האישי שלכם.</p></div>',
+    '<div id="instruct"><p>בקרוב תתחילו באימון קצר. נצלו את האימון בכדי להתרגל ללחיצה על הכפתורים השונים, ולקצב בו יוצגו השאלות ותצטרכו להגיב להן.<p></div>',
+    '<div id="instruct"><p>קודם לכן, נשאל אתכם כמה שאלות בכדי לוודא שהבנתם את ההוראות.</p>\
+    <p>ענו על השאלות כמיטב יכולתכם.</p>\
+    <p>אם תענו תשובה שגויה, ההוראות יוצגו שוב, ותיבחנו שנית על הבנתן. כדי להמשיך לאימון, חובה לענות על כל השאלות נכונה.</p></div>'    
   ]
 
 var wait_instructions1_text = []
