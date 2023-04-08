@@ -350,20 +350,21 @@ var depression_message = {
   // Put it all together
   experiment.push(fullscreen);
   experiment.push(welcome);
-//   experiment = experiment.concat(wait_instructions1);
-//   experiment.push(wait_practice_block);
-//   experiment.push(wait_instructions_post_practice);
-//   experiment.push(wait_block1);
-// //   if (firstBlock == "coup"){
-// //    experiment.push(wait_instructions_general2);
-// //   }else{
-// //    experiment.push(wait_instructions_coup2);
-// //   };
-//   experiment.push(wait_block2);
-//   experiment.push(wait_instructions_post_task);
+  experiment = experiment.concat(wait_instructions1);
+  experiment.push(wait_practice_block);
+  experiment.push(wait_instructions_post_practice);
+  experiment.push(wait_block1);
+  experiment.push(wait_instructions2);
+  experiment.push(wait_block2);
+  experiment.push(wait_instructions_post_task);
   experiment.push(rating_instructions);
-  experiment.push(coup_rating_block);
-  experiment.push(general_rating_block);
+  if (firstBlock == "coup"){
+    experiment.push(coup_rating_block);
+    experiment.push(general_rating_block);  
+  }else{
+    experiment.push(general_rating_block);  
+    experiment.push(coup_rating_block);
+  }
   experiment.push(pre_questionnaires_message);
 //   experiment.push(anxiety_message);
 //   experiment = experiment.concat(anxiety);
