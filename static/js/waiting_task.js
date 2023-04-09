@@ -24,7 +24,7 @@ var maxStimDuration = 15000, // Response deadline for questions
   maxAnswerTime = 90000, // Response deadline for answers
   postTooSlowTime = 800, // ITI post warning message
   fixationTime = 500, // Duration of fixation period b/w trials
-  maxTaskTime = 5, // Total duration of block
+  maxTaskTime = 1,//5, // Total duration of block
   waits = [3, 6, 9, 12], // Wait times in task
   ITI_range = [500, 900]; // Range of ITIs in task. Drawn from a uniform distribution on this range.
 

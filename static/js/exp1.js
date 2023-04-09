@@ -1,7 +1,7 @@
 // Parameters
 var sess = 1, // Session number
   version = 1.0, // Code version number
-  n_for_ratings = 7; // How many items to save for rating measurement
+  n_for_ratings = 3;//7; // How many items to save for rating measurement
 var images = ["../static/images/wait_instructions.jpg"]; // Images to preload
 
 // Get participant id form url
@@ -165,11 +165,9 @@ function postLoad() {
   // Message that shows up before the questionnaire section
   var pre_questionnaires_message = {
     type: "html-button-response",
-    stimulus: '<div id="instruct"><p>For the last part of the study, we ask \
-      you to answer a few questions about yourself, including your opinions, feelings, and beliefs.</p> \
-      <p>Please answer these questions as truthfully and accurately \
-      as possible.</p></div>',
-      choices: ["Continue"],
+    stimulus: '<div id="instruct"><p>בחלק האחרון של המחקר, נבקש מכם לענות על כמה שאלות הנוגעות אליכם, דעותייך, הרגשותייך, ואמונותייך.</p> \
+    <p>אנא ענה/י עליהם בדיוק וכנות האפשרית.</p></div>',
+      choices: ["המשך"],
       margin_vertical: "80px",
       data: {
         category: 'pre_questionnaires_message'
@@ -185,7 +183,7 @@ function postLoad() {
     that indicates how you feel <b>right now‚ at this moment</b>.</p><p>There \
     are no right or wrong answers. Do not spend too much time on any one statement \
     but give the answer which seems to best describe your present feelings.</div>",
-      choices: ["Continue"],
+      choices: ["המשך"],
       margin_vertical: "80px",
       data: {
         category: 'anxiety_message'
@@ -200,7 +198,7 @@ var impulse_message = {
   Please read each of the following statements carefully and use the scale below them to indicate \
   the option that best describes how often you act or behave that way.</p> \
   <p>Please answer these questions as truthfully and accurately as possible.</p></div>',
-    choices: ["Continue"],
+    choices: ["המשך"],
     margin_vertical: "80px",
     data: {
       category: 'impulse_message'
@@ -215,7 +213,7 @@ var regfocus_message = {
   Please read each of the following statements, then use the scale below them to indicate how much \
   you agree with each statement according to your beliefs and experiences.</p> \
   <p>There are no right or wrong answers.</p></div>',
-    choices: ["Continue"],
+    choices: ["המשך"],
     margin_vertical: "80px",
     data: {
       category: 'regfocus_message'
@@ -230,7 +228,7 @@ var apathy_message = {
   Please read each of the following questions and provide an answer to each one by selecting the item\
   on the scale that best describes you.</p> \
   <p>There are no right or wrong answers.</p></div>',
-    choices: ["Continue"],
+    choices: ["המשך"],
     margin_vertical: "80px",
     data: {
       category: 'apathy_message'
@@ -245,7 +243,7 @@ var pleasure_message = {
   You will read statements people often use to describe themselves. Please use the scale below each statement\
   to indicate the degree to which these statements accurately describe you.</p> \
   <p>There are no right or wrong answers.</p></div>',
-    choices: ["Continue"],
+    choices: ["המשך"],
     margin_vertical: "80px",
     data: {
       category: 'pleasure_message'
@@ -260,7 +258,7 @@ var depression_message = {
   <p>For this last set of questions, we ask you to think about how you felt <b>over the last 2 weeks.</b></p>\
   Please read each statement and choose the one that best describes how you have been feeling <b>the past two weeks, \
   including today</b>.<p>If several statements apply equally well, choose the highest number for that group.</p></div>',
-    choices: ["Continue"],
+    choices: ["המשך"],
     margin_vertical: "80px",
     data: {
       category: 'depression_message'
@@ -273,7 +271,7 @@ var depression_message = {
     type: "html-button-response",
     stimulus: '<div id="instruct"><p>You will now answer a few questions \
       about your demographic information.</p></div>',
-      choices: ["Continue"],
+      choices: ["המשך"],
       margin_vertical: "80px",
       data: {
         category: 'demog_message'
