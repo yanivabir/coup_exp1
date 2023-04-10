@@ -1,25 +1,25 @@
 // Anxiety Questionnaire - STAI State
 var anxiety_items = [
-    "I feel calm.",
-    "I feel secure.",
-    "I am tense.",
-    "I feel strained.",
-    "I feel at ease.",
-    "I feel upset.",
-    "I am presently worrying over possible misfortunes.",
-    "I feel satisfied.",
-    "I feel frightened.",
-    "I feel comfortable.",
-    "I feel self-confident.",
-    "I feel nervous.",
-    "I am jittery.",
-    "I feel indecisive.",
-    "I am relaxed.",
-    "I feel content.",
-    "I am worried.",
-    "I feel confused.",
-    "I feel steady.",
-    "I feel pleasant."
+    "אני מרגיש שלו/ה",
+    "אני מרגיש/ה בטוח/ה",
+    " אני דרוך/ה",
+    "אני מרגיש/ה מתוח/ה",
+    "אני מרגיש רגוע/ה",
+    "אני מרגיש/ה מוטרד/ת",
+    "אני חושש/ת עכשיו מאסונות שעלולים להתרחש",
+    "אני מרגיש/ה שביעות רצון",
+    "אני מרגיש/ה מבוהל/ת",
+    "אני חש/ה בנוח",
+    "אני מרגיש/ה בטוח/ה בעצמי",
+    "אני מרגיש/ה עצבני/ת",
+    "אני מרגיש/ה חרד/ה",
+    "אני מרגיש/ה חסר/ת יכולת להחליט",
+    "אני רגוע/ה",
+    "אני חש/ה סיפוק",
+    "אני מודאג/ת",
+    "אני חש/ה בלבול",
+    "אני חש/ה יציבות",
+    "יש לי הרגשה נעימה"
   ];
   
   var anxiety = [];
@@ -30,9 +30,9 @@ var anxiety_items = [
       if (anxiety_items[i * 4 + j]) {
         these_q.push({
           prompt: "<div id='instruct'>" + anxiety_items[i * 4 + j] + "</div>",
-          labels: ["1<br>Not at all", "2<br>Somewhat", "3<br>Moderately", "4<br>Very much"
+          labels: ["1<br>כלל לא", "2<br>במקצת", "3<br>במידה בינונית", "4<br>מאוד"
           ],
-          name: "anxiety_" + (i * 4 + j),
+          name: "stai_" + (i * 4 + j),
           required: false
         });
       }
@@ -46,7 +46,7 @@ var anxiety_items = [
       scale_width: 400,
       post_trial_gap: 200,
       data:{
-        category: "anxiety"
+        category: "stai"
       }
     });
   }

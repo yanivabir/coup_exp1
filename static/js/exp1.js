@@ -185,17 +185,16 @@ function postLoad() {
   }
 
    // Message that shows up before the questionnaire section
-   var anxiety_message = {
+   var stai_message = {
     type: "html-button-response",
-    stimulus: "<div id='instruct'>A number of statements which people have used to \
-    describe themselves will follow. Read each statement and choose the number \
-    that indicates how you feel <b>right now‚ at this moment</b>.</p><p>There \
-    are no right or wrong answers. Do not spend too much time on any one statement \
-    but give the answer which seems to best describe your present feelings.</div>",
+    stimulus: "<div id='instruct'>להלן מספר משפטים, בהם משתמשים אנשים כדי לתאר את עצמם. קרא/י כל משפט ותן/י את התשובה \
+    הנראית לך כמתארת בצורה הטובה ביותר את רגשותיך <b>ברגע זה</b>.\
+    אין כאן תשובה נכונה או לא נכונה; אל תבזבז/י יותר מדי זמן על אף אחד מהמשפטים, אלא תן/י את התשובה המדויקת ביותר, המתארת את רגשותייך כעת.\
+    </div>",
       choices: ["המשך"],
       margin_vertical: "80px",
       data: {
-        category: 'anxiety_message'
+        category: 'stai_message'
       },
       post_trial_gap: 200
   }
@@ -381,8 +380,8 @@ var depression_message = {
     experiment.push(coup_rating_block);
   }
   experiment.push(pre_questionnaires_message);
-//   experiment.push(anxiety_message);
-//   experiment = experiment.concat(anxiety);
+  experiment.push(stai_message);
+  experiment = experiment.concat(anxiety);
 //   experiment.push(impulse_message);
 //   experiment = experiment.concat(impulsive);
 //   experiment.push(regfocus_message);
