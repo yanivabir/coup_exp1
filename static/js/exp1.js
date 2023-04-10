@@ -142,21 +142,26 @@ function postLoad() {
     timeline_variables: firstBlock == "coup" ? general_items_waiting : coup_items_waiting
   }
 
-  // Shuffle probe order across coup trial
-  for (i = 0; i < coup_items_rating.length; i++) {
-    var this_trial = []
-  }
+    // coup curiosity rating block variable
+    var coup_curiosity_rating_block = {
+        timeline: curiosity_rating_trial,
+        timeline_variables: coup_items_curiosity,
+        randomize_order: true
+    }
+
+    // general curiosity rating block variable
+    var general_curiosity_rating_block = {
+        timeline: curiosity_rating_trial,
+        timeline_variables: general_items_curiosity,
+        randomize_order: true
+    }
+    
 
   // coup rating block variable
   var coup_rating_block = {
     timeline: rating_trial,
     timeline_variables: coup_items_rating,
     randomize_order: true
-  }
-
-  // Shuffle probe order across general trial
-  for (i = 0; i < general_items_rating.length; i++) {
-    var this_trial = []
   }
 
   // general rating block variable
@@ -359,6 +364,14 @@ var depression_message = {
   experiment.push(wait_instructions2);
   experiment.push(wait_block2);
   experiment.push(wait_instructions_post_task);
+  experiment.push(curiosity_rating_instructions);
+  if (firstBlock == "coup"){
+    experiment.push(coup_curiosity_rating_block);
+    experiment.push(general_curiosity_rating_block);  
+  }else{
+    experiment.push(general_curiosity_rating_block);  
+    experiment.push(coup_curiosity_rating_block);
+  }
   experiment.push(rating_instructions);
   if (firstBlock == "coup"){
     experiment.push(coup_rating_block);
