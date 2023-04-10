@@ -114,20 +114,16 @@ var wait_trial_answer = [{
   },
   {
     // Satisfaction rating
-    //Add a new rating questions: 50% "Was the answer worth the wait?"; 50% "Would you be curious to learn more about this topic?".
     type: "html-button-response",
-    stimulus: jsPsych.timelineVariable('postanswer_stimulus'),
+    stimulus: "האם התשובה הייתה שווה את ההמתנה?",
     choices: ["1", "2", "3", "4", "5"],
     post_trial_gap: jsPsych.timelineVariable('ITI_next'),
     trial_duration: satisfactionMaxTime,
-    prompt: function() {
-      return "<div id='satsifaction_prompt'><i>1</i> = Not at all, <i>5</i> = Extremely " +
-        (jsPsych.timelineVariable('postanswer_item', true) == 'satisfaction' ? "worth it" : "curious") + "</div>"
-    },
+    prompt: "<div id='satsifaction_prompt'><i>1</i> = בכלל לא, <i>5</i> = שווה מאוד</div>",
     margin_horizontal: "30px",
     margin_vertical: "80px",
     data: {
-      category: jsPsych.timelineVariable('postanswer_item'),
+      category: "wait_satisfaction",
       ITI_next: jsPsych.timelineVariable('ITI_next'),
       questionId: jsPsych.timelineVariable('questionId'),
       wait_duration: jsPsych.timelineVariable('wait_time'),
