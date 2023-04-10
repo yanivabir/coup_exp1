@@ -119,8 +119,8 @@ var rating_instructions = {
     stimulus: jsPsych.timelineVariable("text")
   }],
   timeline_variables: [{
-    text: "<div id='instruct'><p>בחלק הבא, יוצגו בפניכם " + n_for_ratings * 2 + " שאלות. נבקש שתדרגו את התרשמותכם מהשאלה במספר אופנים.</p>\
-      <p>הפעם לא תוצג בפניכם התשובה.</p></div>"
+    text: function(){return "<div id='instruct'><p>בחלק הבא, יוצגו בפניכם " + n_for_ratings * 2 + " שאלות. נבקש שתדרגו את התרשמותכם מהשאלה במספר אופנים.</p>\
+      <p>הפעם לא תוצג בפניכם התשובה.</p></div>"}
   },
   {
     text: "<div id='instruct'><p>אנחנו מתעניינים בהתשמותך האישית. לכן, חשוב להסתמך רק על הידע האישי שלך, ולענות ״בשליפה״.</p>\
