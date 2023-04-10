@@ -1,7 +1,8 @@
 // Parameters
 var sess = 1, // Session number
   version = 1.0, // Code version number
-  n_for_ratings = 3;//7; // How many items to save for rating measurement
+  n_for_ratings = 3,//7, // How many items to save for covariate ratings
+  n_for_curiosity = 3;// 7 // How many items to save for curiosity ratings
 var images = ["../static/images/wait_instructions.jpg"]; // Images to preload
 
 // Get participant id form url
@@ -14,9 +15,9 @@ var debug = PID.includes("debug");
 // Keep important variables in global scope for convenience while debugging
 var coup_items,
   general_items,
-  coup_items_curiosity,
+  coup_items_waiting,
   coup_items_rating,
-  general_items_curiosity,
+  general_items_waiting,
   general_items_rating;
 
 // Load questions from local csv file
@@ -68,23 +69,26 @@ function postLoad() {
     coup_items = pseudoShuffle(coup_items, ["useful", "not useful"], 6);
     general_items = pseudoShuffle(general_items, ["useful", "not useful"], 6);
   
-    coup_items_curiosity = coup_items.slice(0,
-      coup_items.length - n_for_ratings);
+    coup_items_waiting = coup_items.slice(0,
+      coup_items.length - n_for_ratings - n_for_curiosity);
     coup_items_rating = coup_items.slice(
-      coup_items.length - n_for_ratings, coup_items.length);
+      coup_items.length - n_for_ratings - n_for_curiosity, coup_items.length - n_for_curiosity);
+    coup_items_curiosity = coup_items.slice(
+        coup_items.length - n_for_curiosity, coup_items.length);
   
-    general_items_curiosity = general_items.slice(0,
-      general_items.length - n_for_ratings);
+    general_items_waiting = general_items.slice(0,
+      general_items.length - n_for_ratings - n_for_curiosity);
     general_items_rating = general_items.slice(
-      general_items.length - n_for_ratings, general_items.length);
+      general_items.length - n_for_ratings - n_for_curiosity, general_items.length - n_for_curiosity);
+    general_items_curiosity = general_items.slice(
+        general_items.length - n_for_curiosity, general_items.length);
 
   // Set timing parameters for waiting task practice block
   practice_items = drawTimes (practice_items)
 
   // Draw timing parameters for waiting task
-  coup_items_curiosity = drawTimes(coup_items_curiosity);
-  general_items_curiosity = drawTimes(general_items_curiosity);
-
+  coup_items_waiting = drawTimes(coup_items_waiting);
+  general_items_waiting = drawTimes(general_items_waiting);
 
   // Set up the first trial, the transitions to fullscreen.
   // This trial also saves the PID to the data, and sets the counterbalanced
@@ -130,12 +134,12 @@ function postLoad() {
 
   wait_block1 = {
     timeline: wait_timeline,
-    timeline_variables: firstBlock == "coup" ? coup_items_curiosity : general_items_curiosity
+    timeline_variables: firstBlock == "coup" ? coup_items_waiting : general_items_waiting
   }
 
   wait_block2 = {
     timeline: wait_timeline,
-    timeline_variables: firstBlock == "coup" ? general_items_curiosity : coup_items_curiosity
+    timeline_variables: firstBlock == "coup" ? general_items_waiting : coup_items_waiting
   }
 
   // Shuffle probe order across coup trial
