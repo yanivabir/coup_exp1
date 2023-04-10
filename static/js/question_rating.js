@@ -52,9 +52,10 @@ var rating_probes = [[{
 ]
 
 // Choose one of each pair of probes
+var random_shuffle = jsPsych.randomization.shuffle([1,1,0,0])
 var chosen_rating_probes = []
 for (j = 0; j < rating_probes.length; j++) {
-    chosen_rating_probes.push(rating_probes[j][(Math.random()>0.5)+0])  
+    chosen_rating_probes.push(rating_probes[j][random_shuffle[j]])  
 }
 
 // Rating trial
