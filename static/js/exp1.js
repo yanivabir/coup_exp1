@@ -184,20 +184,20 @@ function postLoad() {
       post_trial_gap: 200
   }
 
-   // Message that shows up before the questionnaire section
-   var stai_message = {
-    type: "html-button-response",
-    stimulus: "<div id='instruct'>להלן מספר משפטים, בהם משתמשים אנשים כדי לתאר את עצמם. קרא/י כל משפט ותן/י את התשובה \
-    הנראית לך כמתארת בצורה הטובה ביותר את רגשותיך <b>ברגע זה</b>.\
-    אין כאן תשובה נכונה או לא נכונה; אל תבזבז/י יותר מדי זמן על אף אחד מהמשפטים, אלא תן/י את התשובה המדויקת ביותר, המתארת את רגשותייך כעת.\
-    </div>",
-      choices: ["המשך"],
-      margin_vertical: "80px",
-      data: {
-        category: 'stai_message'
-      },
-      post_trial_gap: 200
-  }
+// Message that shows up before the questionnaire section
+var stai_message = {
+type: "html-button-response",
+stimulus: "<div id='instruct'>להלן מספר משפטים, בהם משתמשים אנשים כדי לתאר את עצמם. קרא/י כל משפט ותן/י את התשובה \
+הנראית לך כמתארת בצורה הטובה ביותר את רגשותיך <b>ברגע זה</b>.\
+אין כאן תשובה נכונה או לא נכונה; אל תבזבז/י יותר מדי זמן על אף אחד מהמשפטים, אלא תן/י את התשובה המדויקת ביותר, המתארת את רגשותייך כעת.\
+</div>",
+    choices: ["המשך"],
+    margin_vertical: "80px",
+    data: {
+    category: 'stai_message'
+    },
+    post_trial_gap: 200
+}
 
 // Message that shows up before impulsiveness questionnaire
 var impulse_message = {
@@ -229,128 +229,83 @@ var regfocus_message = {
     post_trial_gap: 200
 }
 
-// Message that shows up before apathy questionnaire
-var apathy_message = {
-  type: "html-button-response",
-  stimulus: '<div id="instruct"><p>You will now continue answering questions about yourself.</p> \
-  Please read each of the following questions and provide an answer to each one by selecting the item\
-  on the scale that best describes you.</p> \
-  <p>There are no right or wrong answers.</p></div>',
+// Message that shows up before demographic section
+var demog_message = {
+type: "html-button-response",
+stimulus: '<div id="instruct"><p>You will now answer a few questions \
+    about your demographic information.</p></div>',
     choices: ["המשך"],
     margin_vertical: "80px",
     data: {
-      category: 'apathy_message'
+    category: 'demog_message'
     },
     post_trial_gap: 200
 }
 
-// Message that shows up before pleasure questionnaire
-var pleasure_message = {
-  type: "html-button-response",
-  stimulus: '<div id="instruct"><p>You will now continue answering questions about yourself.</p> \
-  You will read statements people often use to describe themselves. Please use the scale below each statement\
-  to indicate the degree to which these statements accurately describe you.</p> \
-  <p>There are no right or wrong answers.</p></div>',
-    choices: ["המשך"],
-    margin_vertical: "80px",
+// Debriefing and data upload
+var debrief = [{
+    type: "instructions",
+    pages: ['<div id="instruct">Thank you for participating in this study!<p>\
+    In this study we were interested in people\'s curiosity about different \
+    types of questions.</p>\
+    <p>We will process the data within 48h and grant an extra $2 to any \
+    participant that stayed engaged throughout the task.</p></div>'],
+    show_clickable_nav: true,
+    allow_keys: false,
     data: {
-      category: 'pleasure_message'
-    },
-    post_trial_gap: 200
-}
-
-// Message that shows up before depression questionnaire
-var depression_message = {
-  type: "html-button-response",
-  stimulus: '<div id="instruct"><p>You will now continue answering questions about yourself.</p> \
-  <p>For this last set of questions, we ask you to think about how you felt <b>over the last 2 weeks.</b></p>\
-  Please read each statement and choose the one that best describes how you have been feeling <b>the past two weeks, \
-  including today</b>.<p>If several statements apply equally well, choose the highest number for that group.</p></div>',
-    choices: ["המשך"],
-    margin_vertical: "80px",
-    data: {
-      category: 'depression_message'
-    },
-    post_trial_gap: 200
-}
-
-   // Message that shows up before demographic section
-   var demog_message = {
-    type: "html-button-response",
-    stimulus: '<div id="instruct"><p>You will now answer a few questions \
-      about your demographic information.</p></div>',
-      choices: ["המשך"],
-      margin_vertical: "80px",
-      data: {
-        category: 'demog_message'
-      },
-      post_trial_gap: 200
-  }
-
-  // Debriefing and data upload
-  var debrief = [{
-      type: "instructions",
-      pages: ['<div id="instruct">Thank you for participating in this study!<p>\
-      In this study we were interested in people\'s curiosity about different \
-      types of questions.</p>\
-      <p>We will process the data within 48h and grant an extra $2 to any \
-      participant that stayed engaged throughout the task.</p></div>'],
-      show_clickable_nav: true,
-      allow_keys: false,
-      data: {
-        category: "debrief"
-      }
-    },
-    {
-      type: 'fullscreen',
-      fullscreen_mode: false
-    },
-    {
-      type: "instructions",
-      pages: ["<div id ='instruct'><p>Once you press the <i>Next</i> \
-    button, your results will be uploaded to the server, and the study will\
-    complete. <b>This may take several minutes - do not \
-    refresh or close your browser during this time.</b></p>\
-    <p>After your results are uploaded to the server, you will be presented \
-    with the completion code for MTurk.\
-    <p>Press the <i>Next</i> button to upload your results.</p></div>"],
-      show_clickable_nav: true,
-      allow_keys: false,
-      data: {
-        category: "debrief"
-      }
-    },
-    {
-      type: "html-keyboard-response",
-      data: {
-        category: "save_data"
-      },
-      stimulus: "<div id='instruct'><p>Data uploading. To ensure proper completion \
-      of the study, please don't refresh, \
-      close your browser or open another tab.\
-      </p></div>",
-      choices: jsPsych.NO_KEYS,
-      on_load: function() {
-        var d = new Date;
-        saveData(PID, sess, '', jsPsych.data.get().csv(),
-          function() {
-            saveData(PID, sess, '_int', jsPsych.data.getInteractionData().csv(),
-          jsPsych.finishTrial);
-          });
-      }
-    },
-    {
-      type: "html-keyboard-response",
-      data: {
-        category: "data_saved"
-      },
-      stimulus: "<div class='instructions'><p>Your results have successfully uploaded.</p>\
-    <p>Your completion code for this study is: <br> <b>EK75HN8</b></p>\
-    <p>Use it to submit this HIT on MTurk.</p>\
-    <p>You may now close this window.</p></div>",
-      choices: jsPsych.NO_KEYS
+    category: "debrief"
     }
-  ];
+},
+{
+    type: 'fullscreen',
+    fullscreen_mode: false
+},
+{
+    type: "instructions",
+    pages: ["<div id ='instruct'><p>Once you press the <i>Next</i> \
+button, your results will be uploaded to the server, and the study will\
+complete. <b>This may take several minutes - do not \
+refresh or close your browser during this time.</b></p>\
+<p>After your results are uploaded to the server, you will be presented \
+with the completion code for MTurk.\
+<p>Press the <i>Next</i> button to upload your results.</p></div>"],
+    show_clickable_nav: true,
+    allow_keys: false,
+    data: {
+    category: "debrief"
+    }
+},
+{
+    type: "html-keyboard-response",
+    data: {
+    category: "save_data"
+    },
+    stimulus: "<div id='instruct'><p>Data uploading. To ensure proper completion \
+    of the study, please don't refresh, \
+    close your browser or open another tab.\
+    </p></div>",
+    choices: jsPsych.NO_KEYS,
+    on_load: function() {
+    var d = new Date;
+    saveData(PID, sess, '', jsPsych.data.get().csv(),
+        function() {
+        saveData(PID, sess, '_int', jsPsych.data.getInteractionData().csv(),
+        jsPsych.finishTrial);
+        });
+    }
+},
+{
+    type: "html-keyboard-response",
+    data: {
+    category: "data_saved"
+    },
+    stimulus: "<div class='instructions'><p>Your results have successfully uploaded.</p>\
+<p>Your completion code for this study is: <br> <b>EK75HN8</b></p>\
+<p>Use it to submit this HIT on MTurk.</p>\
+<p>You may now close this window.</p></div>",
+    choices: jsPsych.NO_KEYS
+}
+];
 
 
   // Put it all together
@@ -390,6 +345,8 @@ var depression_message = {
 //   experiment = experiment.concat(apathy);
 //   experiment.push(pleasure_message);
 //   experiment = experiment.concat(pleasure);
+  experiment.push(iwin_message);
+  experiment.push(iwin);
   experiment.push(demog_message);
   experiment = experiment.concat(demographic_block);
   experiment = experiment.concat(debrief);

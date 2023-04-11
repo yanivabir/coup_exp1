@@ -47,7 +47,8 @@ var anxiety_items = [
       post_trial_gap: 200,
       data:{
         category: "stai"
-      }
+      },
+      button_label: "המשך"
     });
   }
   
