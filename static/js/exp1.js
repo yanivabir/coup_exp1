@@ -337,14 +337,10 @@ with the completion code for MTurk.\
   experiment.push(pre_questionnaires_message);
   experiment.push(stai_message);
   experiment = experiment.concat(anxiety);
-//   experiment.push(impulse_message);
-//   experiment = experiment.concat(impulsive);
 //   experiment.push(regfocus_message);
 //   experiment = experiment.concat(reg_focus);
   experiment.push(apathy_message);
   experiment = experiment.concat(apathy);
-//   experiment.push(pleasure_message);
-//   experiment = experiment.concat(pleasure);
   experiment.push(iwin_message);
   experiment.push(iwin);
   experiment.push(demog_message);
