@@ -1,19 +1,19 @@
 // Apathy Questionnaire - Starkstein Scale
 var apathy_items = [
-    "Are you interested in learning new things?",
-    "Does anything interest you?",
-    "Are you concerned about your condition?",
-    "Do you put much effort into things?",
-    "Are you always looking for something to do?",
-    "Do you have plans and goals for the future?",
-    "Do you have motivation?",
-    "Do you have the energy for daily activities?",
-    "Does someone have to tell you what to do each day?",
-    "Are you indifferent to things?",
-    "Are you unconcerned with many things?",
-    "Do you need a push to get started on things?",
-    "Are you neither happy nor sad, just between?",
-    "Would you consider yourself apathetic?"
+    "האם מעניין אותך ללמוד דברים חדשים?",
+    "האם משהו מעניין אותך?",
+    "האם את/ה מודאג/ת ממצבך?",
+    "האם את/ה משקיע מאמץ בדברים?",
+    "האם את/ה תמיד מחפש/ת דברים לעשות?",
+    "יש לך תכניות ויעדים לעתיד?",
+    "יש לך מוטיבציה?",
+    "יש לך אנרגיה לפעילויות יומיומיות?",
+    "האם מישהו צריך להגיד לך מה לעשות כל יום?",
+    "האם את/ה אדיש/ה למה שקורה?",
+    "האם יש הרבה דברים שלא מזיזים לך?",
+    "האם את/ה צריכ/ה דחיפה כדי להתחיל עם דברים",
+    "האם את/ה לא שמח/ה ולא עצוב/ה, רק בין לבין?",
+    "האם את/ה רואה בעצמך אפתי?"
   ];
   
   var apathy = [];
@@ -24,7 +24,7 @@ var apathy_items = [
       if (apathy_items[i * 4 + j]) {
         these_q.push({
           prompt: "<div id='instruct'>" + apathy_items[i * 4 + j] + "</div>",
-          labels: ["1<br>Not at all", "2<br>Slightly", "3<br>Some", "4<br>A Lot"
+          labels: ["1<br>בכלל לא", "2<br>מעט", "3<br>במידת מה", "4<br>מאוד"
           ],
           name: "apathy_" + (i * 4 + j),
           required: false
@@ -41,7 +41,22 @@ var apathy_items = [
       post_trial_gap: 200,
       data:{
         category: "apathy"
-      }
+      },
+      button_label: "המשך"
     });
   }
+
+// Message that shows up before apathy questionnaire
+var apathy_message = {
+  type: "html-button-response",
+  stimulus: '<div id="instruct"><p>כעת תמשיכו לענות על שאלות בנוגע לעצמכם.</p> \
+  אנא קראו כל אחת מהשאלות הבאות, ובחרו על הסולם את התשובה המתאימה ביותר לתאר אתכם.</p> \
+  <p>אין תשובות נכונות או שגויות בשאלון הזה.</p></div>',
+    choices: ["המשך"],
+    margin_vertical: "80px",
+    data: {
+      category: 'apathy_message'
+    },
+    post_trial_gap: 200
+}
   
