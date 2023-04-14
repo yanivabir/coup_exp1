@@ -371,13 +371,12 @@ var wait_instructions_post_practice = {
 
 // Wait instructions before the 2nd Block
 var wait_instructions2 = {
-  type: 'instructions',
-  pages: ['<div id="instruct"><p>כעת נמשיך בסיבוב נוסף של אותה משימה, עם שאלות אחרות.</p></div>',
-    '<div id="instruct"><p>גם הפעם אורך המשימה  ' + maxTaskTime +
+  type: 'html-button-response',
+  stimulus: '<div id="instruct"><p>כעת נמשיך בסיבוב נוסף של אותה משימה, עם שאלות אחרות.</p>\
+    <p>גם הפעם אורך המשימה  ' + maxTaskTime +
     ' דקות, בלי קשר למספר הפעים שתבחרו להמתין או לדלג על תשובות. \
-    על כן, אנא בחרו לפי העניין האישי שלכם.</p></div>',
-    '<div id="instruct"><p>לחצו על המשך כדי להמשיך לחלק הבא.</p></div>'
-  ],
+    על כן, אנא בחרו לפי העניין האישי שלכם.</p>\
+    <p>לחצו על המשך כדי להמשיך לחלק הבא.</p></div>',
   choices: ["המשך"],
   data: {
     category: "wait_instructions1"
@@ -390,13 +389,13 @@ var wait_instructions2 = {
 };
 
 var wait_instructions_post_task = {
-  type: 'instructions',
-  pages: ['<div id="instruct"><p>סיימתם את המשימה השניה במחקר.</p>\
-    <p>לחצו על המשך כדי להמשיך לחל הבא</p></div>'],
+  type: 'html-button-reponse',
+  stimulus: '<div id="instruct"><p>סיימתם את המשימה השניה במחקר.</p>\
+    <p>לחצו על המשך כדי להמשיך לחל הבא</p></div>',
     choices: ["המשך"],
     data: {
-    category: "wait_instructions_post"
-  }
+      category: "wait_instructions_post"
+    }
 }
 
 // A function that assigns waiting tines and ITIs to a list of trials
