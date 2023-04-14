@@ -3,7 +3,7 @@ demographic_block = [
   {
     type: "survey-text",
     questions: [{
-        prompt: "<div id='instruct'>How old are you?</div>",
+        prompt: "<div id='instruct'>גיל:</div>",
         columns: 20,
         rows: 1,
         value: '',
@@ -16,21 +16,11 @@ demographic_block = [
   }, {
     type: "survey-multi-choice",
     questions: [{
-        prompt: "What is your gender?",
-        options: ["Male", "Female", "Other"],
+        prompt: "מגדר:",
+        options: ["זכר", "נקבה", "אחר"],
         required: true,
         horizontal: true,
         name: "gender"
-      },
-      {
-        prompt: "What is your race/ethnicity?",
-        options: ["American Indian or Alaska Native", "Asian",
-          "Black or African American", "Hispanic or Latino/a", "Pacific Islander",
-          "White", "Multi-racial", "Prefer not to answer"
-        ],
-        horizontal: true,
-        required: true,
-        name: "race"
       },
       {
         prompt: "What is the highest degree or level of school that you have completed? (If you are currently enrolled in school, please indicate the highest degree you have received)?",

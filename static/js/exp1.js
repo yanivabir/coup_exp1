@@ -232,8 +232,7 @@ var regfocus_message = {
 // Message that shows up before demographic section
 var demog_message = {
 type: "html-button-response",
-stimulus: '<div id="instruct"><p>You will now answer a few questions \
-    about your demographic information.</p></div>',
+stimulus: '<div id="instruct"><p>נבקש שתענו על כמה שאלות נוספות לגבי המאפיינים הדמוגרפיים שלכם.</p></div>',
     choices: ["המשך"],
     margin_vertical: "80px",
     data: {
@@ -318,14 +317,14 @@ with the completion code for MTurk.\
   experiment.push(wait_instructions2);
   experiment.push(wait_block2);
   experiment.push(wait_instructions_post_task);
-  experiment.push(curiosity_rating_instructions);
-  if (firstBlock == "coup"){
-    experiment.push(coup_curiosity_rating_block);
-    experiment.push(general_curiosity_rating_block);  
-  }else{
-    experiment.push(general_curiosity_rating_block);  
-    experiment.push(coup_curiosity_rating_block);
-  }
+//   experiment.push(curiosity_rating_instructions);
+//   if (firstBlock == "coup"){
+//     experiment.push(coup_curiosity_rating_block);
+//     experiment.push(general_curiosity_rating_block);  
+//   }else{
+//     experiment.push(general_curiosity_rating_block);  
+//     experiment.push(coup_curiosity_rating_block);
+//   }s
   experiment.push(rating_instructions);
   if (firstBlock == "coup"){
     experiment.push(coup_rating_block);
