@@ -34,11 +34,19 @@ Papa.parse("../static/coup_questions.csv", {
       dynamicTyping: true,
       complete: function(results) {
         general_items = results.data;
+        Papa.parse("../static/probability_judgement.csv", {
+          download: true,
+          header: true,
+          dynamicTyping: true,
+          complete: function(results) {
+            probability_judgement_items = results.data;
             postLoad();
-          }
+        }
         });
       }
     });
+  }
+});
 
 var experiment = [];
 
@@ -142,19 +150,19 @@ function postLoad() {
     timeline_variables: firstBlock == "coup" ? general_items_waiting : coup_items_waiting
   }
 
-    // coup curiosity rating block variable
-    var coup_curiosity_rating_block = {
-        timeline: curiosity_rating_trial,
-        timeline_variables: coup_items_curiosity,
-        randomize_order: true
-    }
+    // // coup curiosity rating block variable
+    // var coup_curiosity_rating_block = {
+    //     timeline: curiosity_rating_trial,
+    //     timeline_variables: coup_items_curiosity,
+    //     randomize_order: true
+    // }
 
-    // general curiosity rating block variable
-    var general_curiosity_rating_block = {
-        timeline: curiosity_rating_trial,
-        timeline_variables: general_items_curiosity,
-        randomize_order: true
-    }
+    // // general curiosity rating block variable
+    // var general_curiosity_rating_block = {
+    //     timeline: curiosity_rating_trial,
+    //     timeline_variables: general_items_curiosity,
+    //     randomize_order: true
+    // }
     
 
   // coup rating block variable
@@ -169,6 +177,11 @@ function postLoad() {
     timeline: rating_trial,
     timeline_variables: general_items_rating,
     randomize_order: true
+  }
+
+  var probability_judgement_block = {
+    timeline: prob_judge,
+    timeline_variables: probability_judgement_items
   }
 
   // Message that shows up before the questionnaire section
@@ -309,6 +322,7 @@ with the completion code for MTurk.\
 
   // Put it all together
   experiment.push(fullscreen);
+  experiment.push(probability_judgement_block);
   experiment.push(welcome);
   experiment = experiment.concat(wait_instructions1);
   experiment.push(wait_practice_block);
