@@ -389,9 +389,9 @@ var wait_instructions2 = {
 };
 
 var wait_instructions_post_task = {
-  type: 'html-button-reponse',
+  type: 'html-button-response',
   stimulus: '<div id="instruct"><p>סיימתם את המשימה השניה במחקר.</p>\
-    <p>לחצו על המשך כדי להמשיך לחל הבא</p></div>',
+    <p>לחצו על המשך כדי להמשיך לחלק הבא</p></div>',
     choices: ["המשך"],
     data: {
       category: "wait_instructions_post"
