@@ -160,6 +160,13 @@ function postLoad() {
     randomize_order: true
   }
 
+  // Probablity judgument block variable
+  var block_order = firstBlock == "coup" ? ["coup", "general"] : ["general", "coup"];
+
+  probability_judgement_items = jsPsych.randomization.shuffle(probability_judgement_items.filter(x => 
+    x['block'] == block_order[0])).concat(jsPsych.randomization.shuffle(probability_judgement_items.filter(x => 
+      x['block'] == block_order[1])));
+
   var probability_judgement_block = {
     timeline: prob_judge,
     timeline_variables: probability_judgement_items
@@ -193,20 +200,6 @@ stimulus: "<div id='instruct'>להלן מספר משפטים, בהם משתמש�
     post_trial_gap: 200
 }
 
-// Message that shows up before impulsiveness questionnaire
-var impulse_message = {
-  type: "html-button-response",
-  stimulus: '<div id="instruct"><p>People differ in the ways they act and think in different situations.</p> \
-  Please read each of the following statements carefully and use the scale below them to indicate \
-  the option that best describes how often you act or behave that way.</p> \
-  <p>Please answer these questions as truthfully and accurately as possible.</p></div>',
-    choices: ["המשך"],
-    margin_vertical: "80px",
-    data: {
-      category: 'impulse_message'
-    },
-    post_trial_gap: 200
-}
 
 // Message that shows up before regulatory focus questionnaire
 var regfocus_message = {
