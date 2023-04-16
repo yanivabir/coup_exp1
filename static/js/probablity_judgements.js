@@ -15,3 +15,25 @@ var prob_judge = [{
     button_label: "המשך",
     post_trial_gap: 200
 }];
+
+// Instructions
+var probability_judgement_instructions = {
+    type: "html-button-response",
+    timeline: [{
+      stimulus: jsPsych.timelineVariable("text")
+    }],
+    timeline_variables: [{
+      text: function(){return "<div id='instruct'><p>בחלק הבא, יוצגו בפניכם תיאורים קצרים של אירועים שונים.</p>\
+        <p>עבור כל אחד מהאירועים, נבקש שתעריכו את הסיכוי שיתרחש, מ-0% (בודאות לא יקרה) ועד 100% (בודאות יקרה).</p></div>"}
+    },
+    {
+      text: "<div id='instruct'><p>אנחנו מתעניינים בהתרשמותך האישית. לכן, חשוב להסתמך רק על הידע האישי שלך, ולענות ״בשליפה״.</p>\
+        <p>לחצ/י על המשך כדי להתחיל בחלק הזה של המחקר.</p></div>",
+    }
+    ],
+    choices: ["המשך"],
+    data: {
+      category: "curiosity_rating_instructions"
+    }
+  }
+    
