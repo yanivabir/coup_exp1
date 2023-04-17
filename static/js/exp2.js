@@ -41,8 +41,8 @@ function postLoad() {
   var fullscreen = {
     type: 'fullscreen',
     fullscreen_mode: true,
-    message: '<p>This study runs in fullscreen. To switch to full screen mode \
-      and start the experiment, press the button below.</p>',
+    message: '<p>אתר המחקר פועל רק במצב מסך מלא. בכדי לעבור למסך מלא, ולהתחיל את המחקר, לחצו על הכפתור מטה</p>',
+    button_label: 'המשך',
     on_finish: function() {
       // Hide mouse
       var stylesheet = document.styleSheets[0];
@@ -57,29 +57,6 @@ function postLoad() {
     }
   }
 
-  var welcome = {
-    type: "instructions",
-    pages: [
-      "<div id='instruct'><p>Welcom back to this study!</p>\
-      <p>On week ago, you completed several tasks related to your curiosity \
-      towards different questions, and your judgments and perceptions of various \
-      topics.</p>\
-      <p>Today, we are interested in your memory of the previous session. \
-      Throughout the first part of this session, you will be asked to recall \
-      the reading material and your answers from last week.</p></div>",
-      "<div id='instruct'><p>When prompted, please try your best to remember \
-      the relevant piece of information from last week.</p><p>We will be going over \
-      responses, and awarding a $1 bonus payment only to participants who made a sincere \
-      effort at remembering.</p><p>This bonus will be processed within 48 hours from \
-      completing this session.</p></div>"
-    ],
-    show_clickable_nav: true,
-    allow_keys: false,
-    data: {
-      category: 'welcome'
-    },
-    post_trial_gap: 200
-  };
 
   // Shuffle questions for recall
   viewed_answers = shuffle_viewed_answers(viewed_answers);
@@ -90,44 +67,6 @@ function postLoad() {
     timeline_variables: viewed_answers
   }
 
-  var pre_recall_corona_message = {
-    type: "instructions",
-    pages: [
-      "<div id='instruct'><p>This is the end of this part of this session.</p></div>",
-      "<div id='instruct'><p>In the next part of the experiment, we will ask you \
-      to revisit the answers you gave<br><font color='tomato'><b>one week ago</b></font> \
-      regarding your opinions and beliefs.</p><p>You will now review some questions\
-      that you answered last week. Please answer them <i>as close as possible to \
-      your answers last week</i>.</p></div>",
-      "<div id='instruct'><p>Press the <i>Next</i> button to start recalling your \
-      answers <font color='tomato'><b>from last week</b></font>.</p>"
-    ],
-    show_clickable_nav: true,
-    allow_keys: false,
-    data: {
-      category: 'pre_recall_corona_message'
-    },
-    post_trial_gap: 200
-  };
-
-  var pre_questionnaires_message = {
-    type: "instructions",
-    pages: [
-      '<div id="instruct"><p>For the last part of the experiment, we ask \
-      you to answer a few questions about your opinions, feelings and beliefs <font color="Chartreuse"><b>right now</b></font>.</p>\
-      </div>',
-      '<div id="instruct"><p>You are no longer trying to recall previous answers, but \
-        just reporting your feelings <font color="Chartreuse"><b>right now</b></font>.\
-        <p>Please answer these questions as truthfully and accurately \
-      as possible</p></div>'
-    ],
-    show_clickable_nav: true,
-    allow_keys: false,
-    data: {
-      category: 'pre_questionnaires_message'
-    },
-    post_trial_gap: 200
-  }
 
   // Debriefing and data upload
   var debrief = [{
@@ -203,16 +142,8 @@ function postLoad() {
 
   // Put it all together
   experiment.push(fullscreen);
-  experiment.push(welcome);
   experiment.push(recall_instructions1);
   experiment = experiment.concat(answer_recall_block);
-  experiment.push(pre_recall_corona_message);
-  experiment = experiment.concat(recall_corona_block);
-  experiment.push(pre_questionnaires_message);
-  experiment = experiment.concat(gallup_block);
-  experiment = experiment.concat(anxiety);
-  experiment = experiment.concat(corona_perception_block);
-  experiment = experiment.concat(demographic_block);
   experiment = experiment.concat(debrief);
 
   // Prevent right click, refresh
