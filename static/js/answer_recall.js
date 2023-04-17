@@ -80,21 +80,18 @@ var recall_instructions1 = {
 };
 
 function shuffle_viewed_answers(questions) {
-  corona_qs = jsPsych.randomization.shuffle(questions.filter(x => x["block"] == "corona"))
+  coup_qs = jsPsych.randomization.shuffle(questions.filter(x => x["block"] == "coup"))
   general_qs = jsPsych.randomization.shuffle(questions.filter(x => x["block"] == "general"))
-  third_qs = jsPsych.randomization.shuffle(questions.filter(x => x["block"] == "third"))
 
   var shuf_questions = [];
 
-  if (firstBlock == "corona") {
-    shuf_questions = shuf_questions.concat(corona_qs);
+  if (firstBlock == "coup") {
+    shuf_questions = shuf_questions.concat(coup_qs);
     shuf_questions = shuf_questions.concat(general_qs);
   } else {
     shuf_questions = shuf_questions.concat(general_qs);
-    shuf_questions = shuf_questions.concat(corona_qs);
+    shuf_questions = shuf_questions.concat(coup_qs);
   }
-
-  shuf_questions = shuf_questions.concat(third_qs);
 
   return shuf_questions
 }
