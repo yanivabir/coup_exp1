@@ -24,9 +24,9 @@ Papa.parse("../static/secSessStims/" + PID + "_viewedAnswers.csv", {
     postLoad();
   },
   error: function() {
-    document.body.innerHTML = "<div id='instruct'><p>Sorry, an error has occured while trying to retrieve your data.</p>\
-      <p>Please contact ya2402+mutrk@columbia.edu to resolve this issue.</p>\
-      <p>Thank you!</p></div>"
+    document.body.innerHTML = "<div id='instruct'><p>אנו מצטערים, חלה שגיאה בזיהוי שלך.</p>\
+      <p>אנא צרו קשר עם ya2402+midgam@columbia.edu כדי לפתור את הבעיה.</p>\
+      <p>תודה רבה!</p></div>"
   }
 });
 
