@@ -7,11 +7,10 @@ var minResponseTime = 1500;
 var recall_trial = [fullscreen_prompt, {
     type: "html-button-response-min-time",
     stimulus: function() {
-      return "<div id'instruct'><p>Do you remember the answer you read last week \
-    to this question:</p><p><i>" + jsPsych.timelineVariable('question', true) +
+      return "<div id'instruct'><p>האם אתם זוכרים את התשובה שקראתם במפגש הקודם לשאלה:</p><p><i>" + jsPsych.timelineVariable('question', true) +
         "</i></p></div>"
     },
-    choices: ["Yes", "No"],
+    choices: ["כן", "לא"],
     margin_horizontal: "30px",
     margin_vertical: "80px",
     post_trial_gap: 200,
@@ -28,7 +27,7 @@ var recall_trial = [fullscreen_prompt, {
   {
     timeline: [{
       type: "survey-text",
-      preamble: "<div id'instruct'>What answer did you read last week for the question:</div>",
+      preamble: "<div id'instruct'>מה הייתה התשובה שקראת במפגש הקודם לשאלה:</div>",
       questions: [{
         prompt: jsPsych.timelineVariable('question'),
         required: true,
@@ -63,17 +62,19 @@ var recall_instructions1 = {
   type: 'instructions',
   pages: function() {
     return [
-      '<div id="instruct"><p>You will now start with recalling the answers to the questions you viewed last week.</p>\
-        <p>Last week you were presented with a question and had to decided whether you were interested in waiting to view its answer.</p>\
-        <p>You will now be presented with the questions you chose to wait for, one question at a time.</p></div>',
-        '<div id="instruct"><p>For each question, we first ask you to indicate whether you remember the answer that was displayed last week.</p>\
-        <p>Then we will ask you to write down your best recollection of that answer.</p></div>',
-      '<div id="instruct"><p>Please note: It is important that you try to recall the answer <b>as it was displayed to you last week</b>.</div>',
-      '<div id="instruct"><p>You will be presented with ' + viewed_answers.length + ' questions.</p><p>Press the <i>Next</i> button to start recalling the answers.</p></div>'
+      '<div id="instruct"><p>כעת, נבקש ממך להזכר בתשובות לשאלות שקראת במפגש הקודם.</p>\
+        <p>במפגש הקודם, הוצגו לך מספר שאלות, ועבור כל אחת החלטת אם לחכות לראות את התשובה, או לדלג הלאה.</p>\
+        <p>כעת נציג לך את השאלות שבחרת להמתין עבורן, כל שאלה בתורה.</p></div>',
+        '<div id="instruct"><p>עבור כל שאלה, נבקש שתדווחו אם אתם זוכרים את התשובה לשאלה.</p>\
+        <p>לאחר מכן נבקש שתכתבו את התשובה כמיטב זכרונכם.</p></div>',
+      '<div id="instruct"><p>שימו לב: חשבו שתנסו להזכר בתשובה <b>כפי שהוצגה במפגש הקודם</b>.</div>',
+      '<div id="instruct"><p>נציג בפניך ' + viewed_answers.length + ' שאלות.</p><p>לחצו על <i>המשך</i> כדי להתחיל בחלק זה של המחקר.</p></div>'
     ]
   },
   show_clickable_nav: true,
   allow_keys: false,
+  button_label_previous: "חזרה",
+  button_label_next: "המשך",
   data: {
     category: "recall_instructions1"
   }
