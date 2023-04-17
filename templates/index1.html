@@ -59,6 +59,8 @@
 					<p>
 						הריני לאשר כי:
 						<br>
+						<input type="checkbox" id="sess_checkbox" /> המחקר הזה כולל שני מפגשים. הראשון מתקיים כעת, ובשני אוכל להשתתף ביום ד׳ או ה׳ הקרובים. אני אשתתף בשני המפגשים.
+						<br>
 						<input type="checkbox" id="age_checkbox" /> אני מעל גיל 18.
 					</p>
 					<div class="alert alert-warning">
@@ -98,11 +100,12 @@
 			function openwindow() {
 				var safari = navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1;
 				var age = document.getElementById('age_checkbox');
+				var sess = document.getElementById('sess_checkbox');
 				var otherWin = document.getElementById('close_windows_checkbox')
 				var quiet = document.getElementById('quiet_checkbox')
 				var glasses = document.getElementsByName('glasses')[0].checked || document.getElementsByName('glasses')[1].checked
 				if (!safari) {
-					if (age.checked && otherWin.checked && quiet.checked && glasses) {
+					if (asess.checked && age.checked && otherWin.checked && quiet.checked && glasses) {
 						popup = window.open('/templates/consent.html' + window.location.search, 'Popup', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,width=' + 1024 + ',height=' +
 							768 + '');
 					} else {
