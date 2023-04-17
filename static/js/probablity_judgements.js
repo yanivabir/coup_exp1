@@ -42,11 +42,11 @@ var post_probability_judgment = {
     type: "html-button-response",
     stimulus: "<div id='instruct'>.סיימנו את החלק הזה במחקר. לחצו על ״המשך״ כדי לעבור לחלק הבא\
     </div>",
-        choices: ["המשך"],
-        margin_vertical: "80px",
-        data: {
-        category: 'stai_message'
-        },
-        post_trial_gap: 200
+    choices: ["המשך"],
+    margin_vertical: "80px",
+    data: {
+    category: 'stai_message'
+    },
+    post_trial_gap: 200
     }
     
