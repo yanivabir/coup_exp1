@@ -231,11 +231,10 @@ stimulus: '<div id="instruct"><p>נבקש שתענו על כמה שאלות נו
 // Debriefing and data upload
 var debrief = [{
     type: "instructions",
-    pages: ['<div id="instruct">Thank you for participating in this study!<p>\
-    In this study we were interested in people\'s curiosity about different \
-    types of questions.</p>\
-    <p>We will process the data within 48h and grant an extra $2 to any \
-    participant that stayed engaged throughout the task.</p></div>'],
+    pages: ['<div id="instruct">תודה על השתתפותך במפגש הראשון של המחקר!<p>\
+    במחקר זה אנו בוחנים את הסקרנות של אנשים שונים לשאלות מתחומים שונים.</p>\
+    <p>המידע המשפטי שהוצג במסגרת המחקר מבוסס על פרסומים בעיתונות ובערוצים ממשלתיים. המידע שהוצג אינו מהווה תחליף לייעוץ משפטי בכל מקרה.</p>\
+    <p>ביום ד׳ הקרוב תקבלו מייל עם קישור המזמין אתכם להשתתף בחלק השני של המחקר. תוכלו לעשות זאת באותו היום, או למחרת. השתתפות בחלק הבא של המחקר תזכה אתכם בתשלום נוסף.</p></div>'],
     show_clickable_nav: true,
     allow_keys: false,
     data: {
@@ -248,13 +247,9 @@ var debrief = [{
 },
 {
     type: "instructions",
-    pages: ["<div id ='instruct'><p>Once you press the <i>Next</i> \
-button, your results will be uploaded to the server, and the study will\
-complete. <b>This may take several minutes - do not \
-refresh or close your browser during this time.</b></p>\
-<p>After your results are uploaded to the server, you will be presented \
-with the completion code for MTurk.\
-<p>Press the <i>Next</i> button to upload your results.</p></div>"],
+    pages: ["<div id ='instruct'><p>לחיצה על  <i>המשך</i> \
+תשלח את המידע שלך לשרת, ותחזיר אותך לאתר המדגם <b>העלאת הנתונים יכולה לקחת מספר דקות. בבקשה אל תרעננו את הדפדפן או תסגרו אותו בזמן זה.</b></p>\
+<p>לחצו על <i>המשך</i> לשליחת המידע.</p></div>"],
     show_clickable_nav: true,
     allow_keys: false,
     data: {
@@ -266,17 +261,14 @@ with the completion code for MTurk.\
     data: {
     category: "save_data"
     },
-    stimulus: "<div id='instruct'><p>Data uploading. To ensure proper completion \
-    of the study, please don't refresh, \
-    close your browser or open another tab.\
-    </p></div>",
+    stimulus: "<div id='instruct'><p>המידע שלך נשלח ברגעים אלה. בבקשה לא לרענן את הדפדפן או לסגור את הלשונית.</p></div>",
     choices: jsPsych.NO_KEYS,
     on_load: function() {
     var d = new Date;
     saveData(PID, sess, '', jsPsych.data.get().csv(),
         function() {
-        saveData(PID, sess, '_int', jsPsych.data.getInteractionData().csv(),
-        jsPsych.finishTrial);
+          saveData(PID, sess, '_int', jsPsych.data.getInteractionData().csv(),
+          jsPsych.finishTrial);
         });
     }
 },
