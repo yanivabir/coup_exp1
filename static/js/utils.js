@@ -99,15 +99,17 @@ function saveData(PID, sess, part, data, onComplete = function() {}, type = 'csv
 }
 
 // Create stimulus list for second session
-function createSecondSesssList(){
-  var questions = jsPsych.data.get.filter({category: "wait_question"}).filter({button_pressed: "1"}).values;
-  var answers = jsPsych.data.get.filter({category: "wait_answer"}).values();
+function createSecondSesssList(data){
+  var questions = data.filter({category: "wait_question"}).filter({button_pressed: "1"}).values();
+  var answers = data.filter({category: "wait_answer"}).values();
 
   var m = new Map();
   
   answers.forEach(function(x) {
     x.answer = x.stimulus; 
     x.question = null; 
+    delete x.stimulus;
+    delete x.trial_type;
     m.set(x.questionId, x);
   });
 
@@ -118,6 +120,7 @@ function createSecondSesssList(){
     else
         x.question = x.stimulus;
         delete x.stimulus;
+        delete x.trial_type;
         Object.assign(existing, x);
   });
 
