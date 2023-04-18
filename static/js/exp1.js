@@ -278,7 +278,7 @@ var debrief = [{
         function() {
           saveData(PID, sess, '_int', jsPsych.data.getInteractionData().csv(),
           function() {
-            saveData(PID, sess, "secondSessStims", createSecondSesssList,
+            saveData(PID, sess, "secondSessStims", createSecondSesssList(['trial_type']),
             jsPsych.finishTrial);
           });
         });
