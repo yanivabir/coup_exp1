@@ -45,8 +45,7 @@ var fullscreen_prompt = {
   fullscreen_mode: true,
   timeline: [
     {
-      message: '<div class="instructions"><p>This study has to run in fullscreen mode.</p><p>To switch to full screen mode \
-        and restart the experiment, press the button below.</p></div>'
+      message: '<div class="instructions"><p>אתר המחקר פועל רק במצב מסך מלא. בכדי לחזור למסך מלא, ולהמשיך במחקר, לחצו על הכפתור מטה</p></div>'
     }
   ],
   conditional_function: check_fullscreen,
