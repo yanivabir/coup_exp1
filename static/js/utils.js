@@ -132,43 +132,15 @@ const objectToCsv = function (data) {
   return csvRows.join('\n');
 };
 
-// Create stimulus list for second session
-// Unfortunately this mutates jsPsych data, so call last.
-function createSecondSesssList(){
-  const questions = jsPsych.data.get().filter({category: "wait_question",
-    is_practice: false}).filter({button_pressed: "1"}).values();
-  const answers = jsPsych.data.get().filter({category: "wait_answer", 
-    is_practice: false}).values();
+function createSecondSesssList(keysToRemove) {
+  questions = jsPsych.data.get().filter({category: "wait_question",
+    is_practice: false}).filter({button_pressed: "1"})
 
-  var m = new Map();
-  
-  answers.forEach(function(x) {
-    x.answer = x.stimulus; 
-    x.question = null; 
-    delete x.stimulus;
-    delete x.trial_type;
-    m.set(x.questionId, x);
-  });
+  answers = jsPsych.data.get().filter({category: "wait_answer",
+    is_practice: false}).values()
 
-  questions.forEach(function(x) {
-    var existing = m.get(x.questionId);
-    if (existing === undefined)
-        console.log("missed answer " + x.questionId)
-    else
-        x.question = x.stimulus;
-        delete x.stimulus;
-        delete x.trial_type;
-        Object.assign(existing, x);
-  });
-
-  var joined = Array.from(m.values());
-
-  return objectToCsv(joined)
-}
-
-function chatgpt(array1, array2, keysToRemove) {
   // Renaming the key "stimulus" to "question" in array1
-  const array1WithRenamedKey = array1.map(obj => {
+  const array1WithRenamedKey = questions.map(obj => {
     const newObj = { ...obj };
     newObj.question = newObj.stimulus;
     delete newObj.stimulus;
@@ -176,17 +148,29 @@ function chatgpt(array1, array2, keysToRemove) {
   });
 
   // Renaming the key "stimulus" to "answer" in array2
-  const array2WithRenamedKey = array2.map(obj => {
+  const array2WithRenamedKey = answers.map(obj => {
     const newObj = { ...obj };
     newObj.answer = newObj.stimulus;
     delete newObj.stimulus;
     return newObj;
   });
 
-  // Perform inner join using Array.filter() and Array.some()
-  const result = array1WithRenamedKey.filter(obj1 =>
-    array2WithRenamedKey.some(obj2 => obj1.questionId === obj2.questionId)
-  );
+  // Perform inner join using map
+  var m = new Map();
+  
+  array1WithRenamedKey.forEach(function(x) {
+    m.set(x.questionId, x);
+  });
+
+  array2WithRenamedKey.forEach(function(x) {
+    var existing = m.get(x.questionId);
+    if (existing === undefined)
+        console.log("missed answer " + x.questionId)
+    else
+        Object.assign(existing, x);
+  });
+
+  var result = Array.from(m.values());
 
   // Remove keys from the resulting array of objects
   const modifiedResult = result.map(obj => {
@@ -194,5 +178,5 @@ function chatgpt(array1, array2, keysToRemove) {
     return obj;
   });
 
-  return modifiedResult;
+  return objectToCsv(modifiedResult);
 }
