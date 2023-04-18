@@ -20,7 +20,7 @@ var rating_probes = [[{
     name: "confidence_pos"
   },
   {
-    prompt: "אני לגמרי חסר/ת ביטחון לגבי מהי התשובה לשאלה",
+    prompt: "אין לי שום מושג לגבי התשובה לשאלה",
     required: true,
     labels: ["1<br>כלל לא מסכימ/ה", "2", "3", "4", "5<br>מסכים מאוד"],
     name: "confidence_neg"
