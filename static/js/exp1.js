@@ -132,17 +132,26 @@ function postLoad() {
   // Build waiting task blocks
   wait_practice_block = {
     timeline: wait_timeline,
-    timeline_variables: practice_items
+    timeline_variables: practice_items,
+    data: {
+      is_practice: true
+    }
   }
 
   wait_block1 = {
     timeline: wait_timeline,
-    timeline_variables: firstBlock == "coup" ? coup_items_waiting : general_items_waiting
+    timeline_variables: firstBlock == "coup" ? coup_items_waiting : general_items_waiting,
+    data: {
+      is_practice: false
+    }
   }
 
   wait_block2 = {
     timeline: wait_timeline,
-    timeline_variables: firstBlock == "coup" ? general_items_waiting : coup_items_waiting
+    timeline_variables: firstBlock == "coup" ? general_items_waiting : coup_items_waiting,
+    data: {
+      is_practice: false
+    }
   }
     
 
@@ -268,7 +277,10 @@ var debrief = [{
     saveData(PID, sess, '', jsPsych.data.get().csv(),
         function() {
           saveData(PID, sess, '_int', jsPsych.data.getInteractionData().csv(),
-          jsPsych.finishTrial);
+          function() {
+            saveData(PID, sess, "secondSessStims", createSecondSesssList,
+            jsPsych.finishTrial);
+          });
         });
     }
 },

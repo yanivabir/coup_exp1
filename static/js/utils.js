@@ -134,9 +134,11 @@ const objectToCsv = function (data) {
 
 // Create stimulus list for second session
 // Unfortunately this mutates jsPsych data, so call last.
-function saveSecondSesssList(){
-  const questions = jsPsych.data.get().filter({category: "wait_question"}).filter({button_pressed: "1"}).values();
-  const answers = jsPsych.data.get().filter({category: "wait_answer"}).values();
+function createSecondSesssList(){
+  const questions = jsPsych.data.get().filter({category: "wait_question",
+    is_practice: false}).filter({button_pressed: "1"}).values();
+  const answers = jsPsych.data.get().filter({category: "wait_answer", 
+    is_practice: false}).values();
 
   var m = new Map();
   
