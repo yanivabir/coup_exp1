@@ -9,6 +9,6 @@
 - [x] Alignment waiting task answer
 - [x] rating הפעם לא תוצג התשובה
 - [x] rating continue button
-- [ ] confidence probe wording
-- [ ] rating task end message
+- [x] confidence probe wording
+- [x] rating task end message
 - [ ] ברגע זה

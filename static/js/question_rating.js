@@ -135,3 +135,16 @@ var rating_instructions = {
     category: "rating_instructions1"
   }
 }
+
+// Message that shows up before the questionnaire section
+var post_rating = {
+  type: "html-button-response",
+  stimulus: "<div id='instruct'>.סיימנו את החלק הזה במחקר. לחצו על ״המשך״ כדי לעבור לחלק הבא\
+  </div>",
+  choices: ["המשך"],
+  margin_vertical: "80px",
+  data: {
+  category: 'post_rating'
+  },
+  post_trial_gap: 200
+  }

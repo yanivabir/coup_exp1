@@ -45,7 +45,7 @@ var post_probability_judgment = {
     choices: ["המשך"],
     margin_vertical: "80px",
     data: {
-    category: 'stai_message'
+    category: 'post_probability_judgment'
     },
     post_trial_gap: 200
     }

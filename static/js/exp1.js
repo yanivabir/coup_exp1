@@ -304,6 +304,7 @@ var debrief = [{
     experiment.push(general_rating_block);  
     experiment.push(coup_rating_block);
   }
+  experiment.push(post_rating);
   experiment.push(probability_judgement_instructions);
   experiment.push(probability_judgement_block);
   experiment.push(post_probability_judgment);
