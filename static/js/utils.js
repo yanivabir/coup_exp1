@@ -165,3 +165,32 @@ function createSecondSesssList(){
 
   return objectToCsv(joined)
 }
+
+function chatgpt(array1, array2, keysToRemove) {
+  // Renaming the key "stimulus" to "question" in array1
+  const array1WithRenamedKey = array1.map(obj => {
+    obj.question = obj.stimulus;
+    delete obj.stimulus;
+    return obj;
+  });
+
+  // Renaming the key "stimulus" to "answer" in array2
+  const array2WithRenamedKey = array2.map(obj => {
+    obj.answer = obj.stimulus;
+    delete obj.stimulus;
+    return obj;
+  });
+
+  // Perform inner join using Array.filter() and Array.some()
+  const result = array1WithRenamedKey.filter(obj1 =>
+    array2WithRenamedKey.some(obj2 => obj1.id === obj2.id)
+  );
+
+  // Remove keys from the resulting array of objects
+  const modifiedResult = result.map(obj => {
+    keysToRemove.forEach(key => delete obj[key]);
+    return obj;
+  });
+
+  return objectToCsv(modifiedResult);
+}
