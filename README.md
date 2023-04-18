@@ -5,7 +5,7 @@
 - [ ] Go over gender everywhere
 - [ ] Inter-session processing script
 - [ ] Send to midgam
-- [ ] Translate warning messages
+- [x] Translate warning messages
 - [ ] Alignment waiting task answer
 - [ ] rating הפעם לא תוצג התשובה
 - [ ] rating continue button
