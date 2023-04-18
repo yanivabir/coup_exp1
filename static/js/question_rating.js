@@ -85,6 +85,7 @@ var rating_trial = [fullscreen_prompt,
     },
     scale_width: 400,
     post_trial_gap: 100,
+    button_label: "המשך",
     data:{
       category: "rating_question1",
       questionId: jsPsych.timelineVariable('questionId')
@@ -106,6 +107,7 @@ var rating_trial = [fullscreen_prompt,
     },
     scale_width: 400,
     post_trial_gap: 300,
+    button_label: "המשך",
     data:{
       category: "rating_question2",
       questionId: jsPsych.timelineVariable('questionId')

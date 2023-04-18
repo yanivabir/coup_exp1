@@ -7,7 +7,7 @@
 - [ ] Send to midgam
 - [x] Translate warning messages
 - [x] Alignment waiting task answer
-- [ ] rating הפעם לא תוצג התשובה
+- [x] rating הפעם לא תוצג התשובה
 - [ ] rating continue button
 - [ ] confidence probe wording
 - [ ] rating task end message
