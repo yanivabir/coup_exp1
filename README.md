@@ -11,4 +11,10 @@
 - [x] rating continue button
 - [x] confidence probe wording
 - [x] rating task end message
-- [ ] ברגע זה
+- [x] ברגע זה
+- [ ] rating מסכים מאוד
+- [ ] rating end message period
+- [ ] האם אתה רואה בעצמך אפתי?
+- [ ] extra ideology questions from rasha
+- [ ] demographics
+- [ ] second session saving
