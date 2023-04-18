@@ -8,7 +8,7 @@
 - [x] Translate warning messages
 - [x] Alignment waiting task answer
 - [x] rating הפעם לא תוצג התשובה
-- [ ] rating continue button
+- [x] rating continue button
 - [ ] confidence probe wording
 - [ ] rating task end message
 - [ ] ברגע זה
