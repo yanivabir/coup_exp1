@@ -16,11 +16,11 @@ var kick_out = {
   },
   timeline: [{
     stimulus: "<div class = 'instructions'>\
-    <p>It seems that you are not performing the task as instructed.</p>\
-    <p>Please return this HIT.</p>\
-    <p>If you feel that this is a mistake, please email \
-    ya2402+mturk@columbia.edu</p>\
-    <p>Press the space bar to continue.</p></div>"
+    <p>נראה שאתם לא ממלאים אחר ההוראות.</p>\
+    <p>המחקר ייעצר כעת.</p>\
+    <p>אם אתם חושבים שזו טעות, אנא כתבו לכתובת:  \
+    ya2402+midgam@columbia.edu</p>\
+    <p>לחצו על מקש הרווח להמשך</p></div>"
   }],
   choices: [32],
   on_finish: function() {
