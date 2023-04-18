@@ -86,8 +86,8 @@ function check_fullscreen(){
 function saveData(PID, sess, part, data, onComplete = function() {}, type = 'csv') {
   console.log(onComplete)
   var d = new Date;
-  name = 'S' + PID + '_sess' + sess + '_' + d.toISOString().slice(0, 10) +
-    part + '.' + type;
+  var name = sess > 0 ? 'S' + PID + '_sess' + sess + '_' + d.toISOString().slice(0, 10) +
+    part + '.' + type : 'S' + PID + part + '.' + type;
   var xhr = new XMLHttpRequest();
   xhr.addEventListener("load", onComplete);
   xhr.open('POST', 'write_data.php');

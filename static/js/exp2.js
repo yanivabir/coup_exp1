@@ -14,7 +14,7 @@ var viewed_answers,
   firstBlock;
 
 // Load items from local csv file
-Papa.parse("../static/secSessStims/" + PID + "_viewedAnswers.csv", {
+Papa.parse("../static/data/" + PID + "secondSessStims.csv", {
   download: true,
   header: true,
   dynamicTyping: true,
