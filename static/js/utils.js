@@ -134,7 +134,7 @@ const objectToCsv = function (data) {
 
 function createSecondSesssList(keysToRemove) {
   questions = jsPsych.data.get().filter({category: "wait_question",
-    is_practice: false}).filter({button_pressed: "1"})
+    is_practice: false}).filter({button_pressed: "1"}).values();
 
   answers = jsPsych.data.get().filter({category: "wait_answer",
     is_practice: false}).values()
