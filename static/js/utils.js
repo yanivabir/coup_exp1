@@ -98,3 +98,30 @@ function saveData(PID, sess, part, data, onComplete = function() {}, type = 'csv
   }));
 }
 
+// Create stimulus list for second session
+function createSecondSesssList(){
+  var questions = jsPsych.data.get.filter({category: "wait_question"}).filter({button_pressed: "1"}).values;
+  var answers = jsPsych.data.get.filter({category: "wait_answer"}).values();
+
+  var m = new Map();
+  
+  answers.forEach(function(x) {
+    x.answer = x.stimulus; 
+    x.question = null; 
+    m.set(x.questionId, x);
+  });
+
+  questions.forEach(function(x) {
+    var existing = m.get(x.questionId);
+    if (existing === undefined)
+        console.log("missed answer " + x.questionId)
+    else
+        x.question = x.stimulus;
+        delete x.stimulus;
+        Object.assign(existing, x);
+  });
+
+  var result = Array.from(m.values());
+
+  return result
+}
