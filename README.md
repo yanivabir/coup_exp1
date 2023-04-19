@@ -12,7 +12,7 @@
 - [x] confidence probe wording
 - [x] rating task end message
 - [x] ברגע זה
-- [ ] rating מסכים מאוד
+- [x] rating מסכים מאוד
 - [ ] rating end message period
 - [x] האם אתה רואה בעצמך אפתי?
 - [ ] extra ideology questions from rasha
