@@ -19,4 +19,4 @@
 - [x] demographics
 - [x] second session saving
 - [x] מספר הפעים
-- [ ] next on data upload
+- [x] next on data upload
