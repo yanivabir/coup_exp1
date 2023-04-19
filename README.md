@@ -17,4 +17,5 @@
 - [ ] האם אתה רואה בעצמך אפתי?
 - [ ] extra ideology questions from rasha
 - [ ] demographics
-- [ ] second session saving
+- [x] second session saving
+- [x] מספר הפעים
