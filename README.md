@@ -14,7 +14,7 @@
 - [x] ברגע זה
 - [ ] rating מסכים מאוד
 - [ ] rating end message period
-- [ ] האם אתה רואה בעצמך אפתי?
+- [x] האם אתה רואה בעצמך אפתי?
 - [ ] extra ideology questions from rasha
 - [ ] demographics
 - [x] second session saving
