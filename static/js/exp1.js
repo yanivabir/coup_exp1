@@ -328,7 +328,7 @@ var debrief = [{
   experiment.push(apathy_message);
   experiment = experiment.concat(apathy);
   experiment.push(iwin_message);
-  experiment.push(iwin);
+  experiment = experiment.concat(iwin);
   experiment.push(demog_message);
   experiment = experiment.concat(demographic_block);
   experiment = experiment.concat(debrief);

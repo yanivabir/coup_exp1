@@ -13,9 +13,9 @@
 - [x] rating task end message
 - [x] ברגע זה
 - [x] rating מסכים מאוד
-- [ ] rating end message period
+- [x] rating end message period
 - [x] האם אתה רואה בעצמך אפתי?
-- [ ] extra ideology questions from rasha
+- [x] extra ideology questions from rasha
 - [ ] demographics
 - [x] second session saving
 - [x] מספר הפעים
