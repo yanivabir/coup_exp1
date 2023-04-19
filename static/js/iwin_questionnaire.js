@@ -60,4 +60,15 @@ var iwin = [];
       button_label: "המשך"
     });
   }
+
+var iwin_message = {
+  type: "html-button-response",
+  stimulus: '<div id="instruct"><p>כעת נשאל מספר שאלות הנוגעות לתחושות והעמדות שלך.</p></div>',
+  choices: ["המשך"],
+  margin_vertical: "80px",
+  data: {
+      category: 'iwin_message'
+  },
+  post_trial_gap: 200
+}
   
