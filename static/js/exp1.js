@@ -247,8 +247,10 @@ var debrief = [{
     show_clickable_nav: true,
     allow_keys: false,
     data: {
-    category: "debrief"
-    }
+      category: "debrief"
+    },
+    button_label_previous: "חזרה",
+    button_label_next: "המשך"
 },
 {
     type: 'fullscreen',
@@ -263,7 +265,9 @@ var debrief = [{
     allow_keys: false,
     data: {
     category: "debrief"
-    }
+    },
+    button_label_previous: "חזרה",
+    button_label_next: "המשך"
 },
 {
     type: "html-keyboard-response",
@@ -283,17 +287,6 @@ var debrief = [{
           });
         });
     }
-},
-{
-    type: "html-keyboard-response",
-    data: {
-    category: "data_saved"
-    },
-    stimulus: "<div class='instructions'><p>Your results have successfully uploaded.</p>\
-<p>Your completion code for this study is: <br> <b>EK75HN8</b></p>\
-<p>Use it to submit this HIT on MTurk.</p>\
-<p>You may now close this window.</p></div>",
-    choices: jsPsych.NO_KEYS
 }
 ];
 
