@@ -12,7 +12,8 @@ demographic_block = [
     ],
     data: {
       category: 'demographics'
-    }
+    },
+    button_label: "המשך"
   }, {
     type: "survey-multi-choice",
     questions: [{
@@ -23,18 +24,18 @@ demographic_block = [
         name: "gender"
       },
       {
-        prompt: "What is the highest degree or level of school that you have completed? (If you are currently enrolled in school, please indicate the highest degree you have received)?",
-        options: ["Did not complete high school", "High school degree or equivalent (e.g. GED)",
-          "Some college", "Associate Degree", "Bachelor's Degree",
-          "Master's Degree", "Professional Degree (e.g. MD, JD, DDS)", "Doctorate"
+        prompt: "מהי רמת ההשכלה שלך? (אם את/ה בלימודים כרגע, נא לציין את הרמה הגבוהה ביותר שסיימת)",
+        options: ["יסודי", "תיכונית",
+          "למדתי במכללה/אוניברסיטה אך לא סיימתי", "תעודה/תואר מקצועי", "תואר ראשון",
+          "תואר שני", "תואר שלישי"
         ],
         horizontal: true,
         required: true,
         name: "education"
       },
       {
-        prompt: "Is English your native language?",
-        options: ["Yes", "No"],
+        prompt: "האם עברית היא שפת האם שלך?",
+        options: ["כן", "לא"],
         horizontal: true,
         required: true,
         name: "native_english"
@@ -42,25 +43,27 @@ demographic_block = [
     ],
     data: {
       category: 'demographics'
-    }
+    },
+    button_label: "המשך"
   },
   {
     type: 'survey-likert',
     questions: [{
-      prompt: "How fluent are you in reading and understanding English?",
-      labels: ["1<br>Not at all", "2", "3", "4", "5<br>Very fluent"],
+      prompt: "האם את/ה שולט בקריאה והבנת הנקרא בעברית?",
+      labels: ["1<br>כלל לא", "2", "3", "4", "5<br>שולט בהחלט"],
       required: true,
       name: "fluent"
     }],
     scale_width: 400,
     data: {
       category: 'demographics'
-    }
+    },
+    button_label: "המשך"
   },
   {
     type: "survey-text",
     questions: [{
-        prompt: "<div id='instruct'>Did you encounter any difficulties while completing the tasks today?</div>",
+        prompt: "<div id='instruct'>האם נתקלת בקשיים כלשהם בהשלמת המחקר היום?</div>",
         columns: 35,
         rows: 2,
         value: '',
@@ -68,7 +71,7 @@ demographic_block = [
         required: true
       },
       {
-        prompt: "<div id='instruct'>Was there anything unclear in the instructions?</div>",
+        prompt: "<div id='instruct'>האם היה משהו מבלבל בהוראות?</div>",
         columns: 35,
         rows: 2,
         value: '',
@@ -76,7 +79,7 @@ demographic_block = [
         required: true
       },
       {
-        prompt: "<div id='instruct'>Was there anything you did that helped you complete the tasks more easily?</div>",
+        prompt: "<div id='instruct'>האם היה משהו שעזר לך להשלים את המשימות יותר בקלות?</div>",
         columns: 35,
         rows: 2,
         value: '',
@@ -86,6 +89,7 @@ demographic_block = [
     ],
     data: {
       category: 'difficulties'
-    }
+    },
+    button_label: "המשך"
   }, 
 ]

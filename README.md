@@ -16,6 +16,7 @@
 - [x] rating end message period
 - [x] האם אתה רואה בעצמך אפתי?
 - [x] extra ideology questions from rasha
-- [ ] demographics
+- [x] demographics
 - [x] second session saving
 - [x] מספר הפעים
+- [ ] next on data upload
