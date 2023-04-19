@@ -320,6 +320,8 @@ var debrief = [{
 //   experiment = experiment.concat(reg_focus);
   experiment.push(apathy_message);
   experiment = experiment.concat(apathy);
+  experiment.push(coup_relevance_message);
+  experiment = experiment.concat(coup_relevance);
   experiment.push(iwin_message);
   experiment = experiment.concat(iwin);
   experiment.push(demog_message);
