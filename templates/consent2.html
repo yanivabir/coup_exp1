@@ -38,12 +38,20 @@
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<button type="button" class="btn btn-danger btn-lg" onClick="onexit()">
+			<button type="button" class="btn btn-danger btn-lg" onClick="sendBack()">
 				<span class="glyphicon glyphicon-ban-circle"></span> לא תודה
 			</button>
 		</center>
 		<br>
 	</div>
+
+	<script>
+		function sendBack() {
+			const urlParams = new URLSearchParams(window.location.search);
+			const uid = urlParams.get('uid');
+			window.location.replace("https://www.midgampanel.com/surveyThanks2.asp?USER="+ uid +"&status=refused")
+		}
+		</script>
 </body>
 
 </html>
