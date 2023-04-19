@@ -283,7 +283,7 @@ var debrief = [{
           saveData(PID, sess, '_int', jsPsych.data.getInteractionData().csv(),
           function() {
             saveData(PID, 0, "_secondSessStims", createSecondSesssList(['trial_type', 'button_pressed']),
-            jsPsych.finishTrial);
+            window.location.replace("https://www.midgampanel.com/surveyThanks2.asp?USER=" + PID + "&status=OK"));
           });
         });
     }
