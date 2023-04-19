@@ -4,7 +4,7 @@
 - [x] Fix gender on consent
 - [x] Go over gender everywhere
 - [ ] Inter-session processing script
-- [ ] Send to midgam
+- [x] Send to midgam
 - [x] Translate warning messages
 - [x] Alignment waiting task answer
 - [x] rating הפעם לא תוצג התשובה
@@ -20,3 +20,6 @@
 - [x] second session saving
 - [x] מספר הפעים
 - [x] next on data upload
+- [ ] Finalize questions
+- [ ] Regulatory focus
+- [ ] Gallup wellbeing
