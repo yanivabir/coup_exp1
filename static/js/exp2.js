@@ -32,6 +32,12 @@ Papa.parse("../../data/S" + PID + "_secondSessStims.csv", {
 
 var experiment = [];
 
+function preventRefresh(e) {
+  // Cancel the event
+  e.preventDefault();
+  e.returnValue = '';
+}
+
 
 // Execute all of this experiment prep and run after we load items from local
 // csv file
@@ -127,12 +133,6 @@ function postLoad() {
   // experiment.push(recall_instructions1);
   // experiment = experiment.concat(answer_recall_block);
   experiment = experiment.concat(debrief);
-
-  function preventRefresh(e) {
-    // Cancel the event
-    e.preventDefault();
-    e.returnValue = '';
-  }
 
   // Prevent right click, refresh
   if (!debug) {
