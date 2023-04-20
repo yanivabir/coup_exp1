@@ -70,74 +70,55 @@ function postLoad() {
 
   // Debriefing and data upload
   var debrief = [{
-      type: "instructions",
-      pages: ['<div id="instruct">Thank you for participating in this experiment!<p>\
-      In this study we were interested in people\'s curiosity about different \
-      types of questions.</p>\
-      <p>Any health information presented in this experiment was based on the \
-      researchers’ reading of current publicly available information from the \
-      Center for Disease Control and other reputable health and news media \
-      websites but should not be taken as medical advice. If you have any \
-      questions about your health, you should seek the judgment of a medical \
-      professional.</p>\
-      <p>We will process your data within 48h and grant you an extra $1 to any \
-      participant that made an honest attempt at recalling previous answers.</p></div>'],
-      show_clickable_nav: true,
-      allow_keys: false,
-      data: {
-        category: "debrief"
-      }
+    type: "instructions",
+    pages: ['<div id="instruct">תודה על השתתפותך במפגש הראשון של המחקר!<p>\
+    במחקר זה אנו בוחנים את הסקרנות של אנשים שונים לשאלות מתחומים שונים.</p>\
+    <p>המידע המשפטי שהוצג במסגרת המחקר מבוסס על פרסומים בעיתונות ובערוצים ממשלתיים. המידע שהוצג אינו מהווה תחליף לייעוץ משפטי בכל מקרה.</p>\
+    </div>'],
+    show_clickable_nav: true,
+    allow_keys: false,
+    data: {
+      category: "debrief"
     },
-    {
-      type: 'fullscreen',
-      fullscreen_mode: false
+    button_label_previous: "חזרה",
+    button_label_next: "המשך"
+},
+{
+    type: 'fullscreen',
+    fullscreen_mode: false
+},
+{
+    type: "instructions",
+    pages: ["<div id ='instruct'><p>לחיצה על  <i>המשך</i> \
+תשלח את המידע שלך לשרת, ותחזיר אותך לאתר המדגם <b>העלאת הנתונים יכולה לקחת מספר דקות. בבקשה אל תרעננו את הדפדפן או תסגרו אותו בזמן זה.</b></p>\
+<p>לחצו על <i>המשך</i> לשליחת המידע.</p></div>"],
+    show_clickable_nav: true,
+    allow_keys: false,
+    data: {
+    category: "debrief"
     },
-    {
-      type: "instructions",
-      pages: ["<div id ='instruct'><p>Once you press the <i>Next</i> \
-    button, your results will be uploaded to the server, and the experiment will\
-    complete. <b>This may take several minutes - do not \
-    refresh or close your browser during this time.</b></p>\
-    <p>After your results are uploaded to the server, you will be presented \
-    with the completion code for MTurk.\
-    <p>Press the <i>Next</i> button to upload your results.</p></div>"],
-      show_clickable_nav: true,
-      allow_keys: false,
-      data: {
-        category: "debrief"
-      }
+    button_label_previous: "חזרה",
+    button_label_next: "המשך"
+},
+{
+    type: "html-keyboard-response",
+    data: {
+    category: "save_data"
     },
-    {
-      type: "html-keyboard-response",
-      data: {
-        category: "save_data"
-      },
-      stimulus: "<div id='instruct'><p>Data uploading. To ensure proper completion \
-      of the experiment, please don't refresh, \
-      close your browser or open another tab.\
-      </p></div>",
-      choices: jsPsych.NO_KEYS,
-      on_load: function() {
-        var d = new Date;
-        saveData(PID, sess, '', jsPsych.data.get().csv(),
+    stimulus: "<div id='instruct'><p>המידע שלך נשלח ברגעים אלה. בבקשה לא לרענן את הדפדפן או לסגור את הלשונית.</p></div>",
+    choices: jsPsych.NO_KEYS,
+    on_load: function() {
+    var d = new Date;
+    saveData(PID, sess, '', jsPsych.data.get().csv(),
+        function() {
+          saveData(PID, sess, '_int', jsPsych.data.getInteractionData().csv(),
           function() {
-            saveData(PID, sess, '_int', jsPsych.data.getInteractionData().csv(),
-              jsPsych.finishTrial);
+            window.location.replace("https://www.midgampanel.com/surveyThanks2.asp?USER=" + PID + "&status=OK");
           });
-      }
-    },
-    {
-      type: "html-keyboard-response",
-      data: {
-        category: "data_saved"
-      },
-      stimulus: "<div class='instructions'><p>Your results have successfully uploaded.</p>\
-    <p>Your completion code for this study is: <br> <b>JK834LL3</b></p>\
-    <p>Use it to submit this HIT on MTurk.</p>\
-    <p>You may now close this window.</p></div>",
-      choices: jsPsych.NO_KEYS
+        });
     }
-  ];
+}
+];
 
 
   // Put it all together
