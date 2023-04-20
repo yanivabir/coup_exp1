@@ -1,33 +1,21 @@
 itemId,order,prompt,dimension,domain,coding
-coup_rel_28,1,אני מודאג/ת מאוד מהשפעת הרפורמה המשפטית על המצב הכלכלי שלי,attitude,economics,against
-coup_rel_07,2,"הרפורמה מעניינת את הפוליטיקאים בלבד, ולא נוגעת לאדם הפשוט",relevance,general,negative
-coup_rel_05,3,אכפת לי אם הרפורמה המשפטית תעבור ותיושם במלואה או לא.,relevance,general,positive
-coup_rel_08,4,ההפגנות נגד הרפורמה עשויות להשפיע על מצבי הכלכלי,relevance,economics,positive
-coup_rel_27,5,אני צופה שינוי לטובה במצבי הכלכלי אם הרפורמה המשפטית תיושם,attitude,economics,for
-coup_rel_13,6,הרפורמה המשפטית היא לא נושא לדאגה לאדם הממוצע,attitude,general,for
-coup_rel_12,7,אני חש גאווה כשאני חושב על מדינת ישראל לאחר הרפורמות,attitude,general,for
-coup_rel_23,8,"ללא הרפורמה, המערכת המשפטית לא מייצגת את רצון רוב העם",attitude,civics,for
-coup_rel_17,9,אני דואג/ת שאורח חיי יפגע אם הרפורמה המשפטית תעבור במלואה,attitude,general,against
-coup_rel_15,10,אני מזדהה עם המוחים נגד הרפורמה המשפטית,attitude,general,against
-coup_rel_19,11,יש צורך לשנות מהיסוד את מערכת המשפט הישראלית,attitude,civics,for
-coup_rel_18,12,אני מאוד חושש ממצב שבו הרפורמה המשפטית תעבור,attitude,general,against
-coup_rel_30,13,אני מאוד חושש/ת שללא הרפורמה המשפטית ישראל תהפוך למדינה שאינה יהודית,attitude,religion,for
-coup_rel_02,14,הרפורמה המשפטית תשפיע עלי באופן אישי,relevance,general,positive
-coup_rel_10,15,אני לא מאמין/ה שהרפורמה תשפיע על איכות הטיפול הרפואי שאני מקבל,relevance,medical,negative
-coup_rel_24,16,צריך להגן על מוסדות הדמוקרטיה הישראלית מפני התערבויות של המערכת הפוליטית,attitude,civics,against
-coup_rel_32,17,אני חרד שמקום העבודה שלי יושפע לרעה כתוצאה מהרפורמה המשפטית,attitude,work,against
-coup_rel_01,18,יש לי דברים יותר חשובים לדאוג מהם מאשר הרפורמה המשפטית,relevance,general,negative
-coup_rel_16,19,אני חרד לגורל החברה בה אני חי אם הרפורמה המשפטית תעבור במלואה,attitude,general,against
-coup_rel_29,20,יש צורך להגן על הזהות היהודית של מדינת ישראל מפני התערבויות של בתי המשפט,attitude,religion,for
-coup_rel_04,21,התגובה הציבורית לרפורמה המשפטית משפיעה עלי באופן אישי,relevance,general,positive
-coup_rel_09,22,הרפורמה המשפטית והתגובה לה עשויות להשפיע על יחסי עם בני משפחתי,relevance,family,positive
-coup_rel_21,23,השופטים בבתי המשפט צריכים לייצג את הדעות של הקואליציה הנבחרת,attitude,civics,for
-coup_rel_31,24,הרפורמה המשפטית תגרום לשחיקה באמון הציבור בצבא ובמשטרה,attitude,security,against
-coup_rel_11,25,הפוליטיקאים שמקדמים את הרפורמה המשפטית בסך הכל דומים לאנשים שאני מכיר,attitude,general,for
-coup_rel_25,26,על בתי המשפט לשמש כבלם לממשלה ולהגן על זכויות האזרח מפני הממשלה,attitude,civics,against
-coup_rel_22,27,"הרפורמה תאזן ותגביל את בג""צ ובכך תחזק את האיזונים והבלמים בישראל",attitude,civics,for
-coup_rel_26,28,מערכת משפט עצמאית היא הכרחית לשמירה על הזכויות שלי,attitude,civics/general,against
-coup_rel_14,29,יוזמי הרפורמה המשפטית מונעים מאינטרסים אישיים ולא מדאגה לטובת הציבור,attitude,general,against
-coup_rel_20,30,"בשביל שהממשלה תוכל לשפר את חיי האזרחים, צריך לרסן את מערכת המשפט",attitude,civics,for
-coup_rel_06,31,אני לא צופה שינויים מהותיים בחיי היומיום שלי בעקבות הרפורמה המשפטית,relevance,general,negative
-coup_rel_03,32,הרפורמה המשפטית תשפיע על חיי משפחתי והאנשים הקרובים לי,relevance,general,positive
+coup_rel_06,1,ההפגנות נגד הרפורמה המשפטית עשויות להשפיע על מצבי הכלכלי,relevance,economics,positive
+coup_rel_16,2,צריך להגן על מוסדות הדמוקרטיה הישראלית מפני התערבויות של המערכת הפוליטית,attitude,civics,against
+coup_rel_01,3,יש לי דברים יותר חשובים להתעסק בהם מאשר הרפורמה המשפטית,relevance,general,negative
+coup_rel_02,4,הרפורמה המשפטית תשפיע עלי באופן אישי,relevance,general,positive
+coup_rel_14,5,"בשביל שהממשלה תוכל לשפר את חיי האזרחים, צריך לרסן את מערכת המשפט",attitude,civics,for
+coup_rel_08,6,הפוליטיקאים שמקדמים את הרפורמה המשפטית בסך הכל דומים לאנשים שאני מכיר,attitude,general,for
+coup_rel_12,7,אני מאוד חושש ממצב שבו הרפורמה המשפטית תעבור,attitude,general,against
+coup_rel_09,8,אני חש גאווה כשאני חושב על מדינת ישראל לאחר הרפורמות,attitude,general,for
+coup_rel_05,9,"הרפורמה מעניינת את הפוליטיקאים בלבד, ולא נוגעת לאדם הפשוט",relevance,general,negative
+coup_rel_11,10,אני מזדהה עם המוחים נגד הרפורמה המשפטית,attitude,general,against
+coup_rel_13,11,יש צורך לשנות מהיסוד את מערכת המשפט הישראלית,attitude,civics,for
+coup_rel_20,12,אני מאוד חושש/ת שללא הרפורמה המשפטית ישראל תהפוך למדינה שאינה יהודית,attitude,religion,for
+coup_rel_03,13,הרפורמה המשפטית תשפיע על חיי משפחתי והאנשים הקרובים לי,relevance,general,positive
+coup_rel_15,14,"ללא הרפורמה, המערכת המשפטית לא מייצגת את רצון רוב העם",attitude,civics,for
+coup_rel_04,15,אני לא צופה שינויים מהותיים בחיי היומיום שלי בעקבות הרפורמה המשפטית,relevance,general,negative
+coup_rel_17,16,מערכת משפט עצמאית היא הכרחית לשמירה על הזכויות שלי,attitude,civics/general,against
+coup_rel_19,17,אני מודאג/ת מאוד מהשפעת הרפורמה המשפטית על המצב הכלכלי שלי,attitude,economics,against
+coup_rel_10,18,יוזמי הרפורמה המשפטית מונעים מאינטרסים אישיים ולא מדאגה לטובת הציבור,attitude,general,against
+coup_rel_18,19,אני צופה שינוי לטובה במצבי הכלכלי אם הרפורמה המשפטית תיושם,attitude,economics,for
+coup_rel_07,20,הרפורמה המשפטית והתגובה לה עשויות להשפיע על יחסי עם בני משפחתי,relevance,family,positive

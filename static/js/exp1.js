@@ -199,7 +199,7 @@ var stai_message = {
 type: "html-button-response",
 stimulus: "<div id='instruct'>להלן מספר משפטים, בהם משתמשים אנשים כדי לתאר את עצמם. קרא/י כל משפט ותן/י את התשובה \
 הנראית לך כמתארת בצורה הטובה ביותר את רגשותיך <b>ברגע זה</b>. \
-אין כאן תשובה נכונה או לא נכונה; אל תבזבז/י יותר מדי זמן על אף אחד מהמשפטים, אלא תן/י את התשובה המדויקת ביותר, המתארת את רגשותייך כעת.\
+אין כאן תשובות נכונות או לא נכונות. אל תבזבז/י יותר מדי זמן על אף אחד מהמשפטים, אלא תן/י את התשובה המדויקת ביותר, המתארת את רגשותייך כעת.\
 </div>",
     choices: ["המשך"],
     margin_vertical: "80px",
@@ -209,6 +209,20 @@ stimulus: "<div id='instruct'>להלן מספר משפטים, בהם משתמש�
     post_trial_gap: 200
 }
 
+var gallup_message = {
+  type: "html-button-response",
+  stimulus: "<div id='instruct'><p>כעת תמשיכו לענות על שאלות על עצמכם.\
+   קראו כל שאלה, ובחרו את התשובה המתאימה ביותר עבורכם.\
+    אין כאן תשובות נכונות או לא נכונות.\
+     אל תבזבזו יותר מדי זמן על אף אחת מהשאלות, אלא תנו את התשובה המדויקת ביותר עבוכם כרגע.</p></div>",
+      choices: ["המשך"],
+      margin_vertical: "80px",
+      data: {
+      category: 'gallup_message'
+      },
+      post_trial_gap: 200
+  }
+  
 
 // Message that shows up before regulatory focus questionnaire
 var regfocus_message = {
@@ -293,29 +307,31 @@ var debrief = [{
 
   // Put it all together
   experiment.push(fullscreen);
-  experiment.push(welcome);
-  experiment = experiment.concat(wait_instructions1);
-  experiment.push(wait_practice_block);
-  experiment.push(wait_instructions_post_practice);
-  experiment.push(wait_block1);
-  experiment.push(wait_instructions2);
-  experiment.push(wait_block2);
-  experiment.push(wait_instructions_post_task);
-  experiment.push(rating_instructions);
-  if (firstBlock == "coup"){
-    experiment.push(coup_rating_block);
-    experiment.push(general_rating_block);  
-  }else{
-    experiment.push(general_rating_block);  
-    experiment.push(coup_rating_block);
-  }
-  experiment.push(post_rating);
-  experiment.push(probability_judgement_instructions);
-  experiment.push(probability_judgement_block);
-  experiment.push(post_probability_judgment);
-  experiment.push(pre_questionnaires_message);
-  experiment.push(stai_message);
-  experiment = experiment.concat(anxiety);
+  // experiment.push(welcome);
+  // experiment = experiment.concat(wait_instructions1);
+  // experiment.push(wait_practice_block);
+  // experiment.push(wait_instructions_post_practice);
+  // experiment.push(wait_block1);
+  // experiment.push(wait_instructions2);
+  // experiment.push(wait_block2);
+  // experiment.push(wait_instructions_post_task);
+  // experiment.push(rating_instructions);
+  // if (firstBlock == "coup"){
+  //   experiment.push(coup_rating_block);
+  //   experiment.push(general_rating_block);  
+  // }else{
+  //   experiment.push(general_rating_block);  
+  //   experiment.push(coup_rating_block);
+  // }
+  // experiment.push(post_rating);
+  // experiment.push(probability_judgement_instructions);
+  // experiment.push(probability_judgement_block);
+  // experiment.push(post_probability_judgment);
+  // experiment.push(pre_questionnaires_message);
+  // experiment.push(stai_message);
+  // experiment = experiment.concat(anxiety);
+  experiment.push(gallup_message);
+  experiment = experiment.concat(gallup);
 //   experiment.push(regfocus_message);
 //   experiment = experiment.concat(reg_focus);
   experiment.push(apathy_message);
