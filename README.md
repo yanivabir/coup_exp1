@@ -21,6 +21,7 @@
 - [x] מספר הפעים
 - [x] next on data upload
 - [ ] Finalize questions
-- [ ] Regulatory focus
+- [x] Regulatory focus
 - [x] Gallup wellbeing
 - [x] second session
+- [ ] test
