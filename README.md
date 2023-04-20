@@ -22,4 +22,5 @@
 - [x] next on data upload
 - [ ] Finalize questions
 - [ ] Regulatory focus
-- [ ] Gallup wellbeing
+- [x] Gallup wellbeing
+- [ ] second session
