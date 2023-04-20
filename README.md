@@ -23,4 +23,4 @@
 - [ ] Finalize questions
 - [ ] Regulatory focus
 - [x] Gallup wellbeing
-- [ ] second session
+- [x] second session

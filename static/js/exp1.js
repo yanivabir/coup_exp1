@@ -230,17 +230,16 @@ var gallup_message = {
   }
   
 
-// Message that shows up before regulatory focus questionnaire
-var regfocus_message = {
+// Message that shows up before regulatory mode questionnaire
+var regmode_message = {
   type: "html-button-response",
-  stimulus: '<div id="instruct"><p>You will now continue answering questions about yourself.</p> \
-  Please read each of the following statements, then use the scale below them to indicate how much \
-  you agree with each statement according to your beliefs and experiences.</p> \
-  <p>There are no right or wrong answers.</p></div>',
+  stimulus: '<div id="instruct"><p>כעת תמשיכו לענות על שאלות על עצמכם.</p> \
+  קראו כל אחת מהאמירות הבאות. סמנו בסולם מתחת לכל אמירה עד כמה אתם מסכימים איתה, לפי האמונות והחוויות האישיות שלכם.</p> \
+  <p>אין כאן תשובות נכונות או לא נכונות.</p></div>',
     choices: ["המשך"],
     margin_vertical: "80px",
     data: {
-      category: 'regfocus_message'
+      category: 'regmode_message'
     },
     post_trial_gap: 200
 }
@@ -342,8 +341,8 @@ var debrief = [{
   experiment = experiment.concat(anxiety);
   experiment.push(gallup_message);
   experiment = experiment.concat(gallup);
-//   experiment.push(regfocus_message);
-//   experiment = experiment.concat(reg_focus);
+  experiment.push(regmode_message);
+  experiment = experiment.concat(reg_mode);
   experiment.push(apathy_message);
   experiment = experiment.concat(apathy);
   experiment.push(coup_relevance_message);
