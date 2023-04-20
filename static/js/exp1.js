@@ -307,29 +307,29 @@ var debrief = [{
 
   // Put it all together
   experiment.push(fullscreen);
-  // experiment.push(welcome);
-  // experiment = experiment.concat(wait_instructions1);
-  // experiment.push(wait_practice_block);
-  // experiment.push(wait_instructions_post_practice);
-  // experiment.push(wait_block1);
-  // experiment.push(wait_instructions2);
-  // experiment.push(wait_block2);
-  // experiment.push(wait_instructions_post_task);
-  // experiment.push(rating_instructions);
-  // if (firstBlock == "coup"){
-  //   experiment.push(coup_rating_block);
-  //   experiment.push(general_rating_block);  
-  // }else{
-  //   experiment.push(general_rating_block);  
-  //   experiment.push(coup_rating_block);
-  // }
-  // experiment.push(post_rating);
-  // experiment.push(probability_judgement_instructions);
-  // experiment.push(probability_judgement_block);
-  // experiment.push(post_probability_judgment);
-  // experiment.push(pre_questionnaires_message);
-  // experiment.push(stai_message);
-  // experiment = experiment.concat(anxiety);
+  experiment.push(welcome);
+  experiment = experiment.concat(wait_instructions1);
+  experiment.push(wait_practice_block);
+  experiment.push(wait_instructions_post_practice);
+  experiment.push(wait_block1);
+  experiment.push(wait_instructions2);
+  experiment.push(wait_block2);
+  experiment.push(wait_instructions_post_task);
+  experiment.push(rating_instructions);
+  if (firstBlock == "coup"){
+    experiment.push(coup_rating_block);
+    experiment.push(general_rating_block);  
+  }else{
+    experiment.push(general_rating_block);  
+    experiment.push(coup_rating_block);
+  }
+  experiment.push(post_rating);
+  experiment.push(probability_judgement_instructions);
+  experiment.push(probability_judgement_block);
+  experiment.push(post_probability_judgment);
+  experiment.push(pre_questionnaires_message);
+  experiment.push(stai_message);
+  experiment = experiment.concat(anxiety);
   experiment.push(gallup_message);
   experiment = experiment.concat(gallup);
 //   experiment.push(regfocus_message);
