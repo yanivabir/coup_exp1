@@ -30,6 +30,7 @@ var kick_out = {
       function() {
         saveData(PID, sess, '_int', jsPsych.data.getInteractionData().csv(),
       function() {
+        window.removeEventListener('beforeunload', preventRefresh);
         window.location.replace("https://www.midgampanel.com/surveyThanks2.asp?USER=" + PID + "&status=failed")
       });
       });
