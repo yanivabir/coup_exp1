@@ -113,8 +113,7 @@ function postLoad() {
         function() {
           saveData(PID, sess, '_int', jsPsych.data.getInteractionData().csv(),
           function() {
-            jsPsych.finishTrial();
-            jsPsych.endExperiment();
+            window.removeEventListener('beforeunload', preventRefresh);
             window.location.replace("https://www.midgampanel.com/surveyThanks2.asp?USER=" + PID + "&status=OK");
           });
         });
@@ -129,19 +128,22 @@ function postLoad() {
   // experiment = experiment.concat(answer_recall_block);
   experiment = experiment.concat(debrief);
 
+  function preventRefresh(e) {
+    // Cancel the event
+    e.preventDefault();
+    e.returnValue = '';
+  }
+
   // Prevent right click, refresh
   if (!debug) {
     // Prevent right-click
     document.addEventListener('contextmenu', event => event.preventDefault());
 
     // Prompt before refresh
-    window.addEventListener('beforeunload', function(e) {
-      // Cancel the event
-      e.preventDefault();
-      e.returnValue = '';
-    });
+    window.addEventListener('beforeunload', preventRefresh);
 
   }
+
 
   // Initiate experiment
   jsPsych.init({
