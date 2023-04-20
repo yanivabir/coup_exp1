@@ -113,8 +113,7 @@ function postLoad() {
         function() {
           saveData(PID, sess, '_int', jsPsych.data.getInteractionData().csv(),
           function() {
-            window.onbeforeunload = null;
-            window.location.replace("https://www.midgampanel.com/surveyThanks2.asp?USER=" + PID + "&status=OK");
+            window.location = "https://www.midgampanel.com/surveyThanks2.asp?USER=" + PID + "&status=OK";
           });
         });
     }
