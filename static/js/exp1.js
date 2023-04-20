@@ -49,6 +49,12 @@ Papa.parse("../static/coup_questions.csv", {
 
 var experiment = [];
 
+function preventRefresh(e) {
+  // Cancel the event
+  e.preventDefault();
+  e.returnValue = '';
+}
+
 // Loading csvs takes time. That's why we wrap everything else in a function that only
 // runs after the csvs load
 function postLoad() {
@@ -297,7 +303,8 @@ var debrief = [{
           saveData(PID, sess, '_int', jsPsych.data.getInteractionData().csv(),
           function() {
             saveData(PID, 0, "_secondSessStims", createSecondSesssList(['trial_type', 'button_pressed']),
-            window.location.replace("https://www.midgampanel.com/surveyThanks2.asp?USER=" + PID + "&status=OK"));
+              window.removeEventListener('beforeunload', preventRefresh);
+              window.location.replace("https://www.midgampanel.com/surveyThanks2.asp?USER=" + PID + "&status=OK"));
           });
         });
     }
@@ -350,11 +357,8 @@ var debrief = [{
     document.addEventListener('contextmenu', event => event.preventDefault());
 
     // Prompt before refresh
-    window.addEventListener('beforeunload', function(e) {
-      // Cancel the event
-      e.preventDefault();
-      e.returnValue = '';
-    });
+    // Prompt before refresh
+    window.addEventListener('beforeunload', preventRefresh);
 
   }
 
