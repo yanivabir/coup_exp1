@@ -101,6 +101,7 @@ for (i=0; i<Math.ceil(gallup_questions.length / 3); i++){
     data: {
       category: "gallup"
     },
-    questions: gallup_questions.slice(i * 3, i * 3 + 3)
+    questions: gallup_questions.slice(i * 3, i * 3 + 3),
+    button_label: "המשך"
   })
 }

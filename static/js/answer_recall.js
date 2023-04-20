@@ -22,7 +22,8 @@ var recall_trial = [fullscreen_prompt, {
       questionId: jsPsych.timelineVariable('questionId'),
       block: jsPsych.timelineVariable('block'),
       type: jsPsych.timelineVariable('type')
-    }
+    },
+    button_label: "המשך"
   },
   {
     timeline: [{
@@ -43,7 +44,8 @@ var recall_trial = [fullscreen_prompt, {
         questionId: jsPsych.timelineVariable('questionId'),
         block: jsPsych.timelineVariable('block'),
         type: jsPsych.timelineVariable('type')
-      }
+      },
+      button_label: "המשך"
     }],
     conditional_function: function() {
       // Got to answer input only if yes indicated
