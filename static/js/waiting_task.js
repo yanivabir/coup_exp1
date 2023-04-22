@@ -18,7 +18,7 @@
 
 // Parameters
 var maxStimDuration = 15000, // Response deadline for questions
-  minResponseTime = 1500, // Minimum response time for questions
+  minResponseTime = 1200, // Minimum response time for questions
   satisfactionMaxTime = 5000, // Maximum response time for satisfaction rating
   tooSlowTime = 1000, // Duration of warning message
   maxAnswerTime = 90000, // Response deadline for answers

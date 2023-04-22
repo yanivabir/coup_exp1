@@ -1,7 +1,7 @@
 // Javascript functions and routines for answer reacall task
 
 // Parameters
-var minResponseTime = 1500;
+var minResponseTime = 1200;
 
 // Trial strucutre
 var recall_trial = [fullscreen_prompt, {
