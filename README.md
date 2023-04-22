@@ -25,3 +25,6 @@
 - [x] Gallup wellbeing
 - [x] second session
 - [ ] test
+- [x] general questions
+- [ ] coup question
+- [ ] knowledge test
