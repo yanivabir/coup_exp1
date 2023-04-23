@@ -63,9 +63,7 @@ function postLoad() {
     if (firstBlock == "coup") {
       // Pick 1 from each type at random
       practice_items = jsPsych.randomization.shuffle(
-        coup_items).filter(x => x['type'] == "useful").splice(0,1).concat(
-          jsPsych.randomization.shuffle(coup_items).filter(x =>
-          x['type'] == "not useful").splice(0,1));
+        coup_items).splice(0,2);
       // Remove them from coup list
       coup_items = coup_items.filter(x => !practice_items.includes(x));
     } else {
@@ -79,7 +77,7 @@ function postLoad() {
     }
   
     // Split items to waiting and rating  sets
-    coup_items = pseudoShuffle(coup_items, ["useful", "not useful"], 6);
+    coup_items = jsPsych.randomization.shuffle(coup_items);
     general_items = pseudoShuffle(general_items, ["useful", "not useful"], 6);
   
     coup_items_waiting = coup_items.slice(0,
