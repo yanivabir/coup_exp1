@@ -334,6 +334,9 @@ var debrief = [{
   experiment.push(probability_judgement_instructions);
   experiment.push(probability_judgement_block);
   experiment.push(post_probability_judgment);
+  experiment.push(knowledge_test_message);
+  experiment = experiment.concat(knowledge_test);
+  experiment.push(post_knowledge_test);
   experiment.push(pre_questionnaires_message);
   experiment.push(stai_message);
   experiment = experiment.concat(anxiety);

@@ -26,5 +26,5 @@
 - [x] second session
 - [ ] test
 - [x] general questions
-- [ ] coup question
+- [x] coup question
 - [ ] knowledge test
