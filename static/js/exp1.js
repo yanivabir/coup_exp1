@@ -1,7 +1,7 @@
 // Parameters
 var sess = 1, // Session number
   version = 1.0, // Code version number
-  n_for_ratings = 3;//7, // How many items to save for covariate ratings
+  n_for_ratings = 7; // How many items to save for covariate ratings
 var images = ["../static/images/wait_instructions.jpg"]; // Images to preload
 
 // Get participant id form url
