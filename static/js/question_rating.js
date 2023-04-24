@@ -70,7 +70,9 @@ var rating_trial = [fullscreen_prompt,
     choices: ["המשך"],
     data:{
       category: "rating_intro_question",
-      questionId: jsPsych.timelineVariable('questionId')
+      questionId: jsPsych.timelineVariable('questionId'),
+      type: jsPsych.timelineVariable('type'),
+      block: jsPsych.timelineVariable('block')
     }
   },
   // First page of probes
@@ -88,7 +90,9 @@ var rating_trial = [fullscreen_prompt,
     button_label: "המשך",
     data:{
       category: "rating_question1",
-      questionId: jsPsych.timelineVariable('questionId')
+      questionId: jsPsych.timelineVariable('questionId'),
+      type: jsPsych.timelineVariable('type'),
+      block: jsPsych.timelineVariable('block')
     }
   },
   // Second page of probes
@@ -110,7 +114,9 @@ var rating_trial = [fullscreen_prompt,
     button_label: "המשך",
     data:{
       category: "rating_question2",
-      questionId: jsPsych.timelineVariable('questionId')
+      questionId: jsPsych.timelineVariable('questionId'),
+      type: jsPsych.timelineVariable('type'),
+      block: jsPsych.timelineVariable('block')
     }
   }
 ]
