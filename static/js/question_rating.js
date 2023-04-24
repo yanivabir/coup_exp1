@@ -26,27 +26,27 @@ var rating_probes = [[{
     name: "confidence_neg"
   }],
   [{
-    prompt: "התשובה לשאלה תגרום לי להרגיש טוב יותר כשאקרא אותה",
+    prompt: "כשאקרא את התשובה לשאלה, היא תגרום לי להרגיש:",
     required: true,
-    labels: ["1<br>כלל לא מסכימ/ה", "2", "3", "4", "5<br>מסכימ/ה מאוד"],
+    labels: ["1<br>גרוע יותר", "2", "3", "4", "5<br>טוב יותר"],
     name: "affect_pos"
   },
   {
-    prompt: "התשובה לשאלה תגרום לי להרגיע גרוע יותר כשאקרא אותה",
+    prompt: "כשאקרא את התשובה לשאלה, היא תגרום לי להרגיש:",
     required: true,
-    labels: ["1<br>כלל לא מסכימ/ה", "2", "3", "4", "5<br>מסכימ/ה מאוד"],
+    labels: ["1<br>טוב יותר", "2", "3", "4", "5<br>גרוע יותר"],
     name: "affect_neg"
   }],
   [{
-    prompt: "התשובה לשאלה צפויה להתאים לעמדות והדעות שלי",
+    prompt: "התשובה לשאלה צפויה להתאים לעמדות והדעות שלך או לסתור אותן?",
     required: true,
-    labels: ["1<br>כלל לא מסכימ/ה", "2", "3", "4", "5<br>מסכימ/ה מאוד"],
+    labels: ["1<br>לסתור", "2", "3", "4", "5<br>להתאים"],
     name: "congruence_pos"
   },
   {
-    prompt: "התשובה לשאלה צפויה לסתור את העמדות והדעות שלי",
+    prompt: "התשובה לשאלה צפויה להתאים לעמדות והדעות שלך או לסתור אותן?",
     required: true,
-    labels: ["1<br>כלל לא מסכימ/ה", "2", "3", "4", "5<br>מסכימ/ה מאוד"],
+    labels: ["1<br>להתאים", "2", "3", "4", "5<br>לסתור"],
     name: "congruence_neg"
   }]
 ]
@@ -64,7 +64,7 @@ var rating_trial = [fullscreen_prompt,
   {
     type: "html-button-response",
     stimulus: function() {
-      return "<div id='instruct'><p>קראו את השאלה, ודרגו עד כמה אתם מסכימים עם האמירות הבאות המתייחסות אליה:</p>\
+      return "<div id='instruct'><p>קראו את השאלה, ודרגו את תשובתכם לאמירות הבאות המתייחסות אליה:</p>\
       <p><i>" + jsPsych.timelineVariable('question', true) + "</i></p></div>"
     },
     choices: ["המשך"],
@@ -77,7 +77,7 @@ var rating_trial = [fullscreen_prompt,
   {
     type: "survey-likert",
     preamble: function() {
-      return "<div id='instruct'><p>קראו את השאלה, ודרגו עד כמה אתם מסכימים עם האמירות הבאות המתייחסות אליה:</p>\
+      return "<div id='instruct'><p>קראו את השאלה, ודרגו את תשובתכם לאמירות הבאות המתייחסות אליה:</p>\
       <p><i>" + jsPsych.timelineVariable('question', true) + "</i></p></div>"
     },
     questions: function() {
@@ -95,7 +95,7 @@ var rating_trial = [fullscreen_prompt,
   {
     type: "survey-likert",
     preamble: function() {
-      return "<div id='instruct'><p>קראו את השאלה, ודרגו עד כמה אתם מסכימים עם האמירות הבאות המתייחסות אליה:</p>\
+      return "<div id='instruct'><p>קראו את השאלה, ודרגו את תשובתכם לאמירות הבאות המתייחסות אליה:</p>\
       <p><i>" + jsPsych.timelineVariable('question', true) + "</i></p></div>"
     },
     questions: function() {
