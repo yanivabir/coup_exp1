@@ -44,7 +44,7 @@ var rating_probes = [[{
     name: "congruence_pos"
   },
   {
-    prompt: "התשובה לשאלה צפויה להתאים לעמדות והדעות שלך או לסתור אותן?",
+    prompt: "התשובה לשאלה צפויה לסתור את העמדות והדעות שלך או להתאים להן?",
     required: true,
     labels: ["1<br>להתאים", "2", "3", "4", "5<br>לסתור"],
     name: "congruence_neg"
