@@ -90,10 +90,6 @@ function postLoad() {
     button_label_next: "המשך"
 },
 {
-    type: 'fullscreen',
-    fullscreen_mode: false
-},
-{
     type: "instructions",
     pages: ["<div id ='instruct'><p>לחיצה על  <i>המשך</i> \
 תשלח את המידע שלך לשרת, ותחזיר אותך לאתר המדגם <b>העלאת הנתונים יכולה לקחת מספר דקות. בבקשה אל תרעננו את הדפדפן או תסגרו אותו בזמן זה.</b></p>\
@@ -105,6 +101,10 @@ function postLoad() {
     },
     button_label_previous: "חזרה",
     button_label_next: "המשך"
+},
+{
+  type: 'fullscreen',
+  fullscreen_mode: false
 },
 {
     type: "html-keyboard-response",
