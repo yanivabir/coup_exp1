@@ -5,7 +5,8 @@ var prob_judge = [{
     },
     data: {
         itemId: jsPsych.timelineVariable('itemId'),
-        block: jsPsych.timelineVariable('block')
+        block: jsPsych.timelineVariable('block'),
+        category: "probability_judgment"
     },
     labels: ["0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"],
     ticks: true,
@@ -33,7 +34,7 @@ var probability_judgement_instructions = {
     ],
     choices: ["המשך"],
     data: {
-      category: "curiosity_rating_instructions"
+      category: "probability_judgment_instructions"
     }
   }
 
