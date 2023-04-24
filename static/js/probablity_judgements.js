@@ -6,6 +6,7 @@ var prob_judge = [{
     data: {
         itemId: jsPsych.timelineVariable('itemId'),
         block: jsPsych.timelineVariable('block'),
+        type: jsPsych.timelineVariable('type'),
         category: "probability_judgment"
     },
     labels: ["0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"],
