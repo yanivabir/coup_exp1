@@ -130,8 +130,8 @@ function postLoad() {
 
   // Put it all together
   experiment.push(fullscreen);
-  // experiment.push(recall_instructions1);
-  // experiment = experiment.concat(answer_recall_block);
+  experiment.push(recall_instructions1);
+  experiment = experiment.concat(answer_recall_block);
   experiment = experiment.concat(debrief);
 
   // Prevent right click, refresh
