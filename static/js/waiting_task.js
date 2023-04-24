@@ -17,11 +17,11 @@
 // based on the parameters below.
 
 // Parameters
-var maxStimDuration = 15000, // Response deadline for questions
+var maxStimDuration = 10000, // Response deadline for questions
   minResponseTime = 1200, // Minimum response time for questions
-  satisfactionMaxTime = 5000, // Maximum response time for satisfaction rating
+  satisfactionMaxTime = 3500, // Maximum response time for satisfaction rating
   tooSlowTime = 1000, // Duration of warning message
-  maxAnswerTime = 90000, // Response deadline for answers
+  maxAnswerTime = 7000  , // Response deadline for answers
   postTooSlowTime = 800, // ITI post warning message
   fixationTime = 500, // Duration of fixation period b/w trials
   maxTaskTime = 5, // Total duration of block
