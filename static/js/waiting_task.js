@@ -255,7 +255,7 @@ var check_quiz_function = function() {
 }
 
 var wait_instructions1_text_list = ['<div id="instruct"><p>נתחיל במשימה העוסקת בסקרנות. לחצו על הכפתור בכדי לקרוא את ההוראות למשימה.</p></div>',
-  '<div id="instruct"><p>במשימה זו, תוצג בפניכם בכל פעם שאלה אחת.<br></p><p>אם ברצונכם לקרוא את התשובה לשאלה, תצטרכו להמתין מספר שניות.</p><p>אם אינכם רוצים להמתין, תוכלו לדלג על השאלה.</p><p>אם אתם בטוחים ב100% שאתם יודעים את התשובה, תוכלו לסמן שהתשובה ידועה.</p><p>אם תבחרו לדלג, או שתסמנו שהתשובה ידועה, <b>לא תוכלו</b> לקרוא את התשובה.</p></div>',
+  '<div id="instruct"><p>במשימה זו, תוצג בפניכם בכל פעם שאלה אחת.<br></p><p>אם ברצונכם לקרוא את התשובה לשאלה, תוכלו לבחור להמתין מספר שניות.</p><p>אם אינכם רוצים להמתין, תוכלו לדלג על השאלה.</p><p>אם אתם בטוחים ב100% שאתם יודעים את התשובה, תוכלו לסמן שהתשובה ידועה.</p><p>אם תבחרו לדלג, או שתסמנו שהתשובה ידועה, <b>לא תוכלו</b> לקרוא את התשובה.</p></div>',
   '<div id="instruct"><p>כל שאלה תוצג על המסך באופן הזה:<p>\
     <center><div style="border:1px solid black; width: 500px; height: 200px">\
     <div id="jspsych-html-button-response-stimulus" style="padding-top: 5%">מה היה החיסון היעיל הראשון שפותח?</div>\
@@ -263,7 +263,8 @@ var wait_instructions1_text_list = ['<div id="instruct"><p>נתחיל במשימ
     <div class="jspsych-html-button-response-button" style="display: inline-block; margin: 80px 8px"><button class="jspsych-btn">לדלג</button></div>\
     <div class="jspsych-html-button-response-button" style="display: inline-block; margin: 80px 8px"><button class="jspsych-btn">להמתין 4</button></div>\
     <div class="jspsych-html-button-response-button" style="display: inline-block; margin: 80px 8px"><button class="jspsych-btn">ידוע</button></div></div></div></center>\
-    <p>תצטרכו לבחור בעזרת העכבר אם לדלג על התשובה, להמתין לה, או שהיא כבר ידועה לכם.</p></div>',
+    <p>תצטרכו לבחור בעזרת העכבר אם לדלג על התשובה, להמתין לה, או שהיא כבר ידועה לכם.</p>\
+    <p>זמן ההמתנה יופיע על הכפתור. בדוגמה למעלה, כדי לקרוא את התשובה יש להמתין 4 שניות.</p></div>',
     '<div id="instruct"><p>אם תבחרו להמתין לתשובה תתבקשו לדרג עד כמה התשובה הייתה שווה את ההמתנה. <br> תדרגו זאת על סולם של 1 = לא שווה כלל, עד 5 = שווה מאוד.</p></div>',
     '<div id="instruct"><p>המשימה תארך ' + maxTaskTime + ' דקות. אורך המשימה יהיה זהה, לא משנה על כמה פעמים תבחרו להמתין לתשובה או לדלג לשאלה הבאה. לכן, בחרו אם להמתין או לדלג לפי העניין האישי שלכם.</p></div>',
     '<div id="instruct"><p>בקרוב תתחילו באימון קצר. נצלו את האימון בכדי להתרגל ללחיצה על הכפתורים השונים, ולקצב בו יוצגו השאלות.<p></div>',
