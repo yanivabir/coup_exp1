@@ -34,15 +34,16 @@ Papa.parse("../static/knowledge_test_items.csv", {
     dynamicTyping: true,
     complete: function(results) {
       knowledge_test_items = results.data;
-      knowledge_test = constructKnowledgeTest(knowledge_test_items);
+      knowledge_test_coup = constructKnowledgeTest(knowledge_test_items, "coup");
+      knowledge_test_general = constructKnowledgeTest(knowledge_test_items, "general");
     }
   }
 );
 
 // Construct questionnaire trials
-function constructKnowledgeTest(knowledge_test_items) {
+function constructKnowledgeTest(knowledge_test_items, block) {
 
-    knowledge_test_items = jsPsych.randomization.shuffle(knowledge_test_items)
+    knowledge_test_items = jsPsych.randomization.shuffle(knowledge_test_items.filter(x => x['block'] == block))
     
     knowledge_test = [];
 
@@ -70,6 +71,7 @@ function constructKnowledgeTest(knowledge_test_items) {
         post_trial_gap: 200,
         data:{
           category: "knowledge_test",
+          block: block,
           correct_answers: corrects
         },
         button_label: "המשך"
