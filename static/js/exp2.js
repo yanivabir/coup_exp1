@@ -4,7 +4,7 @@ var sess = 2,
 var images = [];
 
 // ------- Determine subject level variables ----- //
-var PID = jsPsych.data.getURLVariable('uid');
+var PID = jsPsych.data.getURLVariable('userid');
 
 // Is this a debug run?
 var debug = PID.includes("debug");
@@ -120,7 +120,7 @@ function postLoad() {
           saveData(PID, sess, '_int', jsPsych.data.getInteractionData().csv(),
           function() {
             window.removeEventListener('beforeunload', preventRefresh);
-            window.location.replace("https://www.midgampanel.com/surveyThanks2.asp?USER=" + PID + "&status=OK");
+            window.location.replace("https://www.midgampanel.com/surveyThanks2.asp?USER=" + inviteId + "&status=OK");
           });
         });
     }

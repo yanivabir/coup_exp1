@@ -5,7 +5,8 @@ var sess = 1, // Session number
 var images = ["../static/images/wait_instructions.jpg"]; // Images to preload
 
 // Get participant id form url
-var PID = jsPsych.data.getURLVariable('uid'),
+var PID = jsPsych.data.getURLVariable('userid'),
+  inviteId = jsPsych.data.getURLVariable('uid'),
   firstBlock = Math.random() > 0.5 ? "coup" : "general";
 
 // Is this a debug run?
@@ -302,7 +303,7 @@ var debrief = [{
             saveData(PID, 0, "_secondSessStims", createSecondSesssList(['trial_type', 'button_pressed']),
               function() {
                 window.removeEventListener('beforeunload', preventRefresh);
-                window.location.replace("https://www.midgampanel.com/surveyThanks2.asp?USER=" + PID + "&status=OK")
+                window.location.replace("https://www.midgampanel.com/surveyThanks2.asp?USER=" + inviteId + "&status=OK")
               }
             );
           });
