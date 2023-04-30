@@ -4,7 +4,8 @@ var sess = 2,
 var images = [];
 
 // ------- Determine subject level variables ----- //
-var PID = jsPsych.data.getURLVariable('userid');
+var PID = jsPsych.data.getURLVariable('userid'),
+  inviteId = jsPsych.data.getURLVariable('uid');
 
 // Is this a debug run?
 var debug = PID.includes("debug");
