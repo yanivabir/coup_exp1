@@ -57,6 +57,7 @@ function postLoad() {
       jsPsych.data.addProperties({
         n_warnings: 0,
         PID: PID,
+        inviteId: inviteId,
         firstBlock: firstBlock,
         sess: sess,
         version: version
