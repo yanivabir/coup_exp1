@@ -1,6 +1,6 @@
 // Parameters
 var sess = 1, // Session number
-  version = 1.01, // Code version number
+  version = 1.011, // Code version number
   n_for_ratings = 7; // How many items to save for covariate ratings
 var images = ["../static/images/wait_instructions.jpg"]; // Images to preload
 

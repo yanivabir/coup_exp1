@@ -56,5 +56,29 @@ function constructCoupRelevance(coup_relevance_items) {
         button_label: "המשך"
       });
     }
+
+  coup_relevance = coup_relevance.concat([
+    {type: "survey-likert",
+    preamble: "ענה על השאלות הבאות:",
+    questions: [
+      {
+        prompt: "<div id='instruct'>ביחס ללפני שבועיים, עד כמה את/ה מרגיש/ה שהרפורמה המשפטית רלוונטית לחיים שלך?</div>",
+        labels: ["1<br>פחות רלוונטית היום", "2", "3", "4", "5<br>יותר רלוונטית היום"],
+        name: "coup_rel_22"
+      },
+      {
+        prompt: "<div id='instruct'>ביחס ללפני שבועים, עד כמה אתה תומך ברפורמה המשפטית?</div>",
+        labels: ["1<br>מתנגד יותר היום", "2", "3", "4", "5<br>תומך יותר היום"],
+        name: "coup_rel_23"
+      }
+    ],
+    scale_width: 400,
+    post_trial_gap: 200,
+    data:{
+      category: "coup_relevance"
+    },
+    button_label: "המשך"
+  },
+  ])
   return coup_relevance
 }
