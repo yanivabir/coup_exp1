@@ -167,6 +167,7 @@ function postLoad() {
 
   // Put it all together
   experiment.push(fullscreen);
+  console.log(recall_instructions1)
   experiment.push(recall_instructions1);
   experiment = experiment.concat(answer_recall_block);
   if (!known_answers == null){
