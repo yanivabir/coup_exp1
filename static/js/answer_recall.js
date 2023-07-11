@@ -17,7 +17,7 @@ var recall_trial = [fullscreen_prompt, {
     post_trial_gap: 200,
     min_response_time: minResponseTime,
     data: {
-      category: "answer_recall_yn",
+      category: jsPsych.timelineVariable('category_yn'),
       question: jsPsych.timelineVariable('question'),
       answer: jsPsych.timelineVariable('answer'),
       questionId: jsPsych.timelineVariable('questionId'),
@@ -39,7 +39,7 @@ var recall_trial = [fullscreen_prompt, {
       }],
       post_trial_gap: 200,
       data: {
-        category: "answer_recall",
+        category: jsPsych.timelineVariable('category'),
         question: jsPsych.timelineVariable('question'),
         answer: jsPsych.timelineVariable('answer'),
         questionId: jsPsych.timelineVariable('questionId'),

@@ -90,12 +90,16 @@ function postLoad() {
   for (ii=0; ii < viewed_answers.length; ii++){
     viewed_answers[ii]["preamble1"] = "האם אתם זוכרים את התשובה שקראתם במפגש הקודם לשאלה:",
     viewed_answers[ii]["preamble2"] = "מה הייתה התשובה שקראת במפגש הקודם לשאלה:"
+    viewed_answers[ii]['category_yn'] = "answer_recall_yn"
+    viewed_answers[ii]['category'] = "answer_recall"
   }
 
   if (!(known_answers == null)){
     for (ii=0; ii < known_answers.length; ii++){
       known_answers[ii]["preamble1"] = "האם אתם זוכרים את התשובה לשאלה:",
       known_answers[ii]["preamble2"] = "מה התשובה לשאלה:"
+      viewed_answers[ii]['category_yn'] = "known_answer_yn"
+      viewed_answers[ii]['category'] = "known_answer"  
     }
   }
 
