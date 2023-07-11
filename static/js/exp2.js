@@ -82,8 +82,7 @@ function postLoad() {
   // Shuffle questions for recall
   viewed_answers = shuffle_viewed_answers(viewed_answers);
 
-  console.log(known_answers)
-  if (!known_answers == null){
+  if (!(known_answers == null)){
     known_answers = shuffle_viewed_answers(known_answers);
   }
 
@@ -93,7 +92,7 @@ function postLoad() {
     viewed_answers[ii]["preamble2"] = "מה הייתה התשובה שקראת במפגש הקודם לשאלה:"
   }
 
-  if (!known_answers == null){
+  if (!(known_answers == null)){
     for (ii=0; ii < known_answers.length; ii++){
       known_answers[ii]["preamble1"] = "האם אתם זוכרים את התשובה לשאלה:",
       known_answers[ii]["preamble2"] = "מה התשובה לשאלה:"
@@ -168,10 +167,9 @@ function postLoad() {
 
   // Put it all together
   experiment.push(fullscreen);
-  console.log(recall_instructions1)
   experiment.push(recall_instructions1);
   experiment = experiment.concat(answer_recall_block);
-  if (!known_answers == null){
+  if (!(known_answers == null)){
     experiment.push(known_instructions1);
     experiment = experiment.concat(answer_known_block);
   }
