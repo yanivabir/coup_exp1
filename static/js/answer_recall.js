@@ -51,7 +51,7 @@ var recall_trial = [fullscreen_prompt, {
     conditional_function: function() {
       // Got to answer input only if yes indicated
       var resp = jsPsych.data.get().filter({
-        category: jsPsych.timelineVariable('category_yn')
+        category: jsPsych.timelineVariable('category_yn', true)
       }).last(1).select("button_pressed").values[0]
 
       return (resp == "0") | (resp == 0)  ? true : false
