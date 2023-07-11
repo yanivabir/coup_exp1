@@ -8,7 +8,7 @@ var recall_trial = [fullscreen_prompt, {
     type: "html-button-response-min-time",
     stimulus: function() {
       return "<div id'instruct'><p>" + jsPsych.timelineVariable('preamble1', true) + 
-      "</p><p><i>" + jsPsych.timelineVariable('question', true).replace('"""', '"') +
+      "</p><p><i>" + jsPsych.timelineVariable('question', true).replaceAll('""""', '"') +
         "</i></p></div>"
     },
     choices: ["כן", "לא"],
