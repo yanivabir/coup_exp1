@@ -23,7 +23,7 @@ Papa.parse("../../data/S" + PID + "_secondSessStims.csv", {
   complete: function(results) {
     viewed_answers = results.data;
     firstBlock = viewed_answers[0]["firstBlock"];
-    Papa.parse("../../data/S" + PID + "_known_stims.csv.csv", {
+    Papa.parse("../../data/S" + PID + "_known_stims.csv", {
       download: true,
       header: true,
       dynamicTyping: true,
@@ -92,9 +92,11 @@ function postLoad() {
     viewed_answers[ii]["preamble2"] = "מה הייתה התשובה שקראת במפגש הקודם לשאלה:"
   }
 
-  for (ii=0; ii < known_answers.length; ii++){
-    known_answers[ii]["preamble1"] = "האם אתם זוכרים את התשובה לשאלה:",
-    known_answers[ii]["preamble2"] = "מה התשובה לשאלה:"
+  if (!known_answers == null){
+    for (ii=0; ii < known_answers.length; ii++){
+      known_answers[ii]["preamble1"] = "האם אתם זוכרים את התשובה לשאלה:",
+      known_answers[ii]["preamble2"] = "מה התשובה לשאלה:"
+    }
   }
 
   // Answer recall block
@@ -167,8 +169,10 @@ function postLoad() {
   experiment.push(fullscreen);
   experiment.push(recall_instructions1);
   experiment = experiment.concat(answer_recall_block);
-  experiment.push(known_instructions1);
-  experiment = experiment.concat(answer_known_block);
+  if (!known_answers == null){
+    experiment.push(known_instructions1);
+    experiment = experiment.concat(answer_known_block);
+  }
   experiment = experiment.concat(debrief);
 
   // Prevent right click, refresh
