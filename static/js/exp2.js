@@ -98,8 +98,8 @@ function postLoad() {
     for (ii=0; ii < known_answers.length; ii++){
       known_answers[ii]["preamble1"] = "האם אתם זוכרים את התשובה לשאלה:",
       known_answers[ii]["preamble2"] = "מה התשובה לשאלה:"
-      viewed_answers[ii]['category_yn'] = "known_answer_yn"
-      viewed_answers[ii]['category'] = "known_answer"  
+      known_answers[ii]['category_yn'] = "known_answer_yn"
+      known_answers[ii]['category'] = "known_answer"  
     }
   }
 
