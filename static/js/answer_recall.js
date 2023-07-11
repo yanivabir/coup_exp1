@@ -7,7 +7,8 @@ var minResponseTime = 1200;
 var recall_trial = [fullscreen_prompt, {
     type: "html-button-response-min-time",
     stimulus: function() {
-      return "<div id'instruct'><p>האם אתם זוכרים את התשובה שקראתם במפגש הקודם לשאלה:</p><p><i>" + jsPsych.timelineVariable('question', true) +
+      return "<div id'instruct'><p>" + jsPsych.timelineVariable('preamble1', true) + 
+      "</p><p><i>" + jsPsych.timelineVariable('question', true) +
         "</i></p></div>"
     },
     choices: ["כן", "לא"],
@@ -28,7 +29,7 @@ var recall_trial = [fullscreen_prompt, {
   {
     timeline: [{
       type: "survey-text",
-      preamble: "<div id'instruct'>מה הייתה התשובה שקראת במפגש הקודם לשאלה:</div>",
+      preamble: "<div id'instruct'>" + jsPsych.timelineVariable('preamble2', true) + "</div>",
       questions: [{
         prompt: jsPsych.timelineVariable('question'),
         required: true,
@@ -82,6 +83,28 @@ var recall_instructions1 = {
     category: "recall_instructions1"
   }
 };
+
+var known_instructions1 = {
+  type: 'instructions',
+  pages: function() {
+    return [
+      '<div id="instruct"><pנמשיך כעת באותה משימה.</p>\
+        <p>נציג בפניך שאלות נוספות שקראת במפגש הקודם, כל שאלה בתורה.</div>',
+        '<div id="instruct"><p>כמו קודם, נבקש שתדווחו אם אתם זוכרים את התשובה לשאלה.</p>\
+        <p>לאחר מכן נבקש שתכתבו את התשובה כמיטב זכרונכם.</p></div>',
+        '<div id="instruct"><p>אנא כתבו את התשובה כפי שאתם זוכרים אותה, מבלי לחשוב יותר מדי.</div>',
+      '<div id="instruct"><p>נציג בפניך ' + known_answers.length + ' שאלות.</p><p>לחצו על <i>המשך</i> כדי להתחיל בחלק זה של המחקר.</p></div>'
+    ]
+  },
+  show_clickable_nav: true,
+  allow_keys: false,
+  button_label_previous: "חזרה",
+  button_label_next: "המשך",
+  data: {
+    category: "known_instructions1"
+  }
+};
+
 
 function shuffle_viewed_answers(questions) {
   coup_qs = jsPsych.randomization.shuffle(questions.filter(x => x["block"] == "coup"))

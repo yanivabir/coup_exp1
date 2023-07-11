@@ -1,6 +1,6 @@
 // Parameters
 var sess = 2,
-  version = 1.0
+  version = 1.1
 var images = [];
 
 // ------- Determine subject level variables ----- //
@@ -12,7 +12,8 @@ var debug = PID.includes("debug");
 
 // Keep important variables in global scope for convenience
 var viewed_answers,
-  firstBlock;
+  firstBlock,
+  known_answers;
 
 // Load items from local csv file
 Papa.parse("../../data/S" + PID + "_secondSessStims.csv", {
@@ -22,7 +23,19 @@ Papa.parse("../../data/S" + PID + "_secondSessStims.csv", {
   complete: function(results) {
     viewed_answers = results.data;
     firstBlock = viewed_answers[0]["firstBlock"];
-    postLoad();
+    Papa.parse("../../data/S" + PID + "_known_stims.csv.csv", {
+      download: true,
+      header: true,
+      dynamicTyping: true,
+      complete: function(results) {
+        known_answers = results.data;
+        postLoad();
+      },
+      error: function() {
+        known_answers = null;
+        postLoad();
+      }
+    })
   },
   error: function() {
     document.body.innerHTML = "<div id='instruct'><p>אנו מצטערים, חלה שגיאה בזיהוי שלך.</p>\
@@ -69,17 +82,37 @@ function postLoad() {
   // Shuffle questions for recall
   viewed_answers = shuffle_viewed_answers(viewed_answers);
 
+  if (!known_answers == null){
+    known_answers = shuffle_viewed_answers(known_answers);
+  }
+
+  // Add preambles
+  for (ii=0; ii < viewed_answers.length; ii++){
+    viewed_answers[ii]["preamble1"] = "האם אתם זוכרים את התשובה שקראתם במפגש הקודם לשאלה:",
+    viewed_answers[ii]["preamble2"] = "מה הייתה התשובה שקראת במפגש הקודם לשאלה:"
+  }
+
+  for (ii=0; ii < answer_known_block.length; ii++){
+    answer_known_block[ii]["preamble1"] = "האם אתם זוכרים את התשובה לשאלה:",
+    answer_known_block[ii]["preamble2"] = "מה התשובה לשאלה:"
+  }
+
   // Answer recall block
   var answer_recall_block = {
     timeline: recall_trial,
     timeline_variables: viewed_answers
   }
 
+    // Answer knowledge block
+    var answer_known_block = {
+      timeline: recall_trial,
+      timeline_variables: known_answers
+    }
 
   // Debriefing and data upload
   var debrief = [{
     type: "instructions",
-    pages: ['<div id="instruct">תודה על השתתפותך במפגש הראשון של המחקר!<p>\
+    pages: ['<div id="instruct">תודה על השתתפותך במפגש השני של המחקר!<p>\
     במחקר זה אנו בוחנים את הסקרנות של אנשים שונים לשאלות מתחומים שונים.</p>\
     <p>המידע המשפטי שהוצג במסגרת המחקר מבוסס על פרסומים בעיתונות ובערוצים ממשלתיים. המידע שהוצג אינו מהווה תחליף לייעוץ משפטי בכל מקרה.</p>\
     </div>'],
@@ -134,6 +167,8 @@ function postLoad() {
   experiment.push(fullscreen);
   experiment.push(recall_instructions1);
   experiment = experiment.concat(answer_recall_block);
+  experiment.push(known_instructions1);
+  experiment = experiment.concat(answer_known_block);
   experiment = experiment.concat(debrief);
 
   // Prevent right click, refresh
