@@ -10,12 +10,6 @@ var PID = jsPsych.data.getURLVariable('userid'),
 // Is this a debug run?
 var debug = PID.includes("debug");
 
-// Javascript functions and routines for answer reacall task
-
-// Parameters
-var minResponseTime = 1200;
-
-
 // Keep important variables in global scope for convenience
 var viewed_answers,
   firstBlock,

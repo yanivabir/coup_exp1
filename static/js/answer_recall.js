@@ -7,7 +7,7 @@ var minResponseTime = 1200;
 var recall_trial = [fullscreen_prompt, {
     type: "html-button-response-min-time",
     stimulus: function() {
-      return "<div id'instruct'><p>" + jsPsych.timelineVariable('preamble1', true) + 
+      return "<div id'instruct'><p>" + jsPsych.timelineVariable('preamble1') + 
       "</p><p><i>" + jsPsych.timelineVariable('question', true) +
         "</i></p></div>"
     },
@@ -29,7 +29,7 @@ var recall_trial = [fullscreen_prompt, {
   {
     timeline: [{
       type: "survey-text",
-      preamble: "<div id'instruct'>" + jsPsych.timelineVariable('preamble2', true) + "</div>",
+      preamble: "<div id'instruct'>" + jsPsych.timelineVariable('preamble2') + "</div>",
       questions: [{
         prompt: jsPsych.timelineVariable('question'),
         required: true,
