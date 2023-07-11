@@ -29,7 +29,7 @@ var recall_trial = [fullscreen_prompt, {
   {
     timeline: [{
       type: "survey-text",
-      preamble: "<div id'instruct'>" + jsPsych.timelineVariable('preamble2') + "</div>",
+      preamble: function(){return "<div id='instruct'>" + jsPsych.timelineVariable('preamble2', true) + "</div>"},
       questions: [{
         prompt: jsPsych.timelineVariable('question'),
         required: true,
