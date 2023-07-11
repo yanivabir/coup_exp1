@@ -92,9 +92,9 @@ function postLoad() {
     viewed_answers[ii]["preamble2"] = "מה הייתה התשובה שקראת במפגש הקודם לשאלה:"
   }
 
-  for (ii=0; ii < answer_known_block.length; ii++){
-    answer_known_block[ii]["preamble1"] = "האם אתם זוכרים את התשובה לשאלה:",
-    answer_known_block[ii]["preamble2"] = "מה התשובה לשאלה:"
+  for (ii=0; ii < known_answers.length; ii++){
+    known_answers[ii]["preamble1"] = "האם אתם זוכרים את התשובה לשאלה:",
+    known_answers[ii]["preamble2"] = "מה התשובה לשאלה:"
   }
 
   // Answer recall block
