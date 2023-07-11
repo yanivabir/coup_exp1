@@ -98,45 +98,6 @@ var recall_instructions1 = {
 console.log(recall_instructions1)
 
 
-var known_instructions1 = {
-  type: 'instructions',
-  pages: function() {
-    return [
-      '<div id="instruct"><pנמשיך כעת באותה משימה.</p>\
-        <p>נציג בפניך שאלות נוספות שקראת במפגש הקודם, כל שאלה בתורה.</div>',
-        '<div id="instruct"><p>כמו קודם, נבקש שתדווחו אם אתם זוכרים את התשובה לשאלה.</p>\
-        <p>לאחר מכן נבקש שתכתבו את התשובה כמיטב זכרונכם.</p></div>',
-        '<div id="instruct"><p>אנא כתבו את התשובה כפי שאתם זוכרים אותה, מבלי לחשוב יותר מדי.</div>',
-      '<div id="instruct"><p>נציג בפניך ' + known_answers.length + ' שאלות.</p><p>לחצו על <i>המשך</i> כדי להתחיל בחלק זה של המחקר.</p></div>'
-    ]
-  },
-  show_clickable_nav: true,
-  allow_keys: false,
-  button_label_previous: "חזרה",
-  button_label_next: "המשך",
-  data: {
-    category: "known_instructions1"
-  }
-};
-
-
-function shuffle_viewed_answers(questions) {
-  coup_qs = jsPsych.randomization.shuffle(questions.filter(x => x["block"] == "coup"))
-  general_qs = jsPsych.randomization.shuffle(questions.filter(x => x["block"] == "general"))
-
-  var shuf_questions = [];
-
-  if (firstBlock == "coup") {
-    shuf_questions = shuf_questions.concat(coup_qs);
-    shuf_questions = shuf_questions.concat(general_qs);
-  } else {
-    shuf_questions = shuf_questions.concat(general_qs);
-    shuf_questions = shuf_questions.concat(coup_qs);
-  }
-
-  return shuf_questions
-}
-
 
 // Keep important variables in global scope for convenience
 var viewed_answers,
