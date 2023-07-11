@@ -1,6 +1,7 @@
 // Parameters
 var sess = 2,
-  version = 1.1
+  version = 1.1,
+  max_n_known_answers = 30;
 var images = [];
 
 // ------- Determine subject level variables ----- //
@@ -83,7 +84,7 @@ function postLoad() {
   viewed_answers = shuffle_viewed_answers(viewed_answers);
 
   if (!(known_answers == null)){
-    known_answers = shuffle_viewed_answers(known_answers);
+    known_answers = subset_known_ansewrs(known_answers, max_n_known_answers);
   }
 
   // Add preambles
