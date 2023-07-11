@@ -72,33 +72,6 @@ var recall_trial = [fullscreen_prompt, {
 ];
 
 
-// Instructions
-var recall_instructions1 = {
-  type: 'instructions',
-  pages: function() {
-    return [
-    '<div id = "instruct"><p>תודה שחזרת למפגש נוסף!</p></div>',
-      '<div id="instruct"><p>כעת, נבקש ממך להזכר בתשובות לשאלות שקראת במפגש הקודם.</p>\
-        <p>במפגש הקודם, הוצגו לך מספר שאלות, ועבור כל אחת החלטת אם לחכות לראות את התשובה, או לדלג הלאה.</p>\
-        <p>כעת נציג לך את השאלות שבחרת להמתין עבורן, כל שאלה בתורה.</p></div>',
-        '<div id="instruct"><p>עבור כל שאלה, נבקש שתדווחו אם אתם זוכרים את התשובה לשאלה.</p>\
-        <p>לאחר מכן נבקש שתכתבו את התשובה כמיטב זכרונכם.</p></div>',
-      '<div id="instruct"><p>שימו לב: חשבו שתנסו להזכר בתשובה <b>כפי שהוצגה במפגש הקודם</b>.</div>',
-      '<div id="instruct"><p>נציג בפניך ' + viewed_answers.length + ' שאלות.</p><p>לחצו על <i>המשך</i> כדי להתחיל בחלק זה של המחקר.</p></div>'
-    ]
-  },
-  show_clickable_nav: true,
-  allow_keys: false,
-  button_label_previous: "חזרה",
-  button_label_next: "המשך",
-  data: {
-    category: "recall_instructions1"
-  }
-};
-console.log(recall_instructions1)
-
-
-
 // Keep important variables in global scope for convenience
 var viewed_answers,
   firstBlock,
