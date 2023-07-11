@@ -82,6 +82,7 @@ function postLoad() {
   // Shuffle questions for recall
   viewed_answers = shuffle_viewed_answers(viewed_answers);
 
+  console.log(known_answers)
   if (!known_answers == null){
     known_answers = shuffle_viewed_answers(known_answers);
   }
