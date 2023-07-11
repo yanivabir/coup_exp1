@@ -15,62 +15,6 @@ var debug = PID.includes("debug");
 // Parameters
 var minResponseTime = 1200;
 
-// Trial strucutre
-var recall_trial = [fullscreen_prompt, {
-    type: "html-button-response-min-time",
-    stimulus: function() {
-      return "<div id'instruct'><p>" + jsPsych.timelineVariable('preamble1', true) + 
-      "</p><p><i>" + jsPsych.timelineVariable('question', true) +
-        "</i></p></div>"
-    },
-    choices: ["כן", "לא"],
-    margin_horizontal: "30px",
-    margin_vertical: "80px",
-    post_trial_gap: 200,
-    min_response_time: minResponseTime,
-    data: {
-      category: "answer_recall_yn",
-      question: jsPsych.timelineVariable('question'),
-      answer: jsPsych.timelineVariable('answer'),
-      questionId: jsPsych.timelineVariable('questionId'),
-      block: jsPsych.timelineVariable('block'),
-      type: jsPsych.timelineVariable('type')
-    },
-    button_label: "המשך"
-  },
-  {
-    timeline: [{
-      type: "survey-text",
-      preamble: "<div id'instruct'>" + jsPsych.timelineVariable('preamble2', true) + "</div>",
-      questions: [{
-        prompt: jsPsych.timelineVariable('question'),
-        required: true,
-        rows: 3,
-        columns: 60,
-        name: "recall"
-      }],
-      post_trial_gap: 200,
-      data: {
-        category: "answer_recall",
-        question: jsPsych.timelineVariable('question'),
-        answer: jsPsych.timelineVariable('answer'),
-        questionId: jsPsych.timelineVariable('questionId'),
-        block: jsPsych.timelineVariable('block'),
-        type: jsPsych.timelineVariable('type')
-      },
-      button_label: "המשך"
-    }],
-    conditional_function: function() {
-      // Got to answer input only if yes indicated
-      var resp = jsPsych.data.get().filter({
-        category: "answer_recall_yn"
-      }).last(1).select("button_pressed").values[0]
-
-      return (resp == "0") | (resp == 0)  ? true : false
-    }
-  }
-];
-
 
 // Keep important variables in global scope for convenience
 var viewed_answers,
