@@ -83,6 +83,8 @@ var recall_instructions1 = {
     category: "recall_instructions1"
   }
 };
+console.log(recall_instructions1)
+
 
 var known_instructions1 = {
   type: 'instructions',
