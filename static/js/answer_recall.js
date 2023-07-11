@@ -126,12 +126,15 @@ function shuffle_viewed_answers(questions) {
 }
 
 function subset_known_ansewrs(questions, n){
+
+  // Shuffle
   var coup_qs = jsPsych.randomization.shuffle(questions.filter(x => x["block"] == "coup")), 
     general_qs = jsPsych.randomization.shuffle(questions.filter(x => x["block"] == "general"));
 
   n_coup = coup_qs.length
   n_general = general_qs.length
 
+  // Subset
   if (n_coup < (n / 2)){
     general_qs = general_qs.slice(0, n - n_coup);
   } else if (n_general < (n / 2)) {
@@ -141,6 +144,8 @@ function subset_known_ansewrs(questions, n){
     coup_qs = coup_qs.slice(0, n/2);
   }
 
+  // Assemble
+  var shuf_questions = [];
   if (firstBlock == "coup") {
     shuf_questions = shuf_questions.concat(coup_qs);
     shuf_questions = shuf_questions.concat(general_qs);
