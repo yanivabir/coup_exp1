@@ -45,5 +45,5 @@ function constructCoupRelevance(coup_reg_items) {
       });
     }
 
-  return coup_relevance
+  return coup_reg_focus
 }
