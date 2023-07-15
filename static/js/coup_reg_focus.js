@@ -14,7 +14,7 @@ Papa.parse("../static/coup_reg_focus.csv", {
 );
 
 // Construct questionnaire trials
-function constructCoupRelevance(coup_reg_items) {
+function constructCoupRegFocus(coup_reg_items) {
     
     coup_reg_focus = [];
 
