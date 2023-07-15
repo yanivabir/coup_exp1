@@ -1,7 +1,18 @@
 // Coup relevance questionnaire ----------
 
 // Pre questionnaire message
-// Load items from csv
+var coup_reg_message = {
+    type: "html-button-response",
+    stimulus: '<div id="instruct"><p>כעת תמשיכו לדרג את הסכמתכם עם מספר משפטים הנוגעים לרפורמה המשפטית.</p></div>',
+    choices: ["המשך"],
+    margin_vertical: "80px",
+    data: {
+        category: 'coup_reg_message'
+    },
+    post_trial_gap: 200
+  }
+
+  // Load items from csv
 Papa.parse("../static/coup_reg_focus.csv", {
     download: true,
     header: true,

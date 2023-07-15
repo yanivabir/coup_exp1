@@ -356,6 +356,7 @@ var debrief = [{
   // experiment = experiment.concat(apathy);
   experiment.push(coup_relevance_message);
   experiment = experiment.concat(coup_relevance);
+  experiment.push(coup_reg_message);
   experiment = experiment.concat(coup_reg_focus);
   experiment.push(iwin_message);
   experiment = experiment.concat(iwin);
