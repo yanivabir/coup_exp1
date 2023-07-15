@@ -8,7 +8,8 @@ Papa.parse("../static/coup_reg_focus.csv", {
     dynamicTyping: true,
     complete: function(results) {
       coup_reg_items = results.data;
-      coup_reg_focus = constructCoupRelevance(coup_reg_items);
+      console.log(constructCoupRegFocus)
+      coup_reg_focus = constructCoupRegFocus(coup_reg_items);
     }
   }
 );
